@@ -8,7 +8,22 @@
 
   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function() {
     $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function() {
+      $.getScript("https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js", function() {
       gsap.registerPlugin(ScrollTrigger); 
+
+      var lenis = new Lenis({
+          duration: 1.8,
+          easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+          smoothWheel: true,
+          wheelMultiplier: 0.9,
+          touchMultiplier: 1.5,
+      });
+
+      function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
 
 
       
@@ -460,41 +475,16 @@ mm2.add("(max-width: 991px)", () => {
     return () => tl.kill();
   });
  
-  $.getScript("https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js", function() {
+  
 
-      var lenis = new Lenis({
-          duration: 1.8,
-          easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-          smoothWheel: true,
-          wheelMultiplier: 0.9,
-          touchMultiplier: 1.5,
-      });
-
-      function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
+      
 
   }); 
 
-ScrollTrigger.config({
-  ignoreMobileResize: true
-});
+ 
 
 
-
-  window.addEventListener("load", () => {
-
-        setTimeout(() => {
-
-          lenis.resize();
-
-          ScrollTrigger.refresh(true);
-
-        }, 500);
-
-      });
+ 
 
  
      
