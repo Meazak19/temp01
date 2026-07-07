@@ -7,11 +7,11 @@
  
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&amp;family=Puppies+Play&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
 
 <!-- Font Awesome -->
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Bs 4 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -22,770 +22,798 @@
 <!-- Animate Css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
  
-
 <style type="text/css">
 
+  /* 
 
-/* 
+    font-family: "Poppins", sans-serif; 
+    font-family: "Urbanist", sans-serif; 1 para 
 
-font-family: "Fira Sans", sans-serif;
-font-family: "Ephesis", cursive;
-font-family: "Open Sans", sans-serif;
-
-*/  
-
-    body .page-wrapper { 
-    font-family: "Lato", sans-serif; 
-    color: #6c6a6a; 
-    line-height: 24px; 
-    overflow-x: hidden; 
-    scroll-behavior: smooth; 
-    background-color: #ffffff;
-    } 
-    
-   .page-wrapper p {
-    margin-bottom: 25px;
+  */  
+  
+  
+  body .page-wrapper { 
+    font-family: "Montserrat", sans-serif; 
+      color: #6c6a6a; 
+      line-height: 24px; 
+      overflow: hidden; 
+      scroll-behavior: smooth; 
+      --dark-green : #0b3428; 
+      --light-green : #0d3b2e; 
+      --yellow : #ffb900; 
+      --white: #fff; 
+      --black: #000; 
+      background-color: #ffffff; 
+      position: relative;
+      }  
+     .page-wrapper p {
+        margin-bottom: 25px;
     font-size: 22px;
-    color: #000000;
-    letter-spacing: 2px;
+    color: #ffffffc4;
+    letter-spacing: 1px;
     line-height: 1.5;
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
     font-weight: 400;
-   }
-
-   .page-wrapper p > a {
-   color: inherit;
-   }
-   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-   line-height: 1.3;
-   font-family: "Fira Sans", sans-serif;
-   }
-   .page-wrapper .row {
-   margin: 0 -15px!important;
-   }
-   .page-wrapper .bg-dark {
-   background-color: #fc673f!important;
-   }
-
-   .page-wrapper .bg-primary {
-   background-color: #241e5e!important;
-   }
-   .page-wrapper .bg-light {
-   background-color: #f1f1f1!important;
-   }
-   .page-wrapper section {
-   position: relative;
-   z-index: 1;
-   background-size: cover;
-   background-position: center center;
-   background-repeat: no-repeat;
-   }   
-   .page-wrapper .btn {
-   font-size: 14px;
-   border-radius: 0;
-   padding: 0 30px;
-   line-height: 50px;
-   }  
-
-   .page-wrapper .overlay{
-      content: "";
-    background: rgb(0 0 0 / 58%);
-    position: absolute;
+    font-family: "Montserrat", sans-serif;
+     }
+  
+     .page-wrapper p > a {
+     color: inherit;
+     }
+     .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+     line-height: 1.3;
+     font-family: "Anton", sans-serif;
+     }
+     .page-wrapper .row {
+     margin: 0 -15px!important;
+     }
+     
+     .page-wrapper section {
+     position: relative;
+     z-index: 1;
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     }   
+     
+  
+     .page-wrapper .overlay{
+        content: "";
+      background: rgb(0 0 0 / 58%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+     } 
+     .page-wrapper h1 {
+      font-size: 170px;
+    color: #c4fb34;
+    letter-spacing: 0;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 0;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(2px 4px 1px black);
+    text-align: center;
+     }
+     .page-wrapper h2{ 
+        color: #fff;
+    font-size: 110px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+     }
+     .page-wrapper h3{  
+      font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    color: #d42a0b;
+    font-weight: 700;
+     }
+     .page-wrapper .firstSection {
+        background-image: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1771876840phpifGgkm.png');
+            padding: 100px 0;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: fixed;
+     }
+     .page-wrapper .firstSection:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0d1e13d4;
+        opacity: 0.6;
+     }
+     .page-wrapper .firstSection:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+     background: #22C1C3;
+     background: linear-gradient(0deg, rgb(26 66 55) 25%, rgb(253 187 45 / 0%) 100%);
+    z-index: 2;
     width: 100%;
-    height: 100%;
+    height: 20%;
+     }
+    .page-wrapper .OrderBtn {
+      display: inline-block;
+      margin-top: 2.2rem;
+      padding: 0.75rem 2.6rem;
+      background: #c0fb1c;
+      color: #0a1a0e;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 0 0 rgba(200,240,0,0.6);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.85s forwards, pulse 2.8s 1.8s ease-in-out infinite;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .page-wrapper .OrderBtn:hover {
+      background: #d9ff00;
+      color: #000;
+      transform: scale(1.06);
+      text-decoration: none;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0   rgba(200,240,0,0.55); }
+      50%      { box-shadow: 0 0 0 14px rgba(200,240,0,0);   }
+    }
+    .page-wrapper .highZindex {
+        z-index: 1;
+        position: relative;
+    }
+    .page-wrapper .aboutSection {
+        background: #1a4237;
+        padding: 75px 0;
+    }
+    .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
+        content: '';
+    position: absolute;
+    bottom: 0;
+    width: 128%;
+    height: 55%;
+    left: -20%; 
+    background: #22C1C3;
+    background: linear-gradient(0deg, rgb(26 64 53) 60%, rgb(253 187 45 / 0%) 100%);
+        filter: blur(15px);
+    }
+    .page-wrapper .serviceSection {
+        background: #1a4237;
+        padding-bottom: 100px;
+    }
+    .page-wrapper .serviceSection h2 {
+      z-index: -1;
+    }
+    .page-wrapper .serviceSection p {
+      position: relative;
+    }
+    .page-wrapper .serviceSection p::after{ 
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
+    width: 130%;
+    height: 150%;
+    background-color: #229a77;
     z-index: -1;
-   }
-
-   .page-wrapper h1 {
-    color: #58137c;
-    font-size: 90px;
-    text-transform: capitalize;
-    font-weight: 900;
-    text-align: center;
-    transform: rotate(3deg);
-    margin-bottom: 0;
-   }
-   .page-wrapper h2 {
-    font-size: 85px;
-    font-weight: 900;
-    color: #58137c;
-    line-height: 1;
-    text-align: center;
-   }
-   .page-wrapper h3 {
-    
+    transform: translate(-30px, -30px);
     }
-   .page-wrapper h4 {
-    
-   }
-   .page-wrapper h5 {
-    
-   }
-   .page-wrapper h6 {
-    
-   }
-   .page-wrapper .bgImg {
-    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780667262phpziwLnX.jpg');
-    padding: 25px 0px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 75px;
-    position: relative;
-    justify-content: center; 
-    align-items: center;
-    filter: drop-shadow(-15px 15px 3px #0000005e);
-   }
-   .page-wrapper .headerSection {
-    padding: 100px 0 200px;
-    background: #54137A;
-    background: linear-gradient(0deg, rgba(84, 19, 122, 1) 30%, rgba(205, 52, 228, 1) 100%);
-    clip-path: ellipse(100% 80% at 33% 20%);
-   }
-   .page-wrapper .bgImg::after {
+    .page-wrapper .serviceSection p::before{ 
+         clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    content: '';
+    position: absolute;
+    top: -99px;
+    right: -30%;
+    width: 150px;
+    height: 70px;
+    background-color: #14463a;
+    z-index: -1;
+    transform: translate(-30px, 0px) rotate(0deg);
+    }
+    .page-wrapper .aboutImg{
+      position: relative;
+      z-index: -2;
+    }
+    .page-wrapper .serviseBtn {
+          background: #1a4237;
+    display: inline-block;
+    transform: translate(-30px, 0px);
+    padding-right: 30px;
+    padding-left: 30px;
+    }
+    .page-wrapper .serviseBtn .OrderBtn {
+      margin-top: 20px;
+    }
+    .page-wrapper .paymentContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #c4fb34 0%, transparent 30%, transparent 70%, #c4fb34 100%);
+    z-index: -1;
+    filter: blur(10px) opacity(1);
+    }
+    .page-wrapper .paymentContainer::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #FFF;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0) 75%);
-    border-radius: inherit;
     z-index: 0;
-   }
-   .page-wrapper .headerContent {
-    z-index: 2;
-    position: relative;
-    text-align: center;
-   }
-   .page-wrapper .headerImg {
-    z-index: 2;
-    position: relative;
-   }
-   .page-wrapper h1 .spanOne {
-    display: inline-block;
-    background: #ffdd00;
-    padding: 10px 30px;
-    font-family: "Ephesis", cursive;
-    color: #000;
-    text-transform: none;
-    font-size: 50px;
-    transform: scale(1.9);
-    transform-origin: center bottom;
-    z-index: -1;
-    position: relative;
-    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
-   }
-   .page-wrapper h1 .spanTwo { 
-    display: block;
-    font-size: 130px;
-    margin-top: -50px;
-   }
-   .page-wrapper .orderBtn {
-        display: inline-block;
-    background: #fe0102;
-    padding: 15px 30px 15px 15px;
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    transition: all 0.2s linear;
-   }
-   .page-wrapper .orderBtn:hover {
-        padding: 15px 15px 15px 30px;
-    transition: all 0.2s linear;
-   }
-   .page-wrapper .orderBtn:hover span{
-        right: 0;
-    left: -30px;
-    transition: all 0.2s linear;
-   }
-   .page-wrapper .orderBtn span{
-        background: #fe0102;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: -40px;
-    top: 0;
-    transition: all 0.2s linear;
-   }
-   .page-wrapper .orderBtn:hover img{
-    transform: rotate(90deg);
-    transition: all 0.2s linear;
-   }
-    .page-wrapper .orderBtn img{ 
-            width: 25px;
-    filter: invert(1);
-    transform: rotate(45deg);
-    transition: all 0.2s linear;
+    filter: blur(1px);
+    background: linear-gradient(to right, #c4fb3400 0%, #c4fb34 5% 30%, #c4fb34 95%, #c4fb341f 100%);
     }
-   .page-wrapper .headerImg img {
-    transform: scale(1.1);
-    transform-origin: bottom left;
-   }
-   .page-wrapper .aboutImg {
-    max-width: 600px;
+    .page-wrapper .paymentParent h2:after {
+        display: none;
+    }
+    .page-wrapper .paymentSection {
+        background: linear-gradient(0deg, rgb(34 154 119) 50%, rgb(26 66 55) 50%);
+        padding: 100px 0 75px;
+    }
+    .page-wrapper .paymentContainer {
+        position: relative;
+    }
+    .page-wrapper .paymentParent {
+          display: flex;
+    flex-direction: column;
+    max-width: 300px;
     margin: auto;
-    width: 100%;
-    border-radius: 50%;
-    border: 15px solid #fe3500;
-    filter: drop-shadow(2px 15px 10px #00000082);
-   }
-   .page-wrapper .aboutContent h2 .spanOne{
-    display: block;
-    font-size: 120px;
-   }
-   .page-wrapper .aboutContent h2 .spanTwo{
-    background: #58137c;
-    color: #ffdd00;
-    font-size: 55px;
-    padding: 10px 15px;
-    transform: rotate(-2deg);
-    display: inline-block;
-   }
-   .page-wrapper .aboutSection {
-    padding: 100px 0;
-   }
-   .page-wrapper .paymentSection {
-       padding: 50px 0 0px;
-   }
-.page-wrapper .paymentSection p{
-       font-size: 20px;
-    text-align: left;
-    letter-spacing: 0;
-    padding-top: 20px;
-}
-.page-wrapper .paymentSection h2{ 
-        font-size: 110px;
-    text-align: left;
-}
-.page-wrapper .paymentSection h2 span{ 
-           font-size: 220px;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    transform: rotate(10deg);
-    filter: drop-shadow(5px 5px 0px #ffd90c);
-}
-.page-wrapper .step-card {
-        background: #58047d;
-    padding: 40px 15px;
-    border-radius: 25px;
-    color: #fff;
     text-align: center;
-        transform: scale(0.9);
-    transform-origin: bottom;
-}
-.page-wrapper .step-card.two {
-filter: drop-shadow(10px 10px 0px #ffd90c);
-    transform-origin: top;
-}
-.page-wrapper .step-icon-wrap img {
-          width: 150px;
+    align-items: center;
+    padding: 25px 0;
+    margin-top: -100px;
+    }
+    .page-wrapper .paymentImg {
+         width: 100px;
+    border-radius: 15px;
+    background: #ffffff;
+    height: 150px;
     object-fit: contain;
-    filter: invert(1);
-}
-.page-wrapper .step-title {
-        font-size: 25px;
-    color: #fff;
-    font-weight: 800;
-    padding: 15px 0;
-}
-.page-wrapper .menuSection {
-    padding: 100px 0;
-}
-.page-wrapper .menuContainer {
-        background: #58047d;
-    padding: 50px 50px 100px;
-    border-radius: 100px 100px 0 0;
-}
-.page-wrapper .menuContainer h2{ 
-    color: #fff;
-    font-size: 110px;
-}
-.page-wrapper .menuContainer p{ 
-       max-width: 75%;
+    padding: 15px;
+    }
+    .page-wrapper .paymentParent h2{
+             font-size: 30px;
+    text-transform: none;
+    color: #000101;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    font-family: "Montserrat", sans-serif;
+    }
+    .page-wrapper .paymentParent p { 
+          color: #000;
+    font-size: 18px;
+    letter-spacing: 0;
+    max-width: 80%;
     margin: auto;
-    color: #fff;
-    margin-bottom: 50px;
-    letter-spacing: 2px;
+    }
+    .page-wrapper .tagline {
+        font-size: 50px;
+    }
+     
+.page-wrapper .headline .blur{ 
+        filter: blur(6px);
+    position: relative;
 }
-.page-wrapper .footerContent .spanOne {
-        font-family: "Ephesis", cursive;
+     .page-wrapper .takeawaySection {
+            background: linear-gradient(180deg, rgb(34 154 119) 0%, rgb(34 154 119) 80%, rgba(9, 9, 121, 0) 80%, rgba(0, 212, 255, 0) 100%);
+            padding: 50px 0 0px;
+     }
+     .page-wrapper .takeAwayContent h2 {
+            color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 0;
+     }
+     .page-wrapper .takeAwayContent h2 .spanOne{
+            display: block;
+    font-size: 140px;
+    transform: translateY(10px);
+    color: #c4ff33;
+    filter: drop-shadow(2px 4px 10px #0000007a);
+     }
+     .page-wrapper .takeAwayContent h2 .spanTwo{
+            font-size: 250px;
+    display: inline-block;
+    color: #c4ff33;
+    filter: drop-shadow(2px 4px 10px #0000007a);
+     }
+     .page-wrapper .kebabImg {
+            height: 575px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    filter: drop-shadow(8px 10px 10px #0000007a);
+     }
+
+     
+.page-wrapper .parent {
+ display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+    height: 825px;
+}
+.page-wrapper  .galleryImg {
+      width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    font-weight: 100;
-    transform: translate(40px, -30px) rotate(-5deg);
-    font-size: 120px;
 }
-.page-wrapper .footerContent h2 {
-        color: #fff;
-    line-height: 0.8;
-    text-align: left;
-}
-.page-wrapper .footerSection {
-    padding: 50px 0;
+.page-wrapper .parent div {
+    width: 100%;
+    height: 100%;   /* stretch to fill the full grid area instead of max-height */
     overflow: hidden;
 }
-.page-wrapper .footerContent .spanTwo {
-     display: block;
-    font-size: 220px;
-}
-.page-wrapper .footerContent .spanThree {
-     background: #ffdd00;
-    color: #58047d;
-    font-size: 50px;
-    padding: 10px 15px;
-    display: inline-block;
-}
-.page-wrapper .footerContent .spanFour {
-    font-size: 220px;
-    transform: rotate(10deg) scale(1.3);
-    filter: drop-shadow(5px 5px 0px #fff);
-    color: #ffd90c;
-    display: inline-block;
-    transform-origin: right;
-}
-.page-wrapper .footerContent .orderBtn {
-        transform: translate(120px, 15px);
-}
-.page-wrapper .footerContent .orderBtn span{
-border-color: #58047d;
-}
-.page-wrapper .imageContainer {
-     -webkit-mask-image: url(https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png);
-  mask-image: url(https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png);
-      mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: 100% 100%;
-  transition: all 0.2s linear;
-
-}
-.page-wrapper .imageContainer img {
-        height: 400px;
-    object-fit: cover;
-}
-.page-wrapper .imgContainerTop {
-    position: relative;
-}
-.page-wrapper .backImg {
-        position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    filter: invert(1);
-    transform: scale(1.02);
-}
-.page-wrapper .imgContainerTop:hover .imageContainer{
-     /* -webkit-mask-image: url(https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214142phpv8uA5r.png);
-  mask-image: url(https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214142phpv8uA5r.png); */
-  transition: all 0.2s linear;
-      transform: rotateX(180deg);
-}
-.page-wrapper .imgContainerTop:hover .backImg{
-    /* opacity: 0; */
-        transform: rotateX(180deg) scale(1.02);
-  transition: all 0.2s linear;
-
-}
-.page-wrapper .imgContainerTop:hover .imageContainer img{
-      transform: rotateX(-180deg);
-  transition: all 0.2s linear;
-
-}
-.page-wrapper .footerSection:after {
-content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #58047d;
-    z-index: -1;
-    border-radius: 0px 150px 0 0;
-    transform: rotate(-5deg) scale(1.5);
-    transform-origin: top right;
-}
-.page-wrapper .saladImg {
-        transform: scale(1.1);
-    transform-origin: bottom right;
+  .page-wrapper   .div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
-   /* --- SVG Badge Styling --- */
-        .badge-wrapper {
-                 position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    margin-right: 10%;
-    margin-left: auto;
-    border-radius: 50%;
-        }
-
-        .badge-svg {
-              width: 100%;
-    height: 100%;
-    animation: rotateBadge 20s linear infinite;
-    padding: 5px;
-    background: #58137c;
-    border-radius: 50%;
-    border: 8px solid #fadb0a;
-        }
-
-        .inner-circle-static {
-              position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110px;
-    height: 110px;
-    background-color: #58137c;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-        }
-
-        @keyframes rotateBadge {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .page-wrapper .svgTxt {
-        font-size: 19px;
-    letter-spacing: 1px;
-    font-family: 'Roboto Condensed', sans-serif;
-        }
-        .page-wrapper .spoonImg {
-    filter: invert(1);
-    width: 65px;
-   }
-    /* RESPONSIVE VIEW */
-
-    @media(min-width:1200px){
-        .page-wrapper .container{
-            max-width: 1140px;
-        }
-    }
-
-    @media(min-width:1500px){
-        .page-wrapper .container{
-            max-width: 1440px;
-        }
-    }
-
-
-    @media (max-width:1500px)
-    {
-        .page-wrapper h1 { font-size: 70px; }
-        .page-wrapper h1 .spanTwo { font-size: 90px; }
-        .page-wrapper h1 .spanOne { font-size: 40px; padding: 8px 25px; }
-        .page-wrapper h2 { font-size: 65px; }
-        .page-wrapper .aboutContent h2 .spanOne { font-size: 90px; }
-        .page-wrapper .aboutContent h2 .spanTwo { font-size: 38px; padding: 8px 12px;     transform: rotate(-2deg) translateY(-15px);}
-        .page-wrapper p { font-size: 18px; }
-        .page-wrapper .paymentSection h2 { font-size: 80px;    max-width: 350px;
-    position: relative; }
-        .page-wrapper .paymentSection h2 span {         font-size: 180px;
-        top: -10px;
-        right: 20px; }
-        .page-wrapper .menuContainer h2 { font-size: 95px; }
-        .page-wrapper .footerContent .spanOne { font-size: 105px; transform: translate(35px, -25px) rotate(-5deg); }
-        .page-wrapper .footerContent .spanTwo { font-size: 190px; }
-        .page-wrapper .footerContent .spanThree { font-size: 45px; padding: 8px 12px; }
-        .page-wrapper .footerContent .spanFour { font-size: 190px; }
-        .page-wrapper .orderBtn { font-size: 23px; padding: 12px 28px 12px 12px; }
-        .page-wrapper .orderBtn span { width: 52px; height: 52px; right: -38px; }
-        .page-wrapper .bgImg { border-radius: 60px; }
-        .page-wrapper .step-title { font-size: 21px; }
-        .page-wrapper .step-card {
-                padding: 40px 10px;
-        }
-        .page-wrapper .menuSection {
-    padding: 75px 0;
+.page-wrapper .div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 3;
 }
-        .badge-wrapper {
-                      bottom: -7%;
-        margin-right: 5%;
-            width: 180px;
-    height: 180px;
-        }
-        .page-wrapper .aboutImg {
-                max-width: 480px;
-        }
-        .page-wrapper .step-icon-wrap img {
-            width: 120px;
-        }
-        .page-wrapper .paymentSection p {
-            font-size: 18px;
-        }
-        .page-wrapper .imageContainer img {
-            height: 350px;
-        }
-        .page-wrapper .menuContainer {
-                padding: 50px 50px 75px;
-        }
-    }
-
-    @media (max-width:1199px)
-    {
-        .page-wrapper h1 { font-size: 55px; }
-        .page-wrapper h1 .spanTwo { font-size: 75px; margin-top: -40px; }
-        .page-wrapper h1 .spanOne { font-size: 38px; padding: 6px 20px; transform: scale(1.7); }
-        .page-wrapper h2 { font-size: 50px; }
-        .page-wrapper .aboutContent h2 .spanOne { font-size: 70px; }
-        .page-wrapper .aboutContent h2 .spanTwo { font-size: 40px;         transform: rotate(-2deg) translateY(-10px);
-        margin-bottom: 15px;}
-        .page-wrapper p { font-size: 17px; }
-        .page-wrapper .paymentSection h2 { font-size: 65px; }
-        .page-wrapper .paymentSection h2 span {         font-size: 140px;
-        top: -5px;
-        right: 25px; }
-        .page-wrapper .menuContainer h2 { font-size: 60px; }
-        .page-wrapper .footerContent .spanOne { font-size: 85px; transform: translate(30px, -20px) rotate(-5deg); }
-        .page-wrapper .footerContent .spanTwo { font-size: 160px; }
-        .page-wrapper .footerContent .spanThree { font-size: 38px; }
-        .page-wrapper .footerContent .spanFour { font-size: 100px; top: -10px; position: relative;}
-        .page-wrapper .orderBtn { font-size: 21px; padding: 12px 25px 12px 12px; }
-        .page-wrapper .orderBtn span { width: 48px; height: 48px; right: -35px; border-width: 4px; }
-        .page-wrapper .bgImg { border-radius: 50px; }
-        .page-wrapper .step-title { font-size: 20px; }
-        .page-wrapper .step-icon-wrap img { width: 80px; }
-        .page-wrapper .headerSection { padding: 90px 0 170px; }
-        .page-wrapper .aboutSection {
-    padding: 100px 0 50px;
+.page-wrapper .gallerySection {
+    padding: 125px 0 100px;
 }
-.page-wrapper .paymentSection p {
-    font-size: 17px;
-    padding-top: 5px;
+.page-wrapper .div3 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 3;   /* was 2 → shift by 1 */
+    grid-row-start: 1;
+    grid-column-end: 8;
+    text-align: center;
 }
-    .badge-wrapper { 
-        margin-right: 0%;
-        width: 150px;
-        height: 150px;
-    }
-    .page-wrapper .svgTxt {
-            font-size: 15px;
-    letter-spacing: 1.2px;
-    }
-    .page-wrapper .spoonImg {
-        width: 45px;
-    }
-.inner-circle-static {
-        width: 90px;
-    height: 90px;
+
+.page-wrapper .div4 {
+        grid-row: span 4 / span 4;
+    grid-column: span 2 / span 2;
 }
-    .page-wrapper .menuSection {
-        padding: 50px 0 75px;
-    }
-        .page-wrapper .imageContainer img {
-        height: 300px;
-    }
-    }
 
-    @media (max-width:991px)
-    {
-        .page-wrapper h1 { font-size: 45px; margin-bottom: 10px; }
-        .page-wrapper h1 .spanTwo { font-size: 65px; margin-top: -30px; }
-        .page-wrapper h1 .spanOne { font-size: 32px; padding: 6px 18px; transform: scale(1.6); }
-        .page-wrapper h2 { font-size: 43px; }
-        .page-wrapper .aboutContent h2 .spanOne { font-size: 60px; }
-        .page-wrapper .aboutContent h2 .spanTwo { font-size: 30px;
-        padding: 7px 15px;        transform: rotate(0deg) translateY(0px); }
-        .page-wrapper p { font-size: 17px; line-height: 1.5; letter-spacing: 0; }
-        .page-wrapper .paymentSection h2 { font-size: 60px;         max-width: 250px; }
-        .page-wrapper .paymentSection h2 span {         font-size: 120px;
-        top: 0;
-        right: 10px; }
-        .page-wrapper .paymentSection p {
-            margin-bottom: 0;
-        }
-        .page-wrapper .menuContainer h2 { font-size: 50px; }
-        .page-wrapper .menuContainer p {
-                letter-spacing: 1px; max-width: 100%;
-        }
-        .page-wrapper .imgContainerTop {
-            margin-bottom: 75px;
-        }
-            .page-wrapper .menuContainer {
-        padding: 50px 50px 0px;
-    }
-        .page-wrapper .footerContent .spanOne { font-size: 72px; transform: translate(25px, -15px) rotate(-5deg); }
-        .page-wrapper .footerContent .spanTwo { font-size: 130px; }
-        .page-wrapper .footerContent .spanThree { font-size: 28px; }
-        .page-wrapper .footerContent .spanFour { font-size: 85px; }
-        .page-wrapper .footerContent .orderBtn { transform: translate(90px, 12px); }
-        .page-wrapper .orderBtn { font-size: 20px; padding: 10px 22px 10px 10px; }
-        .page-wrapper .orderBtn span { width: 46px; height: 46px; right: -32px; }
-        .page-wrapper .bgImg { border-radius: 40px; }
-        .page-wrapper .step-title { font-size: 20px;     padding: 10px 0;}
-        .page-wrapper .step-icon-wrap img { width: 75px; }
-        .page-wrapper .step-card { padding: 30px 12px; }
-        .page-wrapper .imageContainer img { height: 320px; }
-        .page-wrapper .headerSection { padding: 70px 0 140px;     clip-path: ellipse(100% 95% at 50% 3%); }
-        .page-wrapper .aboutSection { padding: 50px 0 25px; }
-        .page-wrapper .aboutImg { border-width: 12px; }
-        .badge-svg {
-            padding: 0;
-        }
-        .page-wrapper .footerSection:after {
-                border-radius: 0px 100px 0 0;
-        }
-        .page-wrapper .step-card.two {
-            transform-origin: center;
-        }
-        .badge-wrapper {
-                    width: 130px;
-        height: 130px;
-        }
-            .inner-circle-static {
-        width: 75px;
-        height: 75px;
-    }
-    }
+.page-wrapper .div5 {
+       grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
 
-    @media (max-width:767px)
-    {
+.page-wrapper .div6 {
+        grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+.page-wrapper .div7 {
+        grid-row: span 2 / span 2;
+    grid-column-start: 7;
+    grid-row-start: 4;
+}
+.page-wrapper .gallerySection h2{
+        font-size: 160px;
+    color: #1a4237;
+    line-height: 1;
+    text-align: center;
+    transform: scaleX(1.2);
+}
          
-        
-        .page-wrapper h1 { font-size: 32px; }
-        .page-wrapper h1 .spanTwo { font-size: 45px; margin-top: -25px; }
-        .page-wrapper h1 .spanOne { font-size: 26px; padding: 5px 15px; transform: scale(1.5); }
-        .page-wrapper h2 { font-size: 28px; }
-        .page-wrapper .aboutContent h2 .spanOne { font-size: 38px; }
-        .page-wrapper .aboutContent h2 .spanTwo { font-size: 20px; }
-        .page-wrapper p { font-size: 16px; line-height: 1.4;}
-        .page-wrapper .paymentSection h2 { font-size: 40px;        max-width: 180px;
-        margin: auto; }
-        .page-wrapper .paymentSection h2 span { font-size: 85px;
-        right: 20px;
-        filter: drop-shadow(4px 4px 0px #ffd90c); }
-        .page-wrapper .paymentSection p {         font-size: 15px;
-        padding-top: 25px;
-        text-align: center;
-        margin-bottom: 25px;}
-        .page-wrapper .menuContainer h2 { font-size: 52px; }
-        .page-wrapper .menuContainer { padding: 40px 30px 0px; border-radius: 80px 80px 0 0; }
-        .page-wrapper .menuContainer p { max-width: 100%; }
-        .page-wrapper .footerContent .spanOne { font-size: 60px; transform: translate(20px, -12px) rotate(-5deg); }
-        .page-wrapper .footerContent .spanTwo { font-size: 80px; }
-        .page-wrapper .footerContent .spanThree { font-size: 20px; padding: 6px 10px; }
-        .page-wrapper .footerContent .spanFour { font-size: 60px; filter: drop-shadow(2px 2px 0px #fff);}
-        .page-wrapper .footerContent .orderBtn { transform: translate(60px, 10px); }
-        .page-wrapper .orderBtn { font-size: 18px; padding: 10px 20px 10px 10px; }
-        .page-wrapper .orderBtn span { width: 42px; height: 42px; right: -28px; border-width: 3px; }
-        .page-wrapper .orderBtn img { width: 22px; }
-        .page-wrapper .bgImg { border-radius: 35px; padding: 20px 15px;     filter: drop-shadow(-5px 5px 2px #0000005e);}
-        .page-wrapper .step-title { font-size: 18px; padding: 12px 0; }
-        .page-wrapper .step-icon-wrap img { width: 90px; }
-        .page-wrapper .step-card { padding: 25px 10px; transform: scale(0.95); }
-        .page-wrapper .step-card.two { transform: scale(0.95); }
-        .page-wrapper .imageContainer img { height: 260px; }
-    .page-wrapper .headerSection {
-        padding: 60px 0 90px;
-        clip-path: ellipse(100% 100% at 50% 0%);
-    }        .page-wrapper .aboutImg { border-width: 5px;
-        filter: drop-shadow(2px 5px 5px #00000082); }
-        .page-wrapper .saladImg { transform: scale(1.05); }
-         .badge-wrapper {
-        width: 110px;
-        height: 110px;
-        bottom: -22%;
-    }
-    .badge-svg {
-            border-width: 4px;
-    }
-        .inner-circle-static {
-        width: 65px;
-        height: 65px;
-    }
-    }
-   
-    @media (max-width:575px)
-    {
-        
-        .page-wrapper .bgImg::after {
-                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0) 75%);
-        }
-        .page-wrapper h1 { font-size: 32px; }
-        .page-wrapper h1 .spanTwo { font-size: 45px; margin-top: -20px; }
-        .page-wrapper h1 .spanOne { font-size: 27px; padding: 5px 12px; transform: scale(1.3); clip-path: polygon(0 0, 100% 15%, 100% 85%, 0% 100%); }
-        .page-wrapper h2 { font-size: 28px; }
-        .page-wrapper .aboutContent h2 .spanOne { font-size: 38px; }
-        .page-wrapper .aboutContent h2 .spanTwo {         font-size: 20px;
-        display: inline-block;
-        margin-top: 5px; }
-        .page-wrapper p { font-size: 15px; margin-bottom: 20px; }
-        .page-wrapper .paymentSection { padding: 15px 0 0; }
-        .page-wrapper .paymentSection h2 { font-size: 32px; text-align: left; max-width: 120px; }
-        .page-wrapper .paymentSection h2 span {         font-size: 70px;
-        right: -10px;
-        top: -12px;
-        margin: 10px 0;
-        filter: drop-shadow(3px 3px 0px #ffd90c); }
-        .page-wrapper .paymentSection p { text-align: center; font-size: 15px; padding-top: 10px; }
-        .page-wrapper .menuContainer { padding: 35px 20px 15px; border-radius: 30px 30px 0 0; }
-        .page-wrapper .menuContainer h2 { font-size: 34px; }
-        .page-wrapper .menuContainer p { margin-bottom: 30px; font-size: 15px; }
-        .page-wrapper .footerContent .spanOne { font-size: 48px; transform: translate(0, -8px) rotate(-5deg); }
-        .page-wrapper .footerContent .spanTwo { font-size: 50px; }
-        .page-wrapper .footerContent .spanThree { font-size: 20px;  margin-top: 8px; }
-        .page-wrapper .footerContent .spanFour {         font-size: 35px;
-        margin-top: 0px;
-        filter: drop-shadow(1px 1px 0px #fff); }
-        .page-wrapper .footerContent h2 { text-align: center; line-height: 1; }
-        .page-wrapper .footerContent .orderBtn { transform: translate(0, 15px); display: table; margin: 0px auto 0; }
-        .page-wrapper .orderBtn { font-size: 17px; padding: 10px 18px 10px 10px; }
-        .page-wrapper .orderBtn span { width: 40px; height: 40px; right: -25px; border-width: 3px; }
-        .page-wrapper .orderBtn img { width: 18px; }
-        .page-wrapper .bgImg { border-radius: 25px; padding: 20px 15px;        max-width: 350px;
-        margin: auto !important; }
-        .page-wrapper .headerSection { padding: 50px 0 65px; clip-path: ellipse(120% 80% at 50% 20%); }
-        .page-wrapper .headerContent { margin-bottom: 30px; }
-        .page-wrapper .headerImg img {         transform: scale(1.2);
-        transform-origin: top center; }
-        .page-wrapper .aboutSection { padding: 25px 0 50px; }
-        .page-wrapper .aboutImg { max-width: 100%; border-width: 8px; }
-        .page-wrapper .aboutContent { text-align: center; margin-top: 30px; }
-        .page-wrapper .step-card {         transform: scale(1);
-        max-width: 256px;
-        margin: auto;
-        margin-bottom: 20px; }
-        .page-wrapper .step-card.two { transform: scale(1); filter: drop-shadow(8px 8px 0px #ffd90c); }
-        .page-wrapper .step-title { font-size: 17px;         padding: 7px 0; }
-        .page-wrapper .step-icon-wrap img { width: 65px; }
-        .page-wrapper .menuSection { padding: 50px 0; }
-        .page-wrapper .imageContainer img { height: 280px; }
-        .page-wrapper .imgContainerTop { margin-bottom: 45px; }
-        .page-wrapper .saladImg { transform: scale(1); margin-top: 50px; }
-        .page-wrapper .footerSection { padding: 40px 0; }
-        .page-wrapper .footerSection:after { transform: rotate(-3deg) scale(1.1); border-radius: 0px 60px 0 0; }
-        .step-desc {
-    font-size: 14px;
-}
-        .aboutParent {
-                max-width: 350px;
-    position: relative;
-    margin: auto;
-        }
-        .badge-wrapper {
-                bottom: 0%;
-    left: 60%;
-    right: 0;
-    margin: auto;
-        }
-    }
 
-</style>
+   @media(min-width:1200px){
+          .page-wrapper .container{
+              max-width: 1140px;
+          }
+      }
+
+
+   @media(min-width:1500px){
+          .page-wrapper .container{
+              max-width: 1440px;
+          }
+      }
+
+/* =============================================
+     RESPONSIVE BREAKPOINTS
+     ============================================= */
+ /* =============================================
+   RESPONSIVE BREAKPOINTS
+   Rules only: font-size / width / height (all px)
+   No design, colour, or font-family changes
+   No stacking until 576px — stacks one by one below it
+   ============================================= */
+
+/* Prevent col-sm-12 from stacking prematurely (576px - 767px range)
+   Keeps 2-up layout instead of Bootstrap's default full-width stack */
+@media (min-width: 576px) {
+  .page-wrapper .serviceSection .col-sm-12,
+  .page-wrapper .takeawaySection .col-sm-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .page-wrapper .paymentSection .col-sm-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* =============================================
+   1500px and below
+   ============================================= */
+@media (max-width: 1499px) {
+  .page-wrapper h1 {
+    font-size: 140px;
+  }
+  .page-wrapper .tagline {
+    font-size: 42px;
+  }
+  .page-wrapper .aboutSection h2,
+  .page-wrapper .serviceSection h2 {
+    font-size: 90px;
+  }
+  .page-wrapper .aboutSection {
+    padding: 60px 0;
+  }
+  .page-wrapper .aboutSection p,
+  .page-wrapper .serviceSection p,
+  .page-wrapper p {
+    font-size: 20px;
+  }
+  .page-wrapper .paymentImg {
+    width: 95px;
+    height: 140px;
+  }
+  .page-wrapper .paymentParent h2 {
+    font-size: 28px;
+  }
+  .page-wrapper .paymentParent p {
+    font-size: 17px;
+  }
+  .page-wrapper .takeAwayContent h2 {
+    font-size: 50px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanOne {
+    font-size: 110px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanTwo {
+    font-size: 200px;
+  }
+  .page-wrapper .kebabImg {
+    height: 480px;
+  }
+  .page-wrapper .gallerySection h2 {
+    font-size: 130px;
+  }
+  .page-wrapper .gallerySection {
+    padding: 100px 0 80px;
+  }
+  .page-wrapper .parent {
+    height: 700px;
+  }
+}
+
+/* =============================================
+   1199px and below
+   ============================================= */
+@media (max-width: 1199px) {
+  .page-wrapper h1 {
+    font-size: 110px;
+  }
+  .page-wrapper .tagline {
+    font-size: 34px;
+  }
+  .page-wrapper .aboutSection h2,
+  .page-wrapper .serviceSection h2 {
+    font-size: 70px;
+  }
+  .page-wrapper .aboutSection p,
+  .page-wrapper .serviceSection p,
+  .page-wrapper p {
+    font-size: 18px;
+  }
+  .page-wrapper .paymentImg {
+    width: 90px;
+    height: 130px;
+  }
+  .page-wrapper .paymentParent h2 {
+    font-size: 26px;
+  }
+  .page-wrapper .paymentParent p {
+    font-size: 16px;
+  }
+  .page-wrapper .paymentParent {
+    max-width: 260px;
+    margin-top: -80px;
+  }
+  .page-wrapper .takeAwayContent h2 {
+    font-size: 40px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanOne {
+    font-size: 90px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanTwo {
+    font-size: 150px;
+  }
+  .page-wrapper .kebabImg {
+    height: 400px;
+  }
+  .page-wrapper .gallerySection h2 {
+    font-size: 100px;
+  }
+  .page-wrapper .gallerySection {
+    padding: 80px 0 60px;
+  }
+  .page-wrapper .parent {
+    height: 600px;
+    gap: 15px;
+  }
+}
+
+/* =============================================
+   991px and below
+   ============================================= */
+@media (max-width: 991px) {
+  .page-wrapper h1 {
+    font-size: 85px;
+  }
+  .page-wrapper .tagline {
+    font-size: 28px;
+  }
+  .page-wrapper .aboutSection h2,
+  .page-wrapper .serviceSection h2 {
+    font-size: 56px;
+  }
+  .page-wrapper .aboutSection {
+    padding: 50px 0;
+  }
+  .page-wrapper .aboutSection p,
+  .page-wrapper .serviceSection p,
+  .page-wrapper p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .page-wrapper .paymentImg {
+    width: 80px;
+    height: 120px;
+  }
+  .page-wrapper .paymentParent h2 {
+    font-size: 22px;
+  }
+  .page-wrapper .paymentParent p {
+    font-size: 15px;
+  }
+  .page-wrapper .paymentParent {
+    max-width: 220px;
+    margin-top: -60px;
+    padding: 20px 0;
+  }
+  .page-wrapper .paymentSection {
+    padding: 80px 0 60px;
+  }
+  .page-wrapper .takeAwayContent h2 {
+    font-size: 34px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanOne {
+    font-size: 70px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanTwo {
+    font-size: 120px;
+  }
+  .page-wrapper .kebabImg {
+    height: 340px;
+    border-radius: 35px;
+  }
+  .page-wrapper .gallerySection h2 {
+    font-size: 80px;
+  }
+  .page-wrapper .gallerySection {
+    padding: 60px 0 50px;
+  }
+  .page-wrapper .parent {
+    height: 500px;
+    gap: 12px;
+  }
+}
+
+/* =============================================
+   767px and below
+   ============================================= */
+@media (max-width: 767px) {
+  .page-wrapper h1 {
+    font-size: 65px;
+  }
+  .page-wrapper .tagline {
+    font-size: 22px;
+  }
+  .page-wrapper .OrderBtn {
+    padding: 0.6rem 2rem;
+    font-size: 0.85rem;
+  }
+  .page-wrapper .aboutSection h2,
+  .page-wrapper .serviceSection h2 {
+    font-size: 44px;
+  }
+  .page-wrapper .aboutSection {
+    padding: 40px 0;
+  }
+  .page-wrapper .aboutSection p,
+  .page-wrapper .serviceSection p,
+  .page-wrapper p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .page-wrapper .paymentImg {
+    width: 75px;
+    height: 110px;
+  }
+  .page-wrapper .paymentParent h2 {
+    font-size: 20px;
+  }
+  .page-wrapper .paymentParent p {
+    font-size: 14px;
+  }
+  .page-wrapper .paymentParent {
+    max-width: 200px;
+    margin-top: -45px;
+  }
+  .page-wrapper .paymentSection {
+    padding: 60px 0 40px;
+  }
+  .page-wrapper .takeAwayContent h2 {
+    font-size: 26px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanOne {
+    font-size: 50px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanTwo {
+    font-size: 85px;
+  }
+  .page-wrapper .kebabImg {
+    height: 280px;
+    border-radius: 25px;
+  }
+  .page-wrapper .gallerySection h2 {
+    font-size: 56px;
+  }
+  .page-wrapper .gallerySection {
+    padding: 50px 0 40px;
+  }
+  .page-wrapper .parent {
+    height: 400px;
+    gap: 10px;
+  }
+}
+
+/* =============================================
+   575px and below — stack one by one
+   ============================================= */
+@media (max-width: 575px) {
+  .page-wrapper h1 {
+    font-size: 48px;
+  }
+  .page-wrapper .tagline {
+    font-size: 18px;
+  }
+  .page-wrapper .firstSection {
+    min-height: 70vh;
+    padding: 60px 0;
+  }
+  .page-wrapper .OrderBtn {
+    padding: 0.55rem 1.6rem;
+    font-size: 0.75rem;
+  }
+  .page-wrapper .aboutSection h2,
+  .page-wrapper .serviceSection h2 {
+    font-size: 34px;
+  }
+  .page-wrapper .aboutSection {
+    padding: 30px 0;
+  }
+  .page-wrapper .aboutSection p,
+  .page-wrapper .serviceSection p,
+  .page-wrapper p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .page-wrapper .serviceSection p::after,
+  .page-wrapper .serviceSection p::before {
+    display: none;
+  }
+  .page-wrapper .serviseBtn {
+    transform: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .page-wrapper .paymentImg {
+    width: 70px;
+    height: 100px;
+  }
+  .page-wrapper .paymentParent h2 {
+    font-size: 19px;
+  }
+  .page-wrapper .paymentParent p {
+    font-size: 14px;
+  }
+  .page-wrapper .paymentParent {
+    max-width: 100%;
+    margin-top: 0;
+    padding: 15px 0;
+  }
+  .page-wrapper .paymentSection {
+    padding: 40px 0 20px;
+    background: rgb(26 66 55);
+  }
+  .page-wrapper .takeAwayContent h2 {
+    font-size: 20px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanOne {
+    font-size: 38px;
+  }
+  .page-wrapper .takeAwayContent h2 .spanTwo {
+    font-size: 60px;
+  }
+  .page-wrapper .kebabImg {
+    height: 220px;
+    border-radius: 18px;
+  }
+  .page-wrapper .gallerySection h2 {
+    font-size: 36px;
+    transform: scaleX(1);
+  }
+  .page-wrapper .gallerySection {
+    padding: 40px 0 30px;
+  }
+
+  /* Gallery: stack one image per row below 576px */
+  .page-wrapper .parent {
+    display: block;
+    height: auto;
+  }
+  .page-wrapper .parent div {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 12px;
+  }
+  .page-wrapper .div3 {
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+  
+
+</style> 
 
 
 </head>
@@ -796,194 +824,146 @@ content: '';
     
 
 <div id="page-top-margin"></div>
+   <div class="page-wrapper">    
+ 
+  <section class="firstSection"> 
+    <div class="container highZindex">
+        <div class="hero-content">
 
-<div class="page-wrapper">
+            <p class="tagline">Taste Italy on Your Plate</p>
+            <h1 class="headline"> <span class="blur">Fr</span>esh &amp; Delicio<span class="blur">us! </span></h1>
 
-<section class="headerSection">
-  <div class="container">
-   <div class="row bgImg">
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="headerContent">
-                <h1>
-                    Authentic Thai, <br> <span class="spanOne">Just a</span> <span class="spanTwo">Click Away</span>
-                </h1> 
-                <a href="/order-now" class="orderBtn">
-                    Order Now <span> <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781128450phpZV0nFK.png" class="img-fluid" alt=""></span>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="headerImg">
-                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780667469phpQtWKm7.png" class="img-fluid" alt="">
-            </div>
-        </div>
-   </div>
-  </div>
-</section>
+            <a href="#" class="OrderBtn">Order Now</a>
+          </div>
+    </div> 
+  </section>
 
-<section class="aboutSection">
+  <section class="aboutSection">
+    <div class="container text-center">
+        <h2>
+            About Us
+        </h2>
+        <p>
+            Fresh, Fast &amp; Hassle-Free Takeaway - Right When You Need It At Domain 545 Loaded Burgers and Kebabs, {TAKEAWAY TOWN), we make sure you never have to wait long for great food. Whether you're working late, relaxing at home, or hosting a last-minute gathering, our freshly prepared dishes are just a few clicks away. With a variety of meal options, generous portions, and exclusive deals, enjoying your favourite takeaway has never been easier. Simply place your order, track your delivery, and dig into restaurant-style meals without the hassle.
+        </p>
+    </div>
+  </section>
+
+  <section class="serviceSection">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
-                <div class="aboutParent">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1758546775phpb1Ifim.png" class="img-fluid aboutImg" alt="">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2>
+                    Our Services
+                </h2>
+                <p>
+                    Looking for the best takeaway in (TAKEAWAY TOWN}? At Domain 545 Loaded Burgers and Kebabs, we're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion. With fresh ingredients and fast service, we never turn down a hungry customer!
+                </p>
+                <div class="serviseBtn">
+                  <a href="#" class="OrderBtn">Order Now</a>
                 </div>
-                <div class="badge-wrapper">
-                   <svg class="badge-svg" viewBox="0 0 200 200">
-                       <defs>
-                           <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                       </defs>
-                       <text fill="white" class="svgTxt">
-                           <textPath href="#circlePath">
-                               SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
-                           </textPath>
-                       </text>
-                   </svg>
-                   <div class="inner-circle-static">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766550640php7b7eqx.png" class="img-fluid spoonImg" alt="">
-                   </div>
-               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
-                <div class="aboutContent">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div>
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777757527phpKUNonr.jpg" class="aboutImg img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="paymentSection">
+    <div class="container paymentContainer">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="paymentParent">
+                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpR5uiM9.jpg" class="img-fluid paymentImg" alt="">
                     <h2>
-                        Your Thai Food 
-                        <span class="spanOne">Adventure</span>
-                        <span class="spanTwo">Starts Here!</span>
+                       Feeling <br> Hungry?
+
                     </h2>
                     <p>
-                        Why wait for a table when you can enjoy Thai food on the go? Our takeaway menu is packed with delicious options, from the comforting taste of Pad Thai to the spicy kick of Red Curries. <br> <br>
-                        Simply order, collect, and indulge in an authentic Thai feast wherever you are!
+                        Pick something delicious and treat yourself
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="paymentSection">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <h2>
-                    How It <br> Works <span>?</span>
-                </h2>
-                <p>
-                    Enjoy authentic Thai flavours wherever you are! At {TAKEAWAY NAME}, we prepare each dish with passion, using traditional Thai ingredients to deliver a truly unforgettable experience. <br><br>  Order now and savour the best of Thailand from the comfort of your home.
-                </p>
-            </div>
-            <div class="col-lg-8 col-md-6 col-sm-12">
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="paymentContainer">
-            <div class="step-card"> 
-              <div class="step-icon-wrap one">
-                <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214142phpZc2LNl.png" class="img-fluid" alt="">
-              </div>
-              <div class="step-title">Pick a Favourite</div>
-              <div class="step-desc">Browse, select, and let the feast begin!</div>
-            </div>
-          </div>
-                    </div> 
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="paymentContainer">
-            <div class="step-card two"> 
-              <div class="step-icon-wrap one">
-                <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpmrlvev.png" class="img-fluid" alt="">
-              </div>
-              <div class="step-title">Secure Checkout</div>
-              <div class="step-desc">A smooth process from start to finish.</div>
-            </div>
-          </div>
-                    </div> 
-
-                    <div class="col-lg-4 col-md-12 col-sm-6">
-                        <div class="paymentContainer">
-            <div class="step-card"> 
-              <div class="step-icon-wrap one">
-                <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214142phpqb6FWo.png" class="img-fluid" alt="">
-              </div>
-              <div class="step-title">Freshly Made</div>
-              <div class="step-desc">Fresh, flavourful, and just the way you like it.</div>
-            </div>
-          </div>
-                    </div> 
-
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="menuSection">
-    <div class="container menuContainer">
-        <h2>
-                Our Menu
-            </h2>
-            <p>
-                Order now and savour the best of Thailand from the comfort of your home. Whether you're dining solo or sharing with family, our food brings the perfect balance of flavours to every meal.
-            </p>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="imgContainerTop">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png" class="img-fluid backImg" alt="">
-                    <div class="imageContainer">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" class="img-fluid" alt="">
-                    </div>
+                <div class="paymentParent">
+                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpcJ7lFt.jpg" class="img-fluid paymentImg" alt="">
+                    <h2>
+                        Quick & <br> Simple Payment
+                    </h2>
+                    <p>
+                        Safe, speedy, and easy every time
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="imgContainerTop">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png" class="img-fluid backImg" alt="">
-                    <div class="imageContainer">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="imgContainerTop">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png" class="img-fluid backImg" alt="">
-                    <div class="imageContainer">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="imgContainerTop">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781214143phpP9tqny.png" class="img-fluid backImg" alt="">
-                    <div class="imageContainer">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" class="img-fluid" alt="">
-                    </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="paymentParent">
+                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpzchqyN.jpg" class="img-fluid paymentImg" alt="">
+                    <h2>
+                        Made Fresh, <br> Just for You
+                    </h2>
+                    <p>
+                        Enjoy top-quality food with zero hassle.
+                    </p>
                 </div>
             </div> 
         </div>
     </div>
-</section>
+  </section>
 
-<section class="footerSection">
+  <section class="takeawaySection">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2">
-                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781128403php3HRoph.png" class="img-fluid saladImg" alt="">
+        <div class="row align-items-end">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1782597648phpht7ZUc.jpg" class="img-fluid kebabImg" alt="">
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
-                <div class="footerContent">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="takeAwayContent">
                     <h2>
-                        <span class="spanOne"> Craving </span> 
-                        <span class="spanTwo"> Thai <span class="spanFour"> ? </span> </span>
-                        <span class="spanThree"> We've Got You Covered! </span>
+                        TAKEAWAY PERFECTION
+                        <span class="spanOne">ONE CLICK</span>
+                        <span class="spanTwo">AWAY</span>
                     </h2>
-                     <a href="/order-now" class="orderBtn">
-                    Order Now <span> <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781128450phpZV0nFK.png" class="img-fluid" alt=""></span>
-                </a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+  </section>
 
+  <section class="gallerySection">
+    <div class="container">
+    
+<div class="parent">
+    <div class="div1">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+    <div class="div2">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+    <div class="div3">
+        <h2>
+            Our Gallery
+        </h2>
+    </div>
+    <div class="div4">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+    <div class="div5">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+    <div class="div6">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+    <div class="div7">
+        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
+    </div>
+</div>
+    
+    </div>
+  </section>
+ 
 
 </div>
 
@@ -1018,52 +998,13 @@ content: '';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 
 
- <script> 
-
-  var $owl = $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: false,
-    dots: false,
-    autoplay: false,
-    center: true,
-    autoplayTimeout: 4000,
-    smartSpeed: 2000,
-    responsive: {
-      0:   { items: 1 },
-      576: { items: 2, center: false },
-      768: { items: 3 },
-      992: { items: 3 }
-    }
-  });
-
-  function setActiveCard() {
-    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
-    var $visibleItems = $('.owl-carousel .owl-item.active');
-    $visibleItems.eq(0).find('.slider-wrapper').addClass('active');
-  }
-
-  $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
-    setActiveCard();
-  });
-
-  setActiveCard();
-
-  // On hover: remove active from 2nd card
-  // On mouse leave: restore active to 2nd card
-  $(document).on('mouseenter', '.owl-item .slider-wrapper', function () {
-    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
-  });
-
-  $(document).on('mouseleave', '.owl-item .slider-wrapper', function () {
-    setActiveCard();
-  });
+ <script>  
  
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <script> 
  
@@ -1071,7 +1012,8 @@ content: '';
      $('.js-tilt').tilt({
          maxTilt: 5, 
          maxGlare: .2,
-perspective: 1000 , // lower = more dramatic 3D effect 
+perspective: 1000 , // lower = more dramatic 3D effect
+scale: 1.05, 
 speed: 400,         // transition speed (higher = smoother/slower)
 easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve     
     speed: 800,
@@ -1081,12 +1023,215 @@ easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve
      }); 
 </script>
 
+<script>
+
  
- 
+/* =============================================
+   GSAP ScrollTrigger Animations
+   Design, colours, and fonts untouched —
+   animations only affect opacity / transform.
+   ============================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+    console.warn("GSAP or ScrollTrigger not loaded.");
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- About Section ---------- */
+  gsap.from(".aboutSection h2", {
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".aboutSection",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".aboutSection p", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    delay: 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".aboutSection",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  /* ---------- Service Section ---------- */
+  gsap.from(".serviceSection h2", {
+    opacity: 0,
+    x: -50,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".serviceSection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".serviceSection p", {
+    opacity: 0,
+    x: -50,
+    duration: 0.8,
+    delay: 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".serviceSection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".serviceSection .serviseBtn", {
+    opacity: 0,
+    y: 20,
+    duration: 0.6,
+    delay: 0.3,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".serviceSection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".serviceSection .aboutImg", {
+    opacity: 0,
+    x: 50,
+    duration: 0.9,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".serviceSection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  /* ---------- Payment Section (cards stagger) ---------- */
+  gsap.from(".paymentSection .paymentParent", {
+    opacity: 0,
+    y: 60,
+    duration: 0.7,
+    stagger: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".paymentSection",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  /* ---------- Takeaway Section ---------- */
+  gsap.from(".takeawaySection .kebabImg", {
+    opacity: 0,
+    x: -60,
+    duration: 0.9,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".takeawaySection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".takeawaySection .takeAwayContent h2", {
+    opacity: 0,
+    x: 60,
+    duration: 0.9,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".takeawaySection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".takeawaySection .spanOne", {
+    opacity: 0,
+    scale: 0.85,
+    duration: 0.7,
+    delay: 0.2,
+    ease: "back.out(1.4)",
+    scrollTrigger: {
+      trigger: ".takeawaySection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".takeawaySection .spanTwo", {
+    opacity: 0,
+    scale: 0.85,
+    duration: 0.7,
+    delay: 0.35,
+    ease: "back.out(1.4)",
+    scrollTrigger: {
+      trigger: ".takeawaySection",
+      start: "top 75%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  /* ---------- Gallery Section ---------- */
+  gsap.from(".gallerySection h2", {
+    opacity: 0,
+    y: 30,
+    duration: 0.7,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".gallerySection",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(".gallerySection .parent > div", {
+    opacity: 0,
+    y: 40,
+    scale: 0.95,
+    duration: 0.6,
+    stagger: 0.12,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".gallerySection .parent",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  /* Refresh ScrollTrigger after all images load,
+     since layout height can shift once images render */
+  window.addEventListener("load", function () {
+    ScrollTrigger.refresh();
+  });
+});
+
+</script>
  
 
 
 </body>
 </html> 
- 
 
+
+<!-- 
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpsw3fTP.jpg
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpzchqyN.jpg
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpcJ7lFt.jpg
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpR5uiM9.jpg
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phppm132v.png
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106php6WLUcc.png
+
+-->
