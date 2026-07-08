@@ -206,15 +206,17 @@
     }
     .page-wrapper .serviceSection h2 {
       z-index: -1;
+          padding-left: 50px;
     }
     .page-wrapper .serviceSection p {
       position: relative;
+      padding-left: 50px;
     }
     .page-wrapper .serviceSection p::after{ 
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 45px;
     width: 130%;
     height: 150%;
     background-color: #229a77;
@@ -226,8 +228,8 @@
     content: '';
     position: absolute;
     top: -99px;
-    right: -30%;
-    width: 150px;
+    right: -249px;
+    width: 190px;
     height: 70px;
     background-color: #14463a;
     z-index: -1;
@@ -455,27 +457,36 @@
 
 /* Prevent col-sm-12 from stacking prematurely (576px - 767px range)
    Keeps 2-up layout instead of Bootstrap's default full-width stack */
-@media (min-width: 576px) {
-  .page-wrapper .serviceSection .col-sm-12,
-  .page-wrapper .takeawaySection .col-sm-12 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .page-wrapper .paymentSection .col-sm-12 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
+ 
 
 /* =============================================
    1500px and below
    ============================================= */
 @media (max-width: 1499px) {
+  .page-wrapper .serviceSection p::before {
+        top: -64px;
+    right: -126px;
+    width: 70px;
+    height: 35px;
+  }
+  .page-wrapper .serviseBtn .OrderBtn {
+    margin-top: 20px;
+    margin-left: 35px;
+    border-radius: 20px;
+}
+  .page-wrapper .serviceSection p::after {
+        left: 45px;
+    width: 115%;
+    height: 150%;
+  }
   .page-wrapper h1 {
     font-size: 140px;
   }
   .page-wrapper .tagline {
-    font-size: 42px;
+    font-size: 35px;
+  }
+  .page-wrapper .firstSection {
+    min-height: 90vh;
   }
   .page-wrapper .aboutSection h2,
   .page-wrapper .serviceSection h2 {
@@ -532,14 +543,31 @@
   .page-wrapper .tagline {
     font-size: 34px;
   }
+  .page-wrapper .firstSection {
+    min-height: 85vh;
+        background-attachment: local;
+    background-position: bottom;
+  } 
   .page-wrapper .aboutSection h2,
   .page-wrapper .serviceSection h2 {
     font-size: 70px;
   }
+  .page-wrapper .serviceSection p::after {
+    height: 160%;
+  }
   .page-wrapper .aboutSection p,
   .page-wrapper .serviceSection p,
   .page-wrapper p {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .page-wrapper .serviceSection p::before {
+    right: -114px;
+        width: 54px;
+  }
+  .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
+        height: 40%;
+            background: linear-gradient(0deg, rgb(26 64 53) 100%, rgb(253 187 45 / 0%) 100%);
+    filter: blur(8px);
   }
   .page-wrapper .paymentImg {
     width: 90px;
@@ -577,21 +605,35 @@
     height: 600px;
     gap: 15px;
   }
+ 
 }
 
 /* =============================================
    991px and below
    ============================================= */
 @media (max-width: 991px) {
+  .page-wrapper .firstSection {
+            min-height: 70vh;
+  }
+  .page-wrapper .firstSection:before {
+    height: 15%;
+  }
   .page-wrapper h1 {
     font-size: 85px;
+  }
+  .page-wrapper .OrderBtn {
+        padding: 12px 25px;
+            letter-spacing: 0;
+  }
+  .page-wrapper .headline .blur {
+    filter: blur(3px);
   }
   .page-wrapper .tagline {
     font-size: 28px;
   }
   .page-wrapper .aboutSection h2,
   .page-wrapper .serviceSection h2 {
-    font-size: 56px;
+    font-size: 50px;
   }
   .page-wrapper .aboutSection {
     padding: 50px 0;
@@ -649,15 +691,23 @@
    767px and below
    ============================================= */
 @media (max-width: 767px) {
+   .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
+    height: 45%;
+  }
+      .page-wrapper .firstSection {
+        min-height: 60vh;
+    }
   .page-wrapper h1 {
     font-size: 65px;
   }
   .page-wrapper .tagline {
-    font-size: 22px;
-  }
+        font-size: 20px;
+        margin-bottom: 5px;
+        }
   .page-wrapper .OrderBtn {
-    padding: 0.6rem 2rem;
-    font-size: 0.85rem;
+            padding: 12px 25px;
+        font-size: 15px;
+        margin-top: 25px;
   }
   .page-wrapper .aboutSection h2,
   .page-wrapper .serviceSection h2 {
@@ -669,7 +719,7 @@
   .page-wrapper .aboutSection p,
   .page-wrapper .serviceSection p,
   .page-wrapper p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4;
   }
   .page-wrapper .paymentImg {
@@ -719,18 +769,21 @@
    ============================================= */
 @media (max-width: 575px) {
   .page-wrapper h1 {
-    font-size: 48px;
+    font-size: 38px;
   }
   .page-wrapper .tagline {
-    font-size: 18px;
+    font-size: 16px;
   }
+      .page-wrapper .headline .blur {
+        filter: blur(2px);
+    }
   .page-wrapper .firstSection {
-    min-height: 70vh;
-    padding: 60px 0;
+    min-height: 45vh;
+    padding: 50px 0;
   }
   .page-wrapper .OrderBtn {
-    padding: 0.55rem 1.6rem;
-    font-size: 0.75rem;
+           padding: 8px 20px;
+        font-size: 14px;
   }
   .page-wrapper .aboutSection h2,
   .page-wrapper .serviceSection h2 {
@@ -742,7 +795,7 @@
   .page-wrapper .aboutSection p,
   .page-wrapper .serviceSection p,
   .page-wrapper p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.4;
   }
   .page-wrapper .serviceSection p::after,
@@ -809,6 +862,12 @@
     margin-bottom: 20px;
     text-align: center;
   }
+      .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
+        height: 40%;
+                background: linear-gradient(0deg, rgb(26 64 53) 100%, rgb(253 187 45 / 0%) 100%);
+        filter: blur(5px);
+        opacity: 0.9;
+    }
 }
 
   
