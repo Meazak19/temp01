@@ -7,1037 +7,353 @@
  
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Coiny&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
 
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
 
 <!-- Bs 4 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> 
 
-<!-- Owl-Carousel -->
+<!-- Owl-Carousel --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
 
 <!-- Animate Css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
  
+
 <style type="text/css">
 
-  /* 
 
-    font-family: "Poppins", sans-serif; 
-    font-family: "Urbanist", sans-serif; 1 para 
+/* 
 
-  */  
-  
-  
-  body .page-wrapper { 
-    font-family: "Montserrat", sans-serif; 
-      color: #6c6a6a; 
-      line-height: 24px; 
-      overflow: hidden; 
-      scroll-behavior: smooth; 
-      --dark-green : #0b3428; 
-      --light-green : #0d3b2e; 
-      --yellow : #ffb900; 
-      --white: #fff; 
-      --black: #000; 
-      background-color: #1a4237; 
-      position: relative;
-      }  
-     .page-wrapper p {
-        margin-bottom: 25px;
-    font-size: 22px;
-    color: #ffffffc4;
+font-family: "Fira Sans", sans-serif;
+font-family: "Ephesis", cursive;
+font-family: "Open Sans", sans-serif;
+
+*/  
+
+    body .page-wrapper { 
+    font-family: "Urbanist", sans-serif; 
+    color: #6c6a6a; 
+    line-height: 24px; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    background-color: #fffce9;
+    } 
+    
+   .page-wrapper p {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-family: "Urbanist", sans-serif;
+    color: #fff;
     letter-spacing: 1px;
-    line-height: 1.5;
-    font-weight: 400;
-    font-family: "Montserrat", sans-serif;
-     }
-  
-     .page-wrapper p > a {
-     color: inherit;
-     }
-     .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-     line-height: 1.3;
-     font-family: "Anton", sans-serif;
-     }
-     .page-wrapper .row {
-     margin: 0 -15px!important;
-     }
-     
-     .page-wrapper section {
-     position: relative;
-     z-index: 1;
-     background-size: cover;
-     background-position: center center;
-     background-repeat: no-repeat;
-     }   
-     
-  
-     .page-wrapper .overlay{
-        content: "";
-      background: rgb(0 0 0 / 58%);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-     } 
-     .page-wrapper h1 {
-      font-size: 170px;
-    color: #c4fb34;
-    letter-spacing: 0;
-    font-weight: 500;
-    text-align: left;
+    line-height: 1.6;
+   }
+
+   .page-wrapper p > a {
+   color: inherit;
+   }
+   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+   line-height: 1.3;
+   font-family: "Coiny", system-ui;
+   }
+   .page-wrapper .row {
+   margin: 0 -15px!important;
+   }
+   .page-wrapper .bg-dark {
+   background-color: #fc673f!important;
+   }
+
+   .page-wrapper .bg-primary {
+   background-color: #241e5e!important;
+   }
+   .page-wrapper .bg-light {
+   background-color: #f1f1f1!important;
+   }
+   .page-wrapper section {
+   position: relative;
+   z-index: 1;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   }   
+   .page-wrapper .btn {
+   font-size: 14px;
+   border-radius: 0;
+   padding: 0 30px;
+   line-height: 50px;
+   }  
+
+   .page-wrapper .overlay{
+      content: "";
+    background: rgb(0 0 0 / 58%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   }
+
+   .page-wrapper h1 { 
+    color: #853500;
+    font-size: 90px;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+   }
+   .page-wrapper h1 .spanOne {
+   display: block;
+    background: #ea9f05;
+    padding: 15px 40px 10px;
+    position: relative;
+    border-radius: 50px;
     line-height: 1;
+    font-size: 85px;
+    transform: scale(1.1);
+    transform-origin: left;
+    margin: 10px 0;
+   }
+   .page-wrapper h2 {
+    color: #fff;
+    font-size: 65px;
     margin-bottom: 0;
-    z-index: 2;
-    position: relative;
-    filter: drop-shadow(2px 4px 1px black);
-    text-align: center;
-     }
-     .page-wrapper h2{ 
-        color: #fff;
-    font-size: 110px;
+    line-height: 1.2;
+   }
+   .page-wrapper h3 {
+    color: #873601;
+    font-size: 40px;
+    }
+   .page-wrapper h4 {
+    
+   }
+   .page-wrapper h5 {
+    
+   }
+   .page-wrapper h6 {
+    
+   }
+ 
+   .page-wrapper .headerSection {
+    padding: 100px 0 100px 8%;
+   }
+   .page-wrapper .orderBtn {
+    background: #b16202;
+    font-size: 28px;
+    padding: 15px 25px;
+    color: #fff;
+    border: 2px solid #a15302;
+    border-radius: 10px;
     text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 15px;
-    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
     display: inline-block;
-     }
-     .page-wrapper h3{  
-      font-family: "Poppins", sans-serif;
-    font-size: 50px;
-    color: #d42a0b;
-    font-weight: 700;
-     }
-     .page-wrapper .firstSection {
-        background-image: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1771876840phpifGgkm.png');
-            padding: 100px 0;
-    background-size: cover;
-    min-height: 100vh;
+   }
+   .page-wrapper .headerImg img {
+    transform: scale(1.4);
+   }
+   .page-wrapper .contentOne {
+    background: #48261b;
+    padding: 50px;
+    border-radius: 35px;
+   }
+   .page-wrapper .contentOne h2{
+ 
+   }
+   .page-wrapper .contentOne h2 span{
+    background: #ea9f05;
+    padding: 5px 45px;
+    font-size: 40px;
+    display: block;
+    width: fit-content;
+    border-radius: 20px;
+    margin-top: 15px;
+   }
+   .page-wrapper .leftImgContent {
+    background: #f9ecbf;
+    border-radius: 50px;
+    margin-top: 50px;
+   }
+   .page-wrapper .leftImgContent img{
+        width: 80%;
+    margin: auto;
+    display: flex;
+    transform: scale(1.15);
+    transform-origin: top;
+    filter: drop-shadow(0px 10px 7px #0000008c);
+   }
+   .page-wrapper .leftImgContent{
+    background: #f9ecbf;
+    border-radius: 50px;
+    margin-top: 50px;
+   }
+   .page-wrapper .aboutContent {
+    background: #873601;
+    padding: 50px;
+    border-radius: 50px;
+   }
+   .page-wrapper .priceContentParent {
+    display: flex;
+    background: #ea9f05;
+    border-radius: 50px;
+    padding: 25px;
+    align-items: center;
+    margin-top: 25px;
+   }
+   .page-wrapper .priceImg {
+    background: #fff;
+    border-radius: 20px;
+    width: 450px;
+    height: 150px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   }
+   .page-wrapper .aboutContent h2 {
+    color: #ea9f05;
+   }
+   .page-wrapper .priceContent {
+    padding-left: 30px;
+   }
+   .page-wrapper .shieldImg {
+    width: 85%;
+   }
+   .page-wrapper .galleryParent {
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+   .page-wrapper .galleryContainer {
+    background: #873600;
+    border-radius: 40px;
+    padding: 50px 30px 20px;
+        transform: rotate(-5deg) scale(1.05);
+   }
+   .page-wrapper .galleryTxt p {
+        font-family: "Coiny", system-ui;
+    font-size: 35px;
+    text-align: center;
+   }
+   .page-wrapper .galleryImgCard {
+    position: relative;
+   }
+   .page-wrapper .svgImg {
+    position: absolute;
+   }
+   .page-wrapper .galleryImg {
+        z-index: 1;
+    position: relative;
+    transform: scale(1.5);
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+   }
+   .page-wrapper .gallerySection {
+    padding: 200px 0 100px;
+   }
+   .page-wrapper .galleryContainer.two {
+        background: #ea9f08;
+    transform: rotate(5deg) scale(1.1) translateX(8px);
+   }
+   .page-wrapper .galleryContainer.three {
+            border: 8px solid #f9ecbf;
+    filter: drop-shadow(0px 10px 7px #0000008c);
+   }
+   .page-wrapper .galleryContainer.four {
+           background: #ea9f08;
+    transform: rotate(5deg) scale(1.05) translateX(8px);
+   }
+   .page-wrapper .paymentSection {
+        padding: 100px 0;
+   }
+   .page-wrapper .paymentContainer {
+           background: #873600;
+    border-radius: 200px;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    height: 100%;
+   }
+   .page-wrapper .paymentImg {
+        background: #feeca4;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background-attachment: fixed;
-     }
-     .page-wrapper .firstSection:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #0d1e13d4;
-        opacity: 0.6;
-     }
-     .page-wrapper .firstSection:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-     background: #22C1C3;
-     background: linear-gradient(0deg, rgb(26 66 55) 25%, rgb(253 187 45 / 0%) 100%);
-    z-index: 2;
-    width: 100%;
-    height: 20%;
-     }
-    .page-wrapper .OrderBtn {
-      display: inline-block;
-      margin-top: 2.2rem;
-      padding: 0.75rem 2.6rem;
-      background: #c0fb1c;
-      color: #0a1a0e;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 0;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 0 0 0 rgba(200,240,0,0.6);
-      opacity: 0;
-      animation: fadeUp 0.8s 0.85s forwards, pulse 2.8s 1.8s ease-in-out infinite;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-    }
-    .page-wrapper .OrderBtn:hover {
-      background: #d9ff00;
-      color: #000;
-      transform: scale(1.06);
-      text-decoration: none;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0);    }
-    }
-    @keyframes pulse {
-      0%,100% { box-shadow: 0 0 0 0   rgba(200,240,0,0.55); }
-      50%      { box-shadow: 0 0 0 14px rgba(200,240,0,0);   }
-    }
-    .page-wrapper .highZindex {
-        z-index: 1;
-        position: relative;
-    }
-    .page-wrapper .aboutSection {
-        background: #1a4237;
-        padding: 75px 0;
-    }
-    .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
-        content: '';
-    position: absolute;
-    bottom: 0;
-    width: 128%;
-    height: 55%;
-    left: -20%; 
-    background: #22C1C3;
-    background: linear-gradient(0deg, rgb(26 64 53) 60%, rgb(253 187 45 / 0%) 100%);
-        filter: blur(15px);
-    }
-    .page-wrapper .serviceSection {
-        background: #1a4237;
-        padding-bottom: 100px;
-    }
-    .page-wrapper .serviceSection h2 {
-      z-index: -1;
-          padding-left: 50px;
-    }
-    .page-wrapper .serviceSection p {
-      position: relative;
-      padding-left: 50px;
-    }
-    .page-wrapper .serviceSection p::after{ 
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 45px;
-    width: 130%;
-    height: 150%;
-    background-color: #229a77;
-    z-index: -1;
-    transform: translate(-30px, -30px);
-    }
-    .page-wrapper .serviceSection p::before{ 
-         clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    content: '';
-    position: absolute;
-    top: -99px;
-    right: -249px;
-    width: 190px;
-    height: 70px;
-    background-color: #14463a;
-    z-index: -1;
-    transform: translate(-30px, 0px) rotate(0deg);
-    }
-    .page-wrapper .aboutImg{
-      position: relative;
-      z-index: -2;
-    }
-    .page-wrapper .serviseBtn {
-          background: #1a4237;
-    display: inline-block;
-    transform: translate(-30px, 0px);
-    padding-right: 30px;
-    padding-left: 30px;
-    }
-    .page-wrapper .serviseBtn .OrderBtn {
-      margin-top: 20px;
-    }
-    .page-wrapper .paymentContainer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: auto;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #c4fb34 0%, transparent 30%, transparent 70%, #c4fb34 100%);
-    z-index: -1;
-    filter: blur(10px) opacity(1);
-    }
-    .page-wrapper .paymentContainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    filter: blur(1px);
-    background: linear-gradient(to right, #c4fb3400 0%, #c4fb34 5% 30%, #c4fb34 95%, #c4fb341f 100%);
-    }
-    .page-wrapper .paymentParent h2:after {
-        display: none;
-    }
-    .page-wrapper .paymentSection {
-        background: linear-gradient(0deg, rgb(34 154 119) 50%, rgb(26 66 55) 50%);
-        padding: 100px 0 75px;
-    }
-    .page-wrapper .paymentContainer {
-        position: relative;
-    }
-    .page-wrapper .paymentParent {
-          display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    padding: 25px 0;
-    margin-top: -100px;
-    }
-    .page-wrapper .paymentImg {
-         width: 100px;
-    border-radius: 15px;
-    background: #ffffff;
-    height: 150px;
-    object-fit: contain;
-    padding: 15px;
-    }
-    .page-wrapper .paymentParent h2{
-             font-size: 30px;
-    text-transform: none;
-    color: #000101;
-    font-weight: 700;
-    margin: 20px 0 10px;
-    font-family: "Montserrat", sans-serif;
-    }
-    .page-wrapper .paymentParent p { 
-          color: #000;
-    font-size: 18px;
-    letter-spacing: 0;
-    max-width: 80%;
-    margin: auto;
-    }
-    .page-wrapper .tagline {
-        font-size: 50px;
-    }
-     
-.page-wrapper .headline .blur{ 
-        filter: blur(6px);
-    position: relative;
-}
-     .page-wrapper .takeawaySection {
-                background: linear-gradient(180deg, rgb(34 154 119) 0%, rgb(34 154 119) 70%, rgb(255 255 255) 70%, rgb(255 255 255) 100%);
-    padding: 50px 0 50px;
-     }
-     .page-wrapper .takeAwayContent h2 {
-            color: #ffffff;
-    font-size: 60px;
-    text-align: center;
-    line-height: 1.1;
-    margin-bottom: 0;
-     }
-     .page-wrapper .takeAwayContent h2 .spanOne{
-            display: block;
-    font-size: 140px;
-    transform: translateY(10px);
-    color: #c4ff33;
-    filter: drop-shadow(2px 4px 10px #0000007a);
-     }
-     .page-wrapper .takeAwayContent h2 .spanTwo{
-            font-size: 250px;
-    display: inline-block;
-    color: #c4ff33;
-    filter: drop-shadow(2px 4px 10px #0000007a);
-     }
-     .page-wrapper .kebabImg {
-            height: 575px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50px;
-    filter: drop-shadow(8px 10px 10px #0000007a);
-     }
-
-     
-.page-wrapper .parent {
- display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-        gap: 20px;
-    height: 825px;
-}
-.page-wrapper  .galleryImg {
-      width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.page-wrapper .parent div {
-    width: 100%;
-    height: 100%;   /* stretch to fill the full grid area instead of max-height */
-    overflow: hidden;
-}
-  .page-wrapper   .div1 {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 1;
-}
-
-.page-wrapper .div2 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 3;
-}
-.page-wrapper .gallerySection {
-    padding: 125px 0 100px;
-    background-color: #fff;
-}
-.page-wrapper .div3 {
-    grid-column: span 4 / span 4;
-    grid-column-start: 3;   /* was 2 → shift by 1 */
-    grid-row-start: 1;
-    grid-column-end: 8;
-    text-align: center;
-}
-
-.page-wrapper .div4 {
-        grid-row: span 4 / span 4;
-    grid-column: span 2 / span 2;
-}
-
-.page-wrapper .div5 {
-           grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 2;
-}
-
-.page-wrapper .div6 {
-        grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 4;
-}
-
-.page-wrapper .div7 {
-        grid-row: span 2 / span 2;
-    grid-column-start: 7;
-    grid-row-start: 4;
-}
-.page-wrapper .gallerySection h2{
-        font-size: 160px;
-    color: #1a4237;
-    line-height: 1;
-    text-align: center;
-    transform: scaleX(1.2);
-}
-         
-
-   @media(min-width:1200px){
-          .page-wrapper .container{
-              max-width: 1140px;
-          }
-      }
-
-
-   @media(min-width:1500px){
-          .page-wrapper .container{
-              max-width: 1440px;
-          }
-      }
-
-/* =============================================
-     RESPONSIVE BREAKPOINTS
-     ============================================= */
- /* =============================================
-   RESPONSIVE BREAKPOINTS
-   Rules only: font-size / width / height (all px)
-   No design, colour, or font-family changes
-   No stacking until 576px — stacks one by one below it
-   ============================================= */
-
-/* Prevent col-sm-12 from stacking prematurely (576px - 767px range)
-   Keeps 2-up layout instead of Bootstrap's default full-width stack */
- 
-
-/* =============================================
-   1500px and below
-   ============================================= */
-@media (max-width: 1499px) {
-  .page-wrapper .serviceSection p::before {
-        top: -64px;
-    right: -126px;
-    width: 70px;
-    height: 35px;
-  }
-  .page-wrapper .serviseBtn .OrderBtn {
-    margin-top: 20px;
-    margin-left: 35px;
-    border-radius: 20px;
-}
-  .page-wrapper .serviceSection p::after {
-        left: 45px;
-    width: 115%;
-    height: 150%;
-  }
-  .page-wrapper h1 {
-    font-size: 140px;
-  }
-  .page-wrapper .tagline {
-    font-size: 35px;
-  }
-  .page-wrapper .firstSection {
-    min-height: 90vh;
-  }
-  .page-wrapper .aboutSection h2,
-  .page-wrapper .serviceSection h2 {
-    font-size: 90px;
-  }
-  .page-wrapper .aboutSection {
-    padding: 60px 0;
-  }
-  .page-wrapper .aboutSection p,
-  .page-wrapper .serviceSection p,
-  .page-wrapper p {
-    font-size: 20px;
-  }
-  .page-wrapper .paymentImg {
-    width: 95px;
-    height: 140px;
-  }
-  .page-wrapper .paymentParent h2 {
-    font-size: 22px;
-  }
-  .page-wrapper .paymentParent p {
-            font-size: 16px;
-        max-width: 220px;
-  }
-  .page-wrapper .takeAwayContent h2 {
-    font-size: 50px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanOne {
-    font-size: 110px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanTwo {
-    font-size: 200px;
-  }
-  .page-wrapper .kebabImg {
-    height: 480px;
-  }
-  .page-wrapper .gallerySection h2 {
-    font-size: 120px;
-  }
-  .page-wrapper .gallerySection {
-           padding: 65px 0 80px;
-  }
-  .page-wrapper .parent {
-    height: 700px;
-  }
-  .page-wrapper .paymentSection {
-    padding: 75px 0 50px;
-  }
-}
-
-/* =============================================
-   1199px and below
-   ============================================= */
-@media (max-width: 1199px) {
-  .page-wrapper h1 {
-    font-size: 110px;
-  }
-  .page-wrapper .tagline {
-    font-size: 34px;
-  }
-  .page-wrapper .firstSection {
-    min-height: 85vh;
-        background-attachment: local;
-    background-position: bottom;
-  } 
-  .page-wrapper .aboutSection h2,
-  .page-wrapper .serviceSection h2 {
-    font-size: 70px;
-  }
-  .page-wrapper .serviceSection p::after {
-    height: 160%;
-  }
-  .page-wrapper .aboutSection p,
-  .page-wrapper .serviceSection p,
-  .page-wrapper p {
-    font-size: 16px;
-  }
-  .page-wrapper .serviceSection p::before {
-    right: -114px;
-        width: 54px;
-  }
-  .page-wrapper .serviceSection {
-    padding-bottom: 80px;
-  }
-  .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
-        height: 40%;
-            background: linear-gradient(0deg, rgb(26 64 53) 100%, rgb(253 187 45 / 0%) 100%);
-    filter: blur(8px);
-  }
-  .page-wrapper .paymentImg {
-    width: 90px;
-    height: 130px;
-  }
-  .page-wrapper .paymentParent h2 {
-    font-size: 20px;
-  }
-  .page-wrapper .paymentSection { 
-        padding: 75px 50px 50px;
-  }
-  .page-wrapper .paymentParent p {
-    font-size: 16px;
-  }
-  .page-wrapper .paymentParent {
-    max-width: 260px;
-    margin-top: -80px;
-  }
-  .page-wrapper .takeAwayContent h2 {
-    font-size: 45px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanOne {
-    font-size: 100px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanTwo {
-    font-size: 180px;
-  }
-  .page-wrapper .kebabImg {
-    height: 425px;
-  }
-  .page-wrapper .gallerySection h2 {
-    font-size: 90px;
-  }
-  .page-wrapper .gallerySection {
-    padding: 60px 0 50px;
-  }
-  .page-wrapper .parent {
-    height: 600px;
-    gap: 15px;
-  }
- 
-}
-
-/* =============================================
-   991px and below
-   ============================================= */
-@media (max-width: 991px) {
-  .page-wrapper .firstSection {
-            min-height: 70vh;
-  }
-  .page-wrapper .firstSection:before {
-    height: 15%;
-  }
-  .page-wrapper h1 {
-    font-size: 85px;
-  }
-  .page-wrapper .OrderBtn {
-        padding: 12px 25px;
-            letter-spacing: 0;
-  }
-  .page-wrapper .headline .blur {
-    filter: blur(3px);
-  }
-  .page-wrapper .tagline {
-    font-size: 28px;
-  }
-  .page-wrapper .aboutSection h2,
-  .page-wrapper .serviceSection h2 {
-    font-size: 50px;
-  }
-   .page-wrapper .serviceSection h2 {
-                    width: 200%;
-        padding: 0;
-        text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-  }
-  .page-wrapper .aboutSection {
-    padding: 50px 0;
-  }
-  .page-wrapper .aboutSection p,
-  .page-wrapper .serviceSection p,
-  .page-wrapper p {
-    font-size: 17px;
-    line-height: 1.4;
-  }
-  .page-wrapper .serviceSection p {
-               padding: 30px;
-        background: #229a77;
-        margin-bottom: 0;
-        margin-top: 75px;
-        height: 100%;
-  }
-  .page-wrapper .serviseBtn { 
-    width: 200%;
-        display: flex;
-        justify-content: center;
-        transform: unset !important;
-        position: absolute;
-        z-index: 2;
-        bottom: -90px;
-  }
-  .page-wrapper .aboutImg {
-        margin-top: 75px;
-    height: 100%;
-    object-fit: cover;
-    object-position: 100% 100%;
-  }
-  .page-wrapper .serviseBtn .OrderBtn {
-             margin-top: 15px;
-        margin-bottom: 25px;
-        margin-left: 0px;
-        border-radius: 20px;
-  }
-  .page-wrapper .serviceSection p::before, .page-wrapper .serviceSection p::after {
-    display: none;
-  }
-  .page-wrapper .paymentImg {
-    width: 80px;
-    height: 120px;
-  }
-  .page-wrapper .paymentParent h2 {
-    font-size: 18px;
-  }
-  .page-wrapper .paymentParent p {
-    font-size: 14px;
-            max-width: 180px;
-  }
-  .page-wrapper .paymentParent {
-    max-width: 220px;
-    margin-top: -60px;
-    padding: 20px 0;
-  }
-  .page-wrapper .paymentSection {
-    padding: 100px 0 60px;
-  }
-  .page-wrapper .takeAwayContent h2 {
-    font-size: 38px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanOne {
-    font-size: 85px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanTwo {
-    font-size: 150px;
-  }
-  .page-wrapper .takeawaySection {
-            padding: 10px 0 35px;
-  }
-  .page-wrapper .kebabImg {
-    height: 370px;
-    border-radius: 35px;
-  }
-  .page-wrapper .gallerySection h2 {
-    font-size: 70px;
-  }
-  .page-wrapper .gallerySection {
-    padding: 50px 0 50px;
-  }
-  .page-wrapper .parent {
-    height: 450px;
-    gap: 12px;
-        grid-template-columns: repeat(8, 1fr);
-  }
-  .page-wrapper .div6 {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 4;
-}
-.page-wrapper .div7 {
-    grid-row: span 2 / span 2;
-    grid-column: span 2 / span 2;
-    grid-column-start: 7;
-    grid-row-start: 4;
-    grid-column-end: 9;
-}
-.page-wrapper .div5 {
-      grid-column: span 3 / span 4;
-          grid-column-start: 5;
-}
-.page-wrapper .div3 {
-      grid-column-end: 9;
-}
-}
-
-/* =============================================
-   767px and below
-   ============================================= */
-@media (max-width: 767px) {
-   .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
-    height: 45%;
-  }
-      .page-wrapper .firstSection {
-        min-height: 60vh;
-    }
-  .page-wrapper h1 {
-    font-size: 65px;
-  }
-  .page-wrapper .tagline {
-        font-size: 20px;
-        margin-bottom: 5px;
-        }
-  .page-wrapper .OrderBtn {
-            padding: 12px 25px;
-        font-size: 15px;
+   }
+   .page-wrapper .paymentText {
         margin-top: 25px;
-  }
-  .page-wrapper .aboutSection h2,
-  .page-wrapper .serviceSection h2 {
-    font-size: 44px;
-  }
-  .page-wrapper .aboutSection {
-    padding: 40px 0;
-  }
-  .page-wrapper .aboutImgParent { 
-    height: 100%; 
-  }
-  .page-wrapper .serviceSection h2, .page-wrapper .serviseBtn {
-    width: 100%;
-  }
-  .page-wrapper .aboutSection p,
-  .page-wrapper .serviceSection p,
-  .page-wrapper p {
-    font-size: 15px;
-    line-height: 1.4;
-    text-align: center;
-  }
-  .page-wrapper .paymentImg {
-    width: 75px;
-    height: 110px;
-  }
-  .page-wrapper .paymentParent h2 {
-    font-size: 20px;
-  }
-  .page-wrapper .paymentParent p {
-    font-size: 14px;
-  }
-  .page-wrapper .paymentParent {
-    max-width: 200px;
-    margin-top: -45px;
-  }
-  .page-wrapper .paymentSection {
-    padding: 60px 0 40px;
-  }
-  .page-wrapper .takeAwayContent h2 {
-    font-size: 25px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanOne {
-           font-size: 60px; 
-  }
-  .page-wrapper .aboutImg {
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-  .page-wrapper .serviceSection p {
-            margin-top: 60px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanTwo {
-    font-size: 110px;
-    margin-top: 10px;
-  }
-  .page-wrapper .kebabImg {
-    height: 280px;
-    border-radius: 25px;
-  }
-  .page-wrapper .gallerySection h2 {
-    font-size: 56px;
-  }
-  .page-wrapper .gallerySection {
-    padding: 25px 0 40px;
-  }
-  .page-wrapper .parent {
-    height: 800px;
-    gap: 10px;
-        grid-template-rows: repeat(10, 1fr);
-  }
-      .page-wrapper .div5 {
-        grid-column: span 3 / span 8;
-        grid-column-start: 1;
-        grid-row-start: 6;
+   }
+   .page-wrapper .paymentText h2 {
+        font-size: 30px;
+    color: #fdeca4;
+   }
+   .page-wrapper .paymentText p{
+      font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+    max-width: 220px;
+    margin: auto;
+   }
+
+    /* RESPONSIVE VIEW */
+
+    @media(min-width:1200px){
+        .page-wrapper .container{
+            max-width: 1140px;
+        }
     }
-        .page-wrapper .div6 {
-        grid-column: span 2 / span 4;
-        grid-row: span 2 / span 2;
-        grid-column-start: 1;
-        grid-row-start: 9;
+
+    @media(min-width:1500px){
+        .page-wrapper .container{
+            max-width: 1440px;
+        }
     }
-        .page-wrapper .div7 {
-        grid-row: span 2 / span 2;
-        grid-column: span 2 / span 2;
-        grid-column-start: 5;
-        grid-row-start: 9;
-        grid-column-end: 9;
+
+
+
+    @media (max-width:1500px)
+    {
+
     }
-    .page-wrapper .div1 {
-      grid-column: span 2 / span 4;
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 1;
+
+    @media (max-width:1199px)
+    {
+
+    }
+
+    @media (max-width:991px)
+    {
+
+    }
+
+    @media (max-width:767px)
+    {
+
+    }
+
+    @media (max-width:575px)
+    {
+        
+    }
     
-    }
-    .page-wrapper .div2 {
-    grid-column: span 2 / span 4;
-    grid-row: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 3;
-}
-.page-wrapper .div3 {
-         grid-column: span 4 / span 5;
-        grid-row: span 2 / span 2;
-        grid-row-end: 3;
-                display: flex;
-        align-items: center;
-        justify-content: center;
-}
-.page-wrapper .div4 {
-    grid-row: span 3 / span 3;
-    grid-column: span 4 / span 2;
-    grid-row-start: 3;
-}
-}
+    @media (max-width:375px)
+    {
 
-/* =============================================
-   575px and below — stack one by one
-   ============================================= */
-@media (max-width: 575px) {
-  .page-wrapper h1 {
-    font-size: 38px;
-  }
-  .page-wrapper .tagline {
-    font-size: 16px;
-  }
-      .page-wrapper .headline .blur {
-        filter: blur(2px);
     }
-  .page-wrapper .firstSection {
-    min-height: 45vh;
-    padding: 50px 0;
-  }
-  .page-wrapper .OrderBtn {
-           padding: 8px 20px;
-        font-size: 14px;
-  }
-  .page-wrapper .aboutSection h2,
-  .page-wrapper .serviceSection h2 {
-    font-size: 34px;
-  }
-  .page-wrapper .serviceSection p {
-            padding: 25px 15px;
-  }
-  .page-wrapper .aboutSection {
-    padding: 30px 0 10px;
-  }
-  .page-wrapper .aboutImg {
-    margin-bottom: 30px;
-  }
-  .page-wrapper .aboutSection p,
-  .page-wrapper .serviceSection p,
-  .page-wrapper p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  .page-wrapper .serviceSection p::after,
-  .page-wrapper .serviceSection p::before {
-    display: none;
-  }
-  .page-wrapper .serviseBtn {
-    transform: none;
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .page-wrapper .paymentImg {
-    width: 70px;
-    height: 100px;
-  }
-  .page-wrapper .paymentParent h2 {
-    font-size: 19px;
-  }
-  .page-wrapper .paymentParent p {
-    font-size: 14px;
-  }
-  .page-wrapper .paymentParent {
-    max-width: 100%;
-    margin-top: 0;
-    padding: 15px 0;
-  }
-  .page-wrapper .paymentSection {
-        padding: 50px 15px 50px;
-            background: rgb(26 66 55);
-                max-width: 350px;
-    margin: auto;
-  }
-  .page-wrapper .takeAwayContent h2 {
-    font-size: 19px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanOne {
-    font-size: 42px;
-  }
-  .page-wrapper .takeAwayContent h2 .spanTwo {
-    font-size: 75px;
-  }
-      .page-wrapper .takeawaySection {
-        padding: 50px 0;
-            background: #219472;
-    }
-  .page-wrapper .kebabImg {
-            max-width: 350px;
-        margin: 25px auto 0;
-        display: flex;
-        height: 220px;
-        border-radius: 18px;
-  }
-  .page-wrapper .takeAwayContent {
-    text-align: center;
-  }
-  .page-wrapper .gallerySection h2 {
-    font-size: 36px;
-    transform: scaleX(1);
-  }
-  .page-wrapper .gallerySection {
-    padding: 40px 0 30px;
-  }
 
-  /* Gallery: stack one image per row below 576px */
-  .page-wrapper .parent {
-            display: flex;
-        height: auto;
-        flex-direction: column;
-  }
-  .page-wrapper .parent div {
-    width: 100%; 
-    margin-bottom: 12px;
-  }
-  .page-wrapper .div3 {
-    height: auto;
-    margin-bottom: 20px;
-    text-align: center;
-    order: -1;
-  }
-      .page-wrapper .aboutSection h2:after, .page-wrapper .serviceSection h2:after {
-        height: 40%;
-                background: linear-gradient(0deg, rgb(26 64 53) 100%, rgb(253 187 45 / 0%) 100%);
-        filter: blur(5px);
-        opacity: 0.9;
-    }
-    .page-wrapper .paymentContainer::before {
-              filter: blur(5px);
-        background: linear-gradient(to right, #c4fb34 0%, #c4fb34 5% 30%, #c4fb34 95%, #c4fb34 100%);
-        top: -10px;
-        height: 102%;
-    }
-    .page-wrapper .galleryImg {
-    max-width: 350px;
-    margin: auto;
-    text-align: center;
-    }
-}
-
-  
-
-</style> 
+</style>
 
 
 </head>
@@ -1048,146 +364,193 @@
     
 
 <div id="page-top-margin"></div>
-   <div class="page-wrapper">    
- 
-  <section class="firstSection"> 
-    <div class="container highZindex">
-        <div class="hero-content">
 
-            <p class="tagline">Taste Italy on Your Plate</p>
-            <h1 class="headline"> <span class="blur">Fr</span>esh &amp; Delicio<span class="blur">us! </span></h1>
+<div class="page-wrapper">
 
-            <a href="#" class="OrderBtn">Order Now</a>
-          </div>
-    </div> 
-  </section>
+<section class="headerSection">
+  <div class="container-fluid pr-0">
+   <div class="row align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerContent">
+                <h1>
+                    Rise &amp; Shine
+                    <span class="spanOne"> with a Hearty </span>
+                    <span> Breakfast! </span>
+                </h1> 
+                <a href="/order-now" class="orderBtn">
+                    Order Now
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="headerImg">
+                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpKYnnv8.png" class="img-fluid" alt="">
+            </div>
+        </div>
+   </div>
+  </div>
+</section>
 
-  <section class="aboutSection">
-    <div class="container text-center">
-        <h2>
-            About Us
-        </h2>
-        <p>
-            Fresh, Fast &amp; Hassle-Free Takeaway - Right When You Need It At Domain 545 Loaded Burgers and Kebabs, {TAKEAWAY TOWN), we make sure you never have to wait long for great food. Whether you're working late, relaxing at home, or hosting a last-minute gathering, our freshly prepared dishes are just a few clicks away. With a variety of meal options, generous portions, and exclusive deals, enjoying your favourite takeaway has never been easier. Simply place your order, track your delivery, and dig into restaurant-style meals without the hassle.
-        </p>
-    </div>
-  </section>
-
-  <section class="serviceSection">
+<section class="aboutSection">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-12 order-lg-1 order-md-1 order-sm-2 order-2">
-                <h2>
-                    Our Services
-                </h2>
-                <p>
-                    Looking for the best takeaway in (TAKEAWAY TOWN}? At Domain 545 Loaded Burgers and Kebabs, we're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion. With fresh ingredients and fast service, we never turn down a hungry customer!
-                </p>
-                <div class="serviseBtn">
-                  <a href="#" class="OrderBtn">Order Now</a>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="contentOne">
+                    <h2>
+                        Morning Delights
+                        <span> to Fuel Your Day! </span>
+                    </h2>
+                </div>
+                <div class="leftImgContent">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783335312php2m4lr6.png" class="img-fluid" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 order-lg-2 order-md-2 order-sm-1 order-1">
-                <div class="aboutImgParent">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1777757527phpKUNonr.jpg" class="aboutImg img-fluid" alt="">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="aboutContent">
+                    <h2>
+                        About Us
+                    </h2>
+                    <p>
+                        There's nothing like a delicious breakfast to kickstart your morning! At (TAKEAWAY NAME) in (TAKEAWAY TOWN}, we serve a selection of freshly prepared dishes, from comforting {breakfast 1) to energising (breakfast 2). Whether you're dining solo or catching up with friends over coffee, we've got the perfect start to your day.
+                    </p>
+                    <a href="/order-now" class="orderBtn">
+                        Order Now
+                    </a>
+                </div>
+                <div class="priceContentParent">
+                    <div class="priceImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018932phpi8roig.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="priceContent">
+                        <h3 class="mb-0">
+                            Our Price
+                        </h3>
+                        <p class="mb-0">
+                            Enjoy affordable takeaway in (TAKEAWAY TOWN) without compromising on quality! At (TAKEAWAY NAME), we serve up delicious, budget-friendly meals so you can enjoy great food at great prices.
+                        </p>
+                    </div>
+                </div>
+                <div class="priceContentParent">
+                    <div class="priceImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018932phppKqup5.png" class="img-fluid shieldImg" alt="">
+                    </div>
+                    <div class="priceContent">
+                        <h3 class="mb-0">
+                            Our Hygiene
+                        </h3>
+                        <p class="mb-0">
+                            We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, (TAKEAWAY NAME) follows top-rated hygiene standards. Order now from a takeaway you can trust!                      
+                         </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-  </section>
+</section>
 
-  <section class="paymentSection">
-    <div class="container paymentContainer">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="paymentParent">
-                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpR5uiM9.jpg" class="img-fluid paymentImg" alt="">
-                    <h2>
-                       Feeling <br> Hungry?
-
-                    </h2>
+<section class="gallerySection">
+    <div class="container">
+        <div class="galleryParent">
+            <div class="galleryContainer one">
+                <div class="galleryTxt">
                     <p>
-                        Pick something delicious and treat yourself
+                        Hot Chocolate
                     </p>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="paymentParent">
-                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpcJ7lFt.jpg" class="img-fluid paymentImg" alt="">
-                    <h2>
-                        Quick & <br> Simple Payment
-                    </h2>
-                    <p>
-                        Safe, speedy, and easy every time
-                    </p>
+                <div class="galleryImgCard">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="paymentParent">
-                    <img loading="lazy" src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpzchqyN.jpg" class="img-fluid paymentImg" alt="">
-                    <h2>
-                        Made Fresh, <br> Just for You
-                    </h2>
+            <div class="galleryContainer two">
+                <div class="galleryTxt">
                     <p>
-                        Enjoy top-quality food with zero hassle.
+                        Hot Chocolate
                     </p>
+                </div>
+                <div class="galleryImgCard">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                </div>
+            </div>
+            <div class="galleryContainer three">
+                <div class="galleryTxt">
+                    <p>
+                        Hot Chocolate
+                    </p>
+                </div>
+                <div class="galleryImgCard">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                </div>
+            </div>
+            <div class="galleryContainer four">
+                <div class="galleryTxt">
+                    <p>
+                        Hot Chocolate
+                    </p>
+                </div>
+                <div class="galleryImgCard">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="paymentSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="paymentContainer">
+                    <div class="paymentImg">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpe352fb.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="paymentText">
+                        <h2>
+                            Pick a Favourite
+                        </h2>
+                        <p>
+                            Browse the menu and choose something delicious
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="paymentContainer">
+                    <div class="paymentImg">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpYdWR1d.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="paymentText">
+                        <h2>
+                            Secure Payment
+                        </h2>
+                        <p>
+                            A smooth checkout with quick online payment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="paymentContainer">
+                    <div class="paymentImg">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuRPNkI.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="paymentText">
+                        <h2>
+                            Fresh & Ready
+                        </h2>
+                        <p>
+                            Your meal is prepared to perfection and waiting for you.
+                        </p>
+                    </div>
                 </div>
             </div> 
         </div>
     </div>
-  </section>
+</section>
 
-  <section class="takeawaySection">
-    <div class="container">
-        <div class="row align-items-end">
-            <div class="col-lg-6 col-md-6 col-sm-6 order-md-1 order-2">
-                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1782597648phpht7ZUc.jpg" class="img-fluid kebabImg" alt="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 order-md-2 order-1">
-                <div class="takeAwayContent">
-                    <h2>
-                        TAKEAWAY PERFECTION
-                        <span class="spanOne">ONE CLICK</span>
-                        <span class="spanTwo">AWAY</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="gallerySection">
-    <div class="container">
-    
-<div class="parent">
-    <div class="div1">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-    <div class="div2">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-    <div class="div3">
-        <h2>
-            Our Gallery
-        </h2>
-    </div>
-    <div class="div4">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-    <div class="div5">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-    <div class="div6">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-    <div class="div7">
-        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1781989244phpjyaxqL.jpg" class="img-fluid galleryImg" alt="">
-    </div>
-</div>
-    
-    </div>
-  </section>
- 
 
 </div>
 
@@ -1222,7 +585,46 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 
 
- <script>  
+ <script> 
+
+  var $owl = $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    center: false,
+    autoplayTimeout: 4000,
+    smartSpeed: 2000,
+    responsive: {
+      0:   { items: 1 },
+      576: { items: 2, center: false },
+      768: { items: 3 },
+      992: { items: 3.5 }
+    }
+  });
+
+  function setActiveCard() {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+    var $visibleItems = $('.owl-carousel .owl-item.active');
+    $visibleItems.eq(0).find('.slider-wrapper').addClass('active');
+  }
+
+  $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
+    setActiveCard();
+  });
+
+  setActiveCard();
+
+  // On hover: remove active from 2nd card
+  // On mouse leave: restore active to 2nd card
+  $(document).on('mouseenter', '.owl-item .slider-wrapper', function () {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+  });
+
+  $(document).on('mouseleave', '.owl-item .slider-wrapper', function () {
+    setActiveCard();
+  });
  
 </script>
 
@@ -1230,232 +632,84 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<script> 
- 
 
-     $('.js-tilt').tilt({
-         maxTilt: 5, 
-         maxGlare: .2,
-perspective: 1000 , // lower = more dramatic 3D effect
-scale: 1.05, 
-speed: 400,         // transition speed (higher = smoother/slower)
-easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve     
-    speed: 800,
-    glare: false, 
- 
-         
-     }); 
+
+ <script>
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js", function() {
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin: 25,
+            nav: false,
+            dots: false,
+            autoplay: false,
+            autoplaytime: 1500,
+            smartSpeed:1000,
+            center: true,
+            stagePadding: 200,
+            responsive:{
+                0:{
+                    items:1,
+                    stagePadding: 25
+                },
+                576:{
+                    items:2,
+                    margin:15,
+                    stagePadding: 25
+                },
+                768:{
+                    items:2,
+                    margin:15,
+                    stagePadding: 200
+                },
+                992:{
+                    items:2,
+                    margin:15
+                },
+                1200:{
+                    items:3
+                }
+            }
+        })
+    });
 </script>
-
-<script>
-
  
-/* =============================================
-   GSAP ScrollTrigger Animations
-   Design, colours, and fonts untouched —
-   animations only affect opacity / transform.
-   ============================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-    console.warn("GSAP or ScrollTrigger not loaded.");
-    return;
-  }
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  /* ---------- About Section ---------- */
-  gsap.from(".aboutSection h2", {
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".aboutSection",
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".aboutSection p", {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    delay: 0.15,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".aboutSection",
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  /* ---------- Service Section ---------- */
-  gsap.from(".serviceSection h2", {
-    opacity: 0,
-    x: -50,
-    duration: 0.8,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".serviceSection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".serviceSection p", {
-    opacity: 0,
-    x: -50,
-    duration: 0.8,
-    delay: 0.15,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".serviceSection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".serviceSection .serviseBtn", {
-    opacity: 0,
-    y: 20,
-    duration: 0.6,
-    delay: 0.3,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".serviceSection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".serviceSection .aboutImg", {
-    opacity: 0,
-    x: 50,
-    duration: 0.9,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".serviceSection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  /* ---------- Payment Section (cards stagger) ---------- */
-  gsap.from(".paymentSection .paymentParent", {
-    opacity: 0,
-    y: 60,
-    duration: 0.7,
-    stagger: 0.2,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".paymentSection",
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  /* ---------- Takeaway Section ---------- */
-  gsap.from(".takeawaySection .kebabImg", {
-    opacity: 0,
-    x: -60,
-    duration: 0.9,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".takeawaySection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".takeawaySection .takeAwayContent h2", {
-    opacity: 0,
-    x: 60,
-    duration: 0.9,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".takeawaySection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".takeawaySection .spanOne", {
-    opacity: 0,
-    scale: 0.85,
-    duration: 0.7,
-    delay: 0.2,
-    ease: "back.out(1.4)",
-    scrollTrigger: {
-      trigger: ".takeawaySection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".takeawaySection .spanTwo", {
-    opacity: 0,
-    scale: 0.85,
-    duration: 0.7,
-    delay: 0.35,
-    ease: "back.out(1.4)",
-    scrollTrigger: {
-      trigger: ".takeawaySection",
-      start: "top 75%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  /* ---------- Gallery Section ---------- */
-  gsap.from(".gallerySection h2", {
-    opacity: 0,
-    y: 30,
-    duration: 0.7,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".gallerySection",
-      start: "top 80%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".gallerySection .parent > div", {
-    opacity: 0,
-    y: 40,
-    scale: 0.95,
-    duration: 0.6,
-    stagger: 0.12,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: ".gallerySection .parent",
-      start: "top 85%",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  /* Refresh ScrollTrigger after all images load,
-     since layout height can shift once images render */
-  window.addEventListener("load", function () {
-    ScrollTrigger.refresh();
-  });
-});
-
-</script>
  
 
 
 </body>
 </html> 
+ 
+
+
 
 
 <!-- 
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpsw3fTP.jpg
 
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpzchqyN.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpcJ7lFt.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phpR5uiM9.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106phppm132v.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783029106php6WLUcc.png
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783019020phpFCOaJ4.jpg - Temp
+ 
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018932phppKqup5.png - Shield
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpKYnnv8.png - JP
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018932phpi8roig.png - Price
 
--->
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018932phpf2SEbr.png - Milkshake
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpXPSHXA.png - Seeds
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpokLONi.png - Milkshakes
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpbeQ1D0.png - Omelette
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png - Hot Chocolate
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919php3FGykq.png - Jacket Potato
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919php2tcSa8.png - Coffee
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpTBGd1P.png - Arrow
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpU6ozRx.png - Arrow
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpzGBVHf.png - SVG
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png - SVG
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpiSCsPC.png - Smokie Bg
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpqaUKbE.png - Burger Lst Sec
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905php6OskS9.png - Bg Line Vector
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpwYm9yF.png - Bg Line Vector
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpe352fb.png - Pick Dish
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuI8WWG.png - Vector 1
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpO1qRDc.png - Vector 2
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuRPNkI.png - Pick Dish
+ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpYdWR1d.png - Payment
+ 
+ -->
