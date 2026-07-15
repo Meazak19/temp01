@@ -42,7 +42,19 @@ font-family: "Open Sans", sans-serif;
     overflow-x: hidden; 
     scroll-behavior: smooth; 
     background-color: #fffce9;
+    position: relative;
     } 
+    body .page-wrapper::after { 
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpiSCsPC.png');
+        background-size: cover;
+    opacity: 0.2;
+    }
     
    .page-wrapper p {
     margin-bottom: 25px;
@@ -178,19 +190,28 @@ font-family: "Open Sans", sans-serif;
     background: #f9ecbf;
     border-radius: 50px;
     margin-top: 50px;
+    position: relative;
    }
-   .page-wrapper .leftImgContent img{
+   .page-wrapper .leftInnerImg{
         width: 80%;
     margin: auto;
     display: flex;
     transform: scale(1.15);
     transform-origin: top;
     filter: drop-shadow(0px 10px 7px #0000008c);
+   } 
+   .page-wrapper .rightTriangle {
+       position: absolute;
+    right: 20px;
+    width: 75px;
+    top: 20px;
    }
-   .page-wrapper .leftImgContent{
-    background: #f9ecbf;
-    border-radius: 50px;
-    margin-top: 50px;
+   .page-wrapper .leftTriangle {
+         position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100px;
+    transform: translateX(-40px);
    }
    .page-wrapper .aboutContent {
     background: #873601;
@@ -306,7 +327,119 @@ font-family: "Open Sans", sans-serif;
     max-width: 220px;
     margin: auto;
    }
-
+   .page-wrapper .coffeeSection {
+    padding: 100px 0 75px;
+   }
+   .page-wrapper .coffeeContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpwYm9yF.png');
+       border-radius: inherit;
+    z-index: -1;
+    opacity: 0.9;
+    background-size: 100% 100%;
+   }
+   .page-wrapper .seedImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+   }
+   .page-wrapper .coffeeContainer {
+    position: relative;
+    padding: 50px 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    /* background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpwYm9yF.png'); */
+    background: #ea9f0896;
+   }
+   .page-wrapper .leftCoffeImg {
+    position: absolute;
+    left: -20px;
+    width: 375px;
+    bottom: -50px;
+    z-index: 2;
+   }
+   .page-wrapper .rightCoffeImg {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 450px;
+    z-index: 2;
+   }
+   .page-wrapper .coffeeSection h2 {
+    text-align: center;
+    color: #873601;
+    font-size: 100px;
+    filter: drop-shadow(2px -4px 0px #fff);
+    z-index: 2;
+   }
+   .page-wrapper .footerContent {
+    background: #873601;
+    border-radius: 50px;
+    padding: 100px;
+   }
+   .page-wrapper .footerContent h2 {
+    font-size: 60px;
+    color: #feeca4;
+    margin-bottom: 20px;
+   }
+   .page-wrapper .footerContent h2 .spanOne{
+    background: #ffffff;
+    padding: 5px 45px;
+    font-size: 40px;
+    display: block;
+    width: fit-content;
+    border-radius: 20px;
+    margin: 5px 0;
+    color: #873601;
+   }
+   .page-wrapper .footerContent h2 .spanTwo{
+    color: #fff;
+   }
+   .page-wrapper .footerRightImg {
+    background: #ffeea6;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+   }
+   .page-wrapper .footerSection {
+    padding: 25px 0 100px;
+   }
+.page-wrapper .footerSvgImg {
+        filter: invert(1);
+    width: 80%;
+    margin: auto;
+    height: 80%;
+}
+.page-wrapper .footerBurgerImg {
+        position: absolute;
+    right: 0;
+    bottom: 50px;
+    z-index: 1;
+    width: 48%;
+}
+.page-wrapper .arrowImgOne {
+        position: absolute;
+    right: -50px;
+    top: -50px;
+    width: 110px;
+}
+.page-wrapper .arrowImgTwo {
+        position: absolute;
+    bottom: 15px;
+    right: 40%;
+    width: 75px;
+}
     /* RESPONSIVE VIEW */
 
     @media(min-width:1200px){
@@ -321,37 +454,269 @@ font-family: "Open Sans", sans-serif;
         }
     }
 
+/* ============================================================
+   RESPONSIVE OVERRIDES
+   - No design / colour / font-family changes
+   - Only font-size, width, height adjusted in px
+   - Bootstrap's col-sm-12 is forced to hold its 2-col / 3-col / 4-col
+     widths right down to 576px so nothing stacks early
+   - True one-by-one stacking only kicks in at 575px and below
+   ============================================================ */
 
+@media (max-width:1500px)
+{
+    .page-wrapper h1 { font-size: 72px; }
+    .page-wrapper h1 .spanOne { font-size: 68px; padding: 13px 35px 8px; }
+    .page-wrapper h2 { font-size: 55px; }
+    .page-wrapper h3 { font-size: 34px; }
 
-    @media (max-width:1500px)
-    {
+    .page-wrapper .headerSection { padding: 80px 0 80px 6%; }
+    .page-wrapper .orderBtn { font-size: 24px; padding: 0 24px; line-height: 46px; }
+    .page-wrapper .headerImg img { transform: scale(1.25); }
 
-    }
+    .page-wrapper .contentOne { padding: 42px; }
+    .page-wrapper .contentOne h2 span { font-size: 34px; padding: 5px 38px; }
+    .page-wrapper .leftImgContent { margin-top: 42px; }
+    .page-wrapper .leftInnerImg { transform: scale(1.08); }
+    .page-wrapper .rightTriangle { width: 62px; }
+    .page-wrapper .leftTriangle { width: 85px; }
+    .page-wrapper .aboutContent { padding: 42px; }
 
-    @media (max-width:1199px)
-    {
+    .page-wrapper .priceContentParent { padding: 22px; margin-top: 22px; }
+    .page-wrapper .priceImg { width: 400px; height: 140px; }
 
-    }
+    .page-wrapper .gallerySection { padding: 170px 0 85px; }
+    .page-wrapper .galleryContainer { padding: 42px 26px 18px; }
+    .page-wrapper .galleryTxt p { font-size: 30px; }
+    .page-wrapper .galleryImg { width: 260px; height: 260px; transform: scale(1.35); }
 
-    @media (max-width:991px)
-    {
+    .page-wrapper .coffeeSection { padding: 85px 0 65px; }
+    .page-wrapper .coffeeSection h2 { font-size: 82px; }
+    .page-wrapper .leftCoffeImg { width: 320px; }
+    .page-wrapper .rightCoffeImg { width: 380px; }
 
-    }
+    .page-wrapper .paymentImg { width: 220px; height: 220px; }
+    .page-wrapper .paymentText h2 { font-size: 26px; }
+    .page-wrapper .paymentText p { font-size: 17px; max-width: 205px; }
+    .page-wrapper .paymentContainer { padding: 38px; max-width: 310px; }
 
-    @media (max-width:767px)
-    {
+    .page-wrapper .footerContent { padding: 75px; }
+    .page-wrapper .footerContent h2 { font-size: 50px; }
+    .page-wrapper .footerContent h2 .spanOne,
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 34px; }
+    .page-wrapper .footerBurgerImg { width: 42%; }
+}
 
-    }
+@media (max-width:1199px)
+{
+    .page-wrapper h1 { font-size: 60px; }
+    .page-wrapper h1 .spanOne { font-size: 56px; padding: 12px 30px 8px; }
+    .page-wrapper h2 { font-size: 46px; }
+    .page-wrapper h3 { font-size: 30px; }
 
-    @media (max-width:575px)
-    {
-        
-    }
-    
-    @media (max-width:375px)
-    {
+    .page-wrapper .headerSection { padding: 65px 0 65px 5%; }
+    .page-wrapper .orderBtn { font-size: 22px; padding: 0 20px; line-height: 42px; }
+    .page-wrapper .headerImg img { transform: scale(1.1); }
 
-    }
+    .page-wrapper .contentOne { padding: 36px; }
+    .page-wrapper .contentOne h2 span { font-size: 30px; padding: 5px 32px; }
+    .page-wrapper .leftImgContent { margin-top: 36px; }
+    .page-wrapper .leftInnerImg { transform: scale(1); }
+    .page-wrapper .rightTriangle { width: 52px; }
+    .page-wrapper .leftTriangle { width: 72px; }
+    .page-wrapper .aboutContent { padding: 36px; }
+
+    .page-wrapper .priceContentParent { padding: 20px; margin-top: 20px; }
+    .page-wrapper .priceImg { width: 320px; height: 120px; }
+    .page-wrapper .priceContent { padding-left: 22px; }
+
+    .page-wrapper .gallerySection { padding: 140px 0 70px; }
+    .page-wrapper .galleryContainer { padding: 36px 22px 15px; }
+    .page-wrapper .galleryTxt p { font-size: 26px; }
+    .page-wrapper .galleryImg { width: 220px; height: 220px; transform: scale(1.15); }
+
+    .page-wrapper .coffeeSection { padding: 70px 0 55px; }
+    .page-wrapper .coffeeSection h2 { font-size: 65px; }
+    .page-wrapper .coffeeContainer { min-height: 42vh; }
+    .page-wrapper .leftCoffeImg { width: 260px; }
+    .page-wrapper .rightCoffeImg { width: 320px; }
+
+    .page-wrapper .paymentImg { width: 190px; height: 190px; }
+    .page-wrapper .paymentText h2 { font-size: 24px; }
+    .page-wrapper .paymentText p { font-size: 16px; max-width: 190px; }
+    .page-wrapper .paymentContainer { padding: 32px; max-width: 280px; }
+
+    .page-wrapper .footerContent { padding: 60px; border-radius: 42px; }
+    .page-wrapper .footerContent h2 { font-size: 42px; }
+    .page-wrapper .footerContent h2 .spanOne,
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 28px; }
+    .page-wrapper .footerBurgerImg { width: 40%; }
+}
+
+@media (max-width:991px)
+{
+    .page-wrapper h1 { font-size: 48px; letter-spacing: normal; }
+    .page-wrapper h1 .spanOne { font-size: 44px; padding: 10px 26px 6px; border-radius: 35px; }
+    .page-wrapper h2 { font-size: 38px; }
+    .page-wrapper h3 { font-size: 26px; }
+
+    .page-wrapper .headerSection { padding: 55px 0 55px 4%; }
+    .page-wrapper .orderBtn { font-size: 20px; padding: 0 18px; line-height: 40px; }
+    .page-wrapper .headerImg img { transform: scale(0.95); }
+
+    .page-wrapper .contentOne { padding: 30px; border-radius: 28px; }
+    .page-wrapper .contentOne h2 span { font-size: 26px; padding: 5px 28px; border-radius: 16px; }
+    .page-wrapper .leftImgContent { margin-top: 30px; border-radius: 40px; }
+    .page-wrapper .leftInnerImg { transform: scale(0.9); }
+    .page-wrapper .rightTriangle { width: 44px; }
+    .page-wrapper .leftTriangle { width: 62px; }
+    .page-wrapper .aboutContent { padding: 30px; border-radius: 40px; }
+
+    .page-wrapper .priceContentParent { padding: 16px; margin-top: 18px; border-radius: 35px; }
+    .page-wrapper .priceImg { width: 260px; height: 100px; border-radius: 16px; }
+    .page-wrapper .priceContent { padding-left: 18px; }
+
+    .page-wrapper .gallerySection { padding: 110px 0 55px; }
+    .page-wrapper .galleryContainer { padding: 30px 18px 12px; border-radius: 30px; }
+    .page-wrapper .galleryTxt p { font-size: 22px; }
+    .page-wrapper .galleryImg { width: 180px; height: 180px; transform: scale(1); }
+
+    .page-wrapper .coffeeSection { padding: 55px 0 45px; }
+    .page-wrapper .coffeeSection h2 { font-size: 50px; }
+    .page-wrapper .coffeeContainer { min-height: 36vh; border-radius: 40px; }
+    .page-wrapper .leftCoffeImg { width: 200px; left: -10px; bottom: -35px; }
+    .page-wrapper .rightCoffeImg { width: 250px; bottom: -35px; }
+
+    .page-wrapper .paymentImg { width: 165px; height: 165px; }
+    .page-wrapper .paymentText h2 { font-size: 22px; }
+    .page-wrapper .paymentText p { font-size: 15px; max-width: 175px; }
+    .page-wrapper .paymentContainer { padding: 28px; max-width: 250px; border-radius: 160px; }
+
+    .page-wrapper .footerContent { padding: 45px; border-radius: 35px; }
+    .page-wrapper .footerContent h2 { font-size: 34px; }
+    .page-wrapper .footerContent h2 .spanOne,
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 24px; padding: 4px 24px; }
+    .page-wrapper .footerBurgerImg { width: 38%; bottom: 35px; }
+    .page-wrapper .footerSvgImg { width: 72%; height: 72%; }
+    .page-wrapper .arrowImgTwo { width: 58px; }
+}
+
+@media (max-width:767px)
+{
+    /* --- prevent Bootstrap's col-sm-12 from stacking early: hold layouts
+       until 576px by forcing the columns back to their md/lg widths --- */
+    .page-wrapper .headerSection .col-sm-12,
+    .page-wrapper .aboutSection .col-sm-12 { flex: 0 0 50%; max-width: 50%; }
+    .page-wrapper .paymentSection .col-sm-12 { flex: 0 0 50%; max-width: 50%; }
+    .page-wrapper .footerSection .col-sm-12 { flex: 0 0 50%; max-width: 50%; }
+
+    .page-wrapper h1 { font-size: 36px; }
+    .page-wrapper h1 .spanOne { font-size: 33px; padding: 8px 22px 5px; border-radius: 28px; }
+    .page-wrapper h2 { font-size: 30px; }
+    .page-wrapper h3 { font-size: 22px; }
+
+    .page-wrapper .headerSection { padding: 40px 0 40px 4%; }
+    .page-wrapper .orderBtn { font-size: 16px; padding: 0 16px; line-height: 36px; }
+    .page-wrapper .headerImg img { transform: scale(0.85); }
+
+    .page-wrapper .contentOne { padding: 22px; border-radius: 22px; }
+    .page-wrapper .contentOne h2 span { font-size: 20px; padding: 4px 22px; border-radius: 14px; }
+    .page-wrapper .leftImgContent { margin-top: 22px; border-radius: 30px; }
+    .page-wrapper .leftInnerImg { transform: scale(0.85); }
+    .page-wrapper .rightTriangle { width: 32px; top: 12px; right: 12px; }
+    .page-wrapper .leftTriangle { width: 46px; }
+    .page-wrapper .aboutContent { padding: 22px; border-radius: 30px; }
+
+    .page-wrapper .priceContentParent { padding: 12px; margin-top: 14px; border-radius: 26px; }
+    .page-wrapper .priceImg { width: 170px; height: 80px; border-radius: 12px; }
+    .page-wrapper .priceContent { padding-left: 12px; }
+    .page-wrapper .priceContent h3 { font-size: 20px; }
+    .page-wrapper .priceContent p { font-size: 13px; }
+
+    .page-wrapper .gallerySection { padding: 80px 0 40px; }
+    .page-wrapper .galleryContainer { padding: 22px 14px 10px; border-radius: 24px; }
+    .page-wrapper .galleryTxt p { font-size: 17px; }
+    .page-wrapper .galleryImg { width: 130px; height: 130px; transform: scale(0.85); }
+
+    .page-wrapper .coffeeSection { padding: 42px 0 32px; }
+    .page-wrapper .coffeeSection h2 { font-size: 36px; }
+    .page-wrapper .coffeeContainer { min-height: 240px; border-radius: 30px; }
+    .page-wrapper .leftCoffeImg { width: 140px; left: -5px; bottom: -22px; }
+    .page-wrapper .rightCoffeImg { width: 170px; bottom: -22px; }
+
+    .page-wrapper .paymentImg { width: 140px; height: 140px; }
+    .page-wrapper .paymentText h2 { font-size: 19px; }
+    .page-wrapper .paymentText p { font-size: 13px; max-width: 150px; }
+    .page-wrapper .paymentContainer { padding: 20px; max-width: 190px; border-radius: 120px; }
+
+    .page-wrapper .footerContent { padding: 28px; border-radius: 26px; }
+    .page-wrapper .footerContent h2 { font-size: 24px; }
+    .page-wrapper .footerContent h2 .spanOne,
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 17px; padding: 3px 18px; }
+    .page-wrapper .footerBurgerImg { width: 34%; bottom: 20px; }
+    .page-wrapper .footerSvgImg { width: 60%; height: 60%; }
+    .page-wrapper .arrowImgOne { width: 45px; }
+    .page-wrapper .arrowImgTwo { width: 45px; }
+}
+
+@media (max-width:575px)
+{
+    /* --- true one-by-one stacking begins here --- */
+    .page-wrapper .headerSection .col-sm-12,
+    .page-wrapper .aboutSection .col-sm-12,
+    .page-wrapper .paymentSection .col-sm-12,
+    .page-wrapper .footerSection .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+
+    .page-wrapper h1 { font-size: 26px; }
+    .page-wrapper h1 .spanOne { font-size: 24px; padding: 6px 16px 4px; border-radius: 20px; }
+    .page-wrapper h2 { font-size: 22px; }
+    .page-wrapper h3 { font-size: 18px; }
+
+    .page-wrapper .headerSection { padding: 30px 20px; text-align: center; }
+    .page-wrapper .orderBtn { font-size: 14px; padding: 0 14px; line-height: 32px; }
+    .page-wrapper .headerImg img { transform: scale(0.8); margin: 20px auto 0; }
+
+    .page-wrapper .contentOne { padding: 18px; border-radius: 18px; }
+    .page-wrapper .contentOne h2 span { font-size: 16px; padding: 3px 16px; border-radius: 10px; }
+    .page-wrapper .leftImgContent { margin-top: 18px; border-radius: 22px; }
+    .page-wrapper .leftInnerImg { width: 90%; transform: scale(0.8); }
+    .page-wrapper .rightTriangle { width: 26px; top: 8px; right: 8px; }
+    .page-wrapper .leftTriangle { width: 36px; }
+    .page-wrapper .aboutContent { padding: 18px; border-radius: 22px; text-align: center; }
+
+    .page-wrapper .priceContentParent { flex-direction: column; text-align: center; padding: 16px; margin-top: 14px; border-radius: 20px; }
+    .page-wrapper .priceImg { width: 100%; max-width: 220px; height: 75px; margin: 0 auto 12px; }
+    .page-wrapper .priceContent { padding-left: 0; }
+    .page-wrapper .priceContent h3 { font-size: 17px; }
+    .page-wrapper .priceContent p { font-size: 13px; }
+
+    .page-wrapper .gallerySection { padding: 45px 0 25px; }
+    .page-wrapper .galleryParent { grid-template-columns: 1fr; row-gap: 25px; }
+    .page-wrapper .galleryContainer { padding: 20px 15px 10px; border-radius: 18px; transform: none; }
+    .page-wrapper .galleryTxt p { font-size: 18px; }
+    .page-wrapper .galleryImg { width: 130px; height: 130px; transform: scale(1); }
+
+    .page-wrapper .coffeeSection { padding: 28px 0 22px; }
+    .page-wrapper .coffeeSection h2 { font-size: 24px; }
+    .page-wrapper .coffeeContainer { min-height: 190px; border-radius: 22px; padding: 25px 10px; }
+    .page-wrapper .leftCoffeImg { width: 95px; left: 0; bottom: -12px; }
+    .page-wrapper .rightCoffeImg { width: 110px; bottom: -12px; }
+
+    .page-wrapper .paymentImg { width: 110px; height: 110px; }
+    .page-wrapper .paymentText h2 { font-size: 16px; }
+    .page-wrapper .paymentText p { font-size: 12px; max-width: 150px; }
+    .page-wrapper .paymentContainer { padding: 16px; max-width: 180px; border-radius: 90px; }
+
+    .page-wrapper .footerContent { padding: 20px; border-radius: 18px; text-align: center; }
+    .page-wrapper .footerContent h2 { font-size: 18px; }
+    .page-wrapper .footerContent h2 .spanOne,
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 13px; padding: 3px 14px; margin: 4px auto; }
+    .page-wrapper .footerRightImg { height: 200px; border-radius: 18px; margin-top: 15px; }
+    .page-wrapper .footerBurgerImg { width: 42%; bottom: 12px; }
+    .page-wrapper .footerSvgImg { width: 55%; height: 55%; }
+    .page-wrapper .arrowImgOne { width: 34px; }
+    .page-wrapper .arrowImgTwo { width: 34px; bottom: 6px; }
+}
 
 </style>
 
@@ -364,6 +729,7 @@ font-family: "Open Sans", sans-serif;
     
 
 <div id="page-top-margin"></div>
+
 
 <div class="page-wrapper">
 
@@ -402,7 +768,9 @@ font-family: "Open Sans", sans-serif;
                     </h2>
                 </div>
                 <div class="leftImgContent">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783335312php2m4lr6.png" class="img-fluid" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpO1qRDc.png" class="img-fluid rightTriangle" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuI8WWG.png" class="img-fluid leftTriangle" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783335312php2m4lr6.png" class="img-fluid leftInnerImg" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -458,8 +826,8 @@ font-family: "Open Sans", sans-serif;
                     </p>
                 </div>
                 <div class="galleryImgCard">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
                 </div>
             </div>
             <div class="galleryContainer two">
@@ -469,8 +837,8 @@ font-family: "Open Sans", sans-serif;
                     </p>
                 </div>
                 <div class="galleryImgCard">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
                 </div>
             </div>
             <div class="galleryContainer three">
@@ -480,8 +848,8 @@ font-family: "Open Sans", sans-serif;
                     </p>
                 </div>
                 <div class="galleryImgCard">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
                 </div>
             </div>
             <div class="galleryContainer four">
@@ -491,11 +859,22 @@ font-family: "Open Sans", sans-serif;
                     </p>
                 </div>
                 <div class="galleryImgCard">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
-                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpGcgiyX.png" class="img-fluid svgImg" alt="">
+                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpqG3guI.png" class="img-fluid galleryImg" alt="">
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="coffeeSection">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018920phpXPSHXA.png" class="img-fluid seedImg" alt="">
+    <div class="container coffeeContainer">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1784039723php0GeaHn.png" class="img-fluid leftCoffeImg" alt="">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1784039294phpufuHvX.png" class="img-fluid rightCoffeImg" alt="">
+        <h2>
+            Your Morning <br> Your Way
+        </h2>
     </div>
 </section>
 
@@ -505,7 +884,7 @@ font-family: "Open Sans", sans-serif;
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="paymentContainer">
                     <div class="paymentImg">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpe352fb.png" class="img-fluid" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpe352fb.png" class="img-fluid" alt="">
                     </div>
                     <div class="paymentText">
                         <h2>
@@ -520,7 +899,7 @@ font-family: "Open Sans", sans-serif;
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="paymentContainer">
                     <div class="paymentImg">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpYdWR1d.png" class="img-fluid" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpYdWR1d.png" class="img-fluid" alt="">
                     </div>
                     <div class="paymentText">
                         <h2>
@@ -535,11 +914,11 @@ font-family: "Open Sans", sans-serif;
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="paymentContainer">
                     <div class="paymentImg">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuRPNkI.png" class="img-fluid" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuRPNkI.png" class="img-fluid" alt="">
                     </div>
                     <div class="paymentText">
                         <h2>
-                            Fresh & Ready
+                            Fresh &amp; Ready
                         </h2>
                         <p>
                             Your meal is prepared to perfection and waiting for you.
@@ -551,6 +930,32 @@ font-family: "Open Sans", sans-serif;
     </div>
 </section>
 
+<section class="footerSection">
+    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpTBGd1P.png" class="img-fluid arrowImgTwo" alt="">
+    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpqaUKbE.png" class="footerBurgerImg img-fluid" alt="">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <div class="footerContent">
+                    <h2>
+                        Simple, Fresh, &amp; <br>
+                        <span class="spanOne"> Full of Goodness </span>
+                        <span class="spanTwo"> Our Story </span>
+                    </h2>
+                    <p>
+                        There's nothing like a delicious breakfast to kickstart your morning! At {TAKEAWAY NAME) in (TAKEAWAY TOWN), we serve a selection of freshly prepared dishes, from comforting (breakfast 1) to energising (breakfast 2). Whether you're dining solo or catching up with friends over coffee, we've got the perfect start to your day.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="footerRightImg">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpU6ozRx.png" class="img-fluid arrowImgOne" alt="">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpzGBVHf.png" class="img-fluid footerSvgImg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </div>
 
