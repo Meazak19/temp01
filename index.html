@@ -271,6 +271,7 @@ font-family: "Open Sans", sans-serif;
    }
    .page-wrapper .paymentImg img {
     filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(3210%) hue-rotate(35deg) brightness(93%) contrast(99%);
+    width: 150px;
    }
    .page-wrapper .galleryImg {
         z-index: 1;
@@ -355,6 +356,7 @@ font-family: "Open Sans", sans-serif;
     height: 100%;
     inset: 0;
     z-index: 1;
+    object-fit: contain;
    }
    .page-wrapper .coffeeContainer {
     position: relative;
@@ -513,20 +515,24 @@ font-family: "Open Sans", sans-serif;
     .page-wrapper .galleryImg { width: 260px; height: 260px; transform: scale(1.35); }
 
     .page-wrapper .coffeeSection { padding: 85px 0 65px; }
-    .page-wrapper .coffeeSection h2 { font-size: 82px; }
-    .page-wrapper .leftCoffeImg { width: 320px; }
-    .page-wrapper .rightCoffeImg { width: 380px; }
+    .page-wrapper .coffeeSection h2 { font-size: 90px; }
+    .page-wrapper .leftCoffeImg { width: 280px; }
+    .page-wrapper .rightCoffeImg { width: 320px; }
 
     .page-wrapper .paymentImg { width: 220px; height: 220px; }
     .page-wrapper .paymentText h2 { font-size: 26px; }
     .page-wrapper .paymentText p { font-size: 17px; max-width: 205px; }
     .page-wrapper .paymentContainer { padding: 38px; max-width: 310px; }
 
-    .page-wrapper .footerContent { padding: 75px; }
-    .page-wrapper .footerContent h2 { font-size: 50px; }
+    .page-wrapper .footerContent { padding: 75px 100px 75px 75px; }
+    .page-wrapper .footerContent h2 { font-size: 55px; }
     .page-wrapper .footerContent h2 .spanOne,
-    .page-wrapper .footerContent h2 .spanTwo { font-size: 34px; }
-    .page-wrapper .footerBurgerImg { width: 42%; }
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 38px; }
+    .page-wrapper .footerBurgerImg { width: 50%; }
+.page-wrapper .paymentImg img {
+    width: 130px;
+}
+  
 }
 
 @media (max-width:1199px)
@@ -569,26 +575,43 @@ font-family: "Open Sans", sans-serif;
 
   
     .page-wrapper .galleryTxt p { font-size: 17px; }
-    .page-wrapper .galleryImg { width: 220px; height: 220px; transform: scale(1.15); }
+    .page-wrapper .galleryImg { width: 220px; height: 100%; transform: scale(1.15); }
         .page-wrapper .galleryParent {
                 gap: 10px;
         }
     .page-wrapper .coffeeSection { padding: 70px 0 55px; }
-    .page-wrapper .coffeeSection h2 { font-size: 65px; }
-    .page-wrapper .coffeeContainer { min-height: 42vh; }
-    .page-wrapper .leftCoffeImg { width: 260px; }
-    .page-wrapper .rightCoffeImg { width: 320px; }
+    .page-wrapper .coffeeSection h2 { font-size: 80px; }
+    .page-wrapper .coffeeContainer { min-height: 42vh; border-radius: 25px;}
+    .page-wrapper .leftCoffeImg { width: 240px; }
+    .page-wrapper .rightCoffeImg { width: 280px; }
 
     .page-wrapper .paymentImg { width: 190px; height: 190px; }
     .page-wrapper .paymentText h2 { font-size: 24px; }
     .page-wrapper .paymentText p { font-size: 16px; max-width: 190px; }
-    .page-wrapper .paymentContainer { padding: 32px; max-width: 280px; }
+    .page-wrapper .paymentContainer {         padding: 25px;
+        max-width: 260px; }
 
-    .page-wrapper .footerContent { padding: 60px; border-radius: 42px; }
+    .page-wrapper .footerContent {         padding: 45px 75px 44px 45px;
+        border-radius: 40px; }
     .page-wrapper .footerContent h2 { font-size: 42px; }
     .page-wrapper .footerContent h2 .spanOne,
-    .page-wrapper .footerContent h2 .spanTwo { font-size: 28px; }
-    .page-wrapper .footerBurgerImg { width: 40%; }
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 30px; }
+    .page-wrapper .footerBurgerImg { width: 50%; }
+
+      .page-wrapper .paymentImg img {
+            width: 120px;
+    }
+    .page-wrapper .paymentText {
+        padding-bottom: 20px;
+    }
+    .page-wrapper .arrowImgTwo {
+        width: 60px;
+    }
+    .page-wrapper .arrowImgOne { 
+    right: -20px;
+    top: -40px;
+    width: 60px;
+}
 }
 
 @media (max-width:991px)
@@ -652,24 +675,44 @@ font-family: "Open Sans", sans-serif;
 
     .page-wrapper .galleryTxt p { font-size: 17px; } 
 
-    .page-wrapper .coffeeSection { padding: 55px 0 45px; }
+    .page-wrapper .coffeeSection {         padding: 50px 0 50px; }
     .page-wrapper .coffeeSection h2 { font-size: 50px; }
-    .page-wrapper .coffeeContainer { min-height: 36vh; border-radius: 40px; }
-    .page-wrapper .leftCoffeImg { width: 200px; left: -10px; bottom: -35px; }
-    .page-wrapper .rightCoffeImg { width: 250px; bottom: -35px; }
+    .page-wrapper .coffeeContainer {min-height: 35vh;
+        border-radius: 20px;}
+    .page-wrapper .leftCoffeImg {         width: 180px;
+        bottom: -20px; }
+    .page-wrapper .rightCoffeImg { width: 210px;
+        bottom: -20px; }
 
     .page-wrapper .paymentImg { width: 165px; height: 165px; }
-    .page-wrapper .paymentText h2 { font-size: 22px; }
-    .page-wrapper .paymentText p { font-size: 15px; max-width: 175px; }
-    .page-wrapper .paymentContainer { padding: 28px; max-width: 250px; border-radius: 160px; }
+    .page-wrapper .paymentText h2 { font-size: 20px; }
+    .page-wrapper .paymentText p { font-size: 14px;
+        max-width: 165px; }
+    .page-wrapper .paymentContainer { padding: 28px 15px; max-width: 250px; border-radius: 160px; }
 
-    .page-wrapper .footerContent { padding: 45px; border-radius: 35px; }
-    .page-wrapper .footerContent h2 { font-size: 34px; }
+    .page-wrapper .footerContent {         padding: 30px 75px 25px 20px;
+        border-radius: 20px; }
+    .page-wrapper .footerContent h2 { font-size: 30px; margin-bottom: 10px; }
     .page-wrapper .footerContent h2 .spanOne,
     .page-wrapper .footerContent h2 .spanTwo { font-size: 24px; padding: 4px 24px; }
-    .page-wrapper .footerBurgerImg { width: 38%; bottom: 35px; }
+    .page-wrapper .footerBurgerImg { width: 50%; bottom: 50px; }
     .page-wrapper .footerSvgImg { width: 72%; height: 72%; }
     .page-wrapper .arrowImgTwo { width: 58px; }
+        .page-wrapper .paymentText {
+        padding-bottom: 10px;
+    }
+    .page-wrapper .paymentImg img {
+        width: 100px;
+    }
+    .page-wrapper .paymentSection {
+    padding: 50px 0;
+}
+.page-wrapper .footerContent h2 .spanTwo {
+    padding-left: 0 !important;
+}
+.page-wrapper .footerContent p {
+    font-size: 14px;
+}
 }
 
 @media (max-width:767px)
@@ -735,25 +778,49 @@ font-family: "Open Sans", sans-serif;
         height: 100%;
         transform: scale(1); }
 
-    .page-wrapper .coffeeSection { padding: 42px 0 32px; }
-    .page-wrapper .coffeeSection h2 { font-size: 36px; }
-    .page-wrapper .coffeeContainer { min-height: 240px; border-radius: 30px; }
+    .page-wrapper .coffeeSection { padding: 40px 0 30px; }
+    .page-wrapper .coffeeSection h2 { font-size: 40px; }
+    .page-wrapper .coffeeContainer {        min-height: 215px;
+        border-radius: 15px;}
     .page-wrapper .leftCoffeImg { width: 140px; left: -5px; bottom: -22px; }
     .page-wrapper .rightCoffeImg { width: 170px; bottom: -22px; }
 
-    .page-wrapper .paymentImg { width: 140px; height: 140px; }
-    .page-wrapper .paymentText h2 { font-size: 19px; }
-    .page-wrapper .paymentText p { font-size: 13px; max-width: 150px; }
-    .page-wrapper .paymentContainer { padding: 20px; max-width: 190px; border-radius: 120px; }
+    .page-wrapper .paymentImg {         width: 120px;
+        height: 120px; }
+            .page-wrapper .paymentImg img {
+        width: 75px;
+    }
+    .page-wrapper .paymentText {
+    margin-top: 15px;
+}
+    .page-wrapper .paymentText h2 { font-size: 22px; }
+    .page-wrapper .paymentText p {         font-size: 15px;
+        max-width: 180px; }
+    .page-wrapper .paymentContainer {         padding: 30px 15px;
+        max-width: 100%;
+        border-radius: 25px; }
 
-    .page-wrapper .footerContent { padding: 28px; border-radius: 26px; }
+    .page-wrapper .footerContent {        padding: 15px;
+        border-radius: 15px;}
     .page-wrapper .footerContent h2 { font-size: 24px; }
     .page-wrapper .footerContent h2 .spanOne,
-    .page-wrapper .footerContent h2 .spanTwo { font-size: 17px; padding: 3px 18px; }
-    .page-wrapper .footerBurgerImg { width: 34%; bottom: 20px; }
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 19px; padding: 3px 18px; }
+    .page-wrapper .footerBurgerImg { width: 50%;
+        bottom: 0;
+        top: 0;
+        margin: auto; }
     .page-wrapper .footerSvgImg { width: 60%; height: 60%; }
     .page-wrapper .arrowImgOne { width: 45px; }
     .page-wrapper .arrowImgTwo { width: 45px; }
+    .page-wrapper .footerContent p {
+        line-height: 1.3;
+    }
+    .page-wrapper .footerRightImg {
+        border-radius: 15px;
+    }
+    .page-wrapper .footerSection {
+    padding: 10px 0 50px;
+}
 }
 
 @media (max-width:575px)
@@ -816,30 +883,79 @@ font-family: "Open Sans", sans-serif;
 
     .page-wrapper .gallerySection { padding: 45px 0 25px; }
     .page-wrapper .galleryParent { grid-template-columns: 1fr; row-gap: 25px; }
-    .page-wrapper .galleryContainer { padding: 20px 15px 10px; border-radius: 18px; transform: none;         max-width: 350px;}
-    .page-wrapper .galleryTxt p { font-size: 18px; }
-    .page-wrapper .galleryImg { width: 130px; height: 130px; transform: scale(1); }
-
-    .page-wrapper .coffeeSection { padding: 28px 0 22px; }
-    .page-wrapper .coffeeSection h2 { font-size: 24px; }
-    .page-wrapper .coffeeContainer { min-height: 190px; border-radius: 22px; padding: 25px 10px; }
-    .page-wrapper .leftCoffeImg { width: 95px; left: 0; bottom: -12px; }
-    .page-wrapper .rightCoffeImg { width: 110px; bottom: -12px; }
+    .page-wrapper .galleryContainer {         padding: 20px 15px 10px;
+        border-radius: 18px;
+        transform: none;
+        max-width: 350px; }    .page-wrapper .galleryTxt p { font-size: 24px; }
+    .page-wrapper .galleryImg { width: 100%;
+        height: 100%;
+        transform: scale(1); }
+.page-wrapper .svgImg {
+        inset: 0;
+    margin: auto;
+}
+    .page-wrapper .coffeeSection {            padding: 25px 0 25px;
+        margin: 15px auto;
+        max-width: 475px;
+        width: 95%; }
+    .page-wrapper .coffeeSection h2 { font-size: 38px; }
+    .page-wrapper .coffeeContainer {                min-height: 200px;
+        border-radius: 15px;
+        padding: 25px 0 50px;}
+    .page-wrapper .leftCoffeImg {         width: 100px;
+        left: 0;
+        bottom: -20px; }
+    .page-wrapper .rightCoffeImg {         width: 120px;
+        bottom: -20px; }
 
     .page-wrapper .paymentImg { width: 110px; height: 110px; }
-    .page-wrapper .paymentText h2 { font-size: 16px; }
-    .page-wrapper .paymentText p { font-size: 12px; max-width: 150px; }
-    .page-wrapper .paymentContainer { padding: 16px; max-width: 180px; border-radius: 90px; }
-
-    .page-wrapper .footerContent { padding: 20px; border-radius: 18px; text-align: center; }
-    .page-wrapper .footerContent h2 { font-size: 18px; }
+    .page-wrapper .paymentText h2 { font-size: 18px; }
+    .page-wrapper .paymentText p {         font-size: 14px;
+        max-width: 100%; }
+    .page-wrapper .paymentContainer { padding: 25px 10px;
+        max-width: 250px;
+        border-radius: 10px; }
+         .page-wrapper .paymentImg img {
+        width: 65px;
+    }
+.page-wrapper .arrowImgTwo, .page-wrapper .arrowImgOne {
+    display: none;
+}
+    .page-wrapper .footerContent {         padding: 20px 10px;
+        border-radius: 18px;
+        text-align: center;
+        max-width: 350px;
+        width: 95%;
+        margin: auto; }
+    .page-wrapper .footerContent h2 { font-size: 25px; }
     .page-wrapper .footerContent h2 .spanOne,
-    .page-wrapper .footerContent h2 .spanTwo { font-size: 13px; padding: 3px 14px; margin: 4px auto; }
-    .page-wrapper .footerRightImg { height: 200px; border-radius: 18px; margin-top: 15px; }
-    .page-wrapper .footerBurgerImg { width: 42%; bottom: 12px; }
-    .page-wrapper .footerSvgImg { width: 55%; height: 55%; }
-    .page-wrapper .arrowImgOne { width: 34px; }
-    .page-wrapper .arrowImgTwo { width: 34px; bottom: 6px; }
+    .page-wrapper .footerContent h2 .spanTwo { font-size: 22px; padding: 3px 14px; margin: 4px auto; }
+    .page-wrapper .footerRightImg {         height: 200px;
+        border-radius: 18px;
+        max-width: 350px;
+        width: 95%;
+        margin: 25px auto 15px; }
+    .page-wrapper .footerBurgerImg { max-width: 350px;
+        width: 95%; top: unset; left: 0;}
+    .page-wrapper .footerSvgImg { width: 70%; height: 70%; } 
+}
+
+@media (max-width:420px)
+{
+    .page-wrapper .coffeeSection h2 {
+        font-size: 28px;
+    }
+    .page-wrapper .leftCoffeImg {
+        width: 90px;
+    }
+    .page-wrapper .rightCoffeImg {
+        width: 110px;
+    }
+        .page-wrapper .coffeeContainer {
+        min-height: 175px;
+        border-radius: 15px;
+        padding: 20px 0 35px;
+    }
 }
 
 </style>
@@ -1006,8 +1122,8 @@ font-family: "Open Sans", sans-serif;
 
 <section class="paymentSection">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-md-0 mb-4">
                 <div class="paymentContainer">
                     <div class="paymentImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpe352fb.png" class="img-fluid" alt="">
@@ -1022,7 +1138,7 @@ font-family: "Open Sans", sans-serif;
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-md-0 mb-4">
                 <div class="paymentContainer">
                     <div class="paymentImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpYdWR1d.png" class="img-fluid" alt="">
@@ -1037,7 +1153,7 @@ font-family: "Open Sans", sans-serif;
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="paymentContainer">
                     <div class="paymentImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018904phpuRPNkI.png" class="img-fluid" alt="">
@@ -1061,7 +1177,7 @@ font-family: "Open Sans", sans-serif;
     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018905phpqaUKbE.png" class="footerBurgerImg img-fluid" alt="">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="col-lg-7 col-md-7 col-sm-6">
                 <div class="footerContent">
                     <h2>
                         Simple, Fresh, &amp; <br>
@@ -1069,11 +1185,11 @@ font-family: "Open Sans", sans-serif;
                         <span class="spanTwo"> Our Story </span>
                     </h2>
                     <p>
-                        There's nothing like a delicious breakfast to kickstart your morning! At {TAKEAWAY NAME) in (TAKEAWAY TOWN), we serve a selection of freshly prepared dishes, from comforting (breakfast 1) to energising (breakfast 2). Whether you're dining solo or catching up with friends over coffee, we've got the perfect start to your day.
+                        There's nothing like a delicious breakfast to kickstart your morning! At {TAKEAWAY NAME) in (TAKEAWAY TOWN), we serve a selection of freshly prepared dishes, from comforting (breakfast 1) to energising (breakfast 2).
                     </p>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-12">
+            <div class="col-lg-5 col-md-5 col-sm-6">
                 <div class="footerRightImg">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpU6ozRx.png" class="img-fluid arrowImgOne" alt="">
                     <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1783018919phpzGBVHf.png" class="img-fluid footerSvgImg" alt="">
@@ -1162,152 +1278,119 @@ font-family: "Open Sans", sans-serif;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 
-<!-- <script> 
+ 
+ <script>
+    /* ============================================================
+   SCROLL ANIMATIONS — Breakfast Takeaway Site
+   Requires: GSAP 3.12.5 + ScrollTrigger (already enqueued in HTML)
+   - Standalone file, no HTML/CSS changes required
+   - Bidirectional reveals: toggleActions "play reverse play reverse"
+   - ScrollTrigger.refresh() on window.load to handle image reflow
+   ============================================================ */
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  gsap.registerPlugin(ScrollTrigger);
- 
-  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (prefersReducedMotion) return;
+  var mm = gsap.matchMedia();
 
-  var defaultEase = "power3.out";
- 
-  function revealUp(target, options) {
-    options = options || {};
-    var els = gsap.utils.toArray(target);
-    if (!els.length) return;
+  mm.add("all", function () {
 
-    els.forEach(function (el, i) {
-      gsap.fromTo(
-        el,
-        {
-          opacity: 0,
-          y: options.y || 60,
-          scale: options.scale || 1,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: options.duration || 1,
-          ease: options.ease || defaultEase,
-          delay: options.stagger ? i * options.stagger : (options.delay || 0),
-          scrollTrigger: {
-            trigger: options.trigger || el,
-            start: options.start || "top 85%",
-            toggleActions: "play reverse play reverse",
-            onEnterBack: function (self) {
-              self.animation && self.animation.play();
-            },
-            onLeaveBack: function (self) {
-              self.animation && self.animation.reverse();
-            },
-          },
-        }
-      );
-    });
-  }
- 
-  function revealSide(target, fromX, options) {
-    options = options || {};
-    var els = gsap.utils.toArray(target);
-    if (!els.length) return;
+    /* ---------- Defaults ---------- */
+    var EASE = "power3.out";
+    var DUR = 0.9;
 
-    els.forEach(function (el) {
-      gsap.fromTo(
-        el,
-        { opacity: 0, x: fromX },
-        {
-          opacity: 1,
-          x: 0,
-          duration: options.duration || 1.1,
-          ease: options.ease || defaultEase,
-          scrollTrigger: {
-            trigger: options.trigger || el,
-            start: options.start || "top 80%",
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
-    });
-  }
- 
-  var headerTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".headerSection",
-      start: "top 75%",
-      toggleActions: "play reverse play reverse",
-    },
-  });
-
-  headerTl
-    .fromTo(".headerContent h1", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: defaultEase })
-    .fromTo(".headerContent .orderBtn", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: defaultEase }, "-=0.4")
-    .fromTo(".headerImg img", { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1.4, duration: 1, ease: defaultEase }, "-=0.7");
- 
-  revealUp(".contentOne", { y: 50 });
-  revealSide(".leftImgContent", -80, { start: "top 82%" });
-  revealSide(".aboutContent", 80, { start: "top 82%" });
-  revealUp(".priceContentParent", { y: 40, stagger: 0.15, trigger: ".aboutContent" });
- 
-  gsap.utils.toArray(".galleryContainer").forEach(function (card, i) {
-    gsap.fromTo(
-      card,
-      { opacity: 0, y: 70, scale: 0.85 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.9,
-        ease: "back.out(1.4)",
-        delay: i * 0.15,
+    function reveal(target, fromVars, triggerEl, start) {
+      gsap.from(target, {
+        ...fromVars,
+        duration: DUR,
+        ease: EASE,
         scrollTrigger: {
-          trigger: ".galleryParent",
-          start: "top 78%",
-          toggleActions: "play reverse play reverse",
-        },
-        onComplete: function () { 
-          card.style.removeProperty("transform");
-        },
+          trigger: triggerEl || target,
+          start: start || "top 85%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    }
+
+    /* ============================================================
+       HEADER SECTION
+       ============================================================ */
+    reveal(".headerSection .headerContent h1", { opacity: 0, x: -60 }, ".headerSection");
+    reveal(".headerSection .headerContent .orderBtn", { opacity: 0, y: 30 }, ".headerSection", "top 80%");
+    reveal(".headerSection .headerImg img", { opacity: 0, x: 80, scale: 1.5 }, ".headerSection");
+
+    /* ============================================================
+       ABOUT SECTION — left column (contentOne / leftImgContent)
+       ============================================================ */
+    reveal(".contentOne", { opacity: 0, y: 50 });
+    reveal(".leftImgContent", { opacity: 0, y: 60, scale: 0.95 }, ".leftImgContent", "top 88%");
+    reveal(".leftImgContent .rightTriangle", { opacity: 0, rotation: -25, scale: 0.6 }, ".leftImgContent", "top 80%");
+    reveal(".leftImgContent .leftTriangle", { opacity: 0, rotation: 25, scale: 0.6 }, ".leftImgContent", "top 80%");
+
+    /* ---------- About / Price content (right column) ---------- */
+    reveal(".aboutContent", { opacity: 0, y: 50 });
+
+    gsap.utils.toArray(".priceContentParent").forEach(function (el, i) {
+      reveal(el, { opacity: 0, y: 40 }, el, "top 90%");
+    });
+
+    /* ============================================================
+       GALLERY SECTION — staggered card reveal
+       ============================================================ */
+    gsap.from(".galleryParent .galleryContainer", {
+      opacity: 0,
+      y: 70,
+      scale: 0.85,
+      duration: 0.8,
+      ease: EASE,
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: ".gallerySection",
+        start: "top 78%",
+        toggleActions: "play reverse play reverse"
       }
-    );
-  });
- 
-  revealUp(".coffeeSection h2", { y: 40, duration: 0.9 });
-  revealSide(".leftCoffeImg", -100, { start: "top 80%" });
-  revealSide(".rightCoffeImg", 100, { start: "top 80%" });
- 
-  gsap.utils.toArray(".paymentContainer").forEach(function (item, i) {
-    gsap.fromTo(
-      item,
-      { opacity: 0, y: 60 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: defaultEase,
-        delay: i * 0.2,
-        scrollTrigger: {
-          trigger: ".paymentSection",
-          start: "top 80%",
-          toggleActions: "play reverse play reverse",
-        },
+    });
+
+    /* ============================================================
+       COFFEE SECTION
+       ============================================================ */
+    reveal(".coffeeSection h2", { opacity: 0, y: 40, scale: 0.9 }, ".coffeeSection", "top 80%");
+    reveal(".coffeeSection .leftCoffeImg", { opacity: 0, x: -80, rotation: -8 }, ".coffeeSection", "top 75%");
+    reveal(".coffeeSection .rightCoffeImg", { opacity: 0, x: 80, rotation: 8 }, ".coffeeSection", "top 75%");
+
+    /* ============================================================
+       PAYMENT SECTION — staggered steps
+       ============================================================ */
+    gsap.from(".paymentSection .paymentContainer", {
+      opacity: 0,
+      y: 60,
+      duration: 0.8,
+      ease: EASE,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".paymentSection",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse"
       }
-    );
+    });
+
+    /* ============================================================
+       FOOTER SECTION
+       ============================================================ */
+    reveal(".footerContent", { opacity: 0, x: -60 }, ".footerSection", "top 85%");
+    reveal(".footerRightImg", { opacity: 0, x: 60 }, ".footerSection", "top 85%");
+    reveal(".footerBurgerImg", { opacity: 0, y: 50, scale: 0.9 }, ".footerSection", "top 80%");
+
   });
- 
-  revealSide(".footerContent", -70, { start: "top 85%" });
-  revealSide(".footerRightImg", 70, { start: "top 85%" });
-  revealUp(".footerBurgerImg", { y: 50, start: "top 88%" });
- 
+
+  /* ---------- Recalculate positions once all images have loaded ---------- */
   window.addEventListener("load", function () {
     ScrollTrigger.refresh();
   });
+
 });
-</script> -->
- 
- 
+ </script>
 
 
 </body>
