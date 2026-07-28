@@ -179,7 +179,7 @@ font-family: "Open Sans", sans-serif;
    .page-wrapper .contentOne h2{
  
    }
-   .page-wrapper .contentOne h2 span{
+   .page-wrapper .contentOne .contentSpanTwo{
     background: #ea9f05;
     padding: 5px 45px;
     font-size: 40px;
@@ -489,7 +489,7 @@ font-family: "Open Sans", sans-serif;
     border-radius: 20px;
 }
     .page-wrapper .contentOne { padding: 42px; border-radius: 20px; }
-    .page-wrapper .contentOne h2 span { font-size: 34px; padding: 5px 38px; }
+    .page-wrapper .contentOne .contentSpanTwo { font-size: 34px; padding: 5px 38px; }
     .page-wrapper .leftImgContent { margin-top: 42px; }
     .page-wrapper .leftInnerImg { transform: scale(1.2); }
     .page-wrapper .rightTriangle { width: 62px; }
@@ -556,7 +556,7 @@ font-family: "Open Sans", sans-serif;
     .page-wrapper .headerImg img { transform: scale(1.4); }
 
     .page-wrapper .contentOne { padding: 36px; }
-    .page-wrapper .contentOne h2 span { font-size: 30px; padding: 5px 32px; }
+    .page-wrapper .contentOne .contentSpanTwo { font-size: 30px; padding: 5px 32px; }
     .page-wrapper .leftImgContent { margin-top: 36px; }
     .page-wrapper .leftInnerImg { transform: scale(1.2); }
     .page-wrapper .rightTriangle { width: 45px; }
@@ -639,7 +639,7 @@ font-family: "Open Sans", sans-serif;
         align-items: center;
         justify-content: center;
         text-align: center;}
-    .page-wrapper .contentOne h2 span { font-size: 25px; padding: 5px 28px; border-radius: 16px; }
+    .page-wrapper .contentOne .contentSpanTwo { font-size: 25px; padding: 5px 28px; border-radius: 16px; }
     .page-wrapper .leftImgContent {     order: -1;         margin-top: 0;
         border-radius: 20px;
         padding: 20px;}
@@ -733,7 +733,7 @@ font-family: "Open Sans", sans-serif;
         align-items: center;
         justify-content: center;
         text-align: center; }
-    .page-wrapper .contentOne h2 span { font-size: 20px; padding: 4px 22px; border-radius: 14px; }
+    .page-wrapper .contentOne .contentSpanTwo { font-size: 20px; padding: 4px 22px; border-radius: 14px; }
     .page-wrapper .leftImgContent {         margin-top: 0;
         border-radius: 20px;
         padding: 10px; }
@@ -847,7 +847,7 @@ font-family: "Open Sans", sans-serif;
         justify-content: center;
 }
     .page-wrapper .contentOne { padding: 18px; border-radius: 18px; }
-    .page-wrapper .contentOne h2 span {         font-size: 18px;
+    .page-wrapper .contentOne .contentSpanTwo {         font-size: 18px;
         padding: 8px 20px;
         border-radius: 10px;
         display: block;
@@ -1006,7 +1006,7 @@ font-family: "Open Sans", sans-serif;
                 <div class="contentOne">
                     <h2>
                         Morning Delights
-                        <span> to Fuel Your Day! </span>
+                        <span class="contentSpanTwo"> to Fuel Your Day! </span>
                     </h2>
                 </div>
                 <div class="leftImgContent">
@@ -1277,13 +1277,14 @@ font-family: "Open Sans", sans-serif;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-
  
- <script>
+<script>
     /* ============================================================
-   SCROLL ANIMATIONS — Breakfast Takeaway Site
+   SCROLL ANIMATIONS v2 — Breakfast Takeaway Site
+   Modern text reveals + interactive 3D cards
    Requires: GSAP 3.12.5 + ScrollTrigger (already enqueued in HTML)
    - Standalone file, no HTML/CSS changes required
+   - Text is split into words/chars purely in JS (no SplitType needed)
    - Bidirectional reveals: toggleActions "play reverse play reverse"
    - ScrollTrigger.refresh() on window.load to handle image reflow
    ============================================================ */
@@ -1292,105 +1293,536 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* ============================================================
+     TEXT SPLIT HELPERS (vanilla, no plugin dependency)
+     ============================================================ */
+
+  // Preserves any nested elements (e.g. <span class="spanOne">, <span class="contentSpanTwo">)
+  // instead of flattening to textContent, so pill/background styling on inner spans survives.
+  function splitWords(el) {
+    if (!el || el.dataset.split) return [];
+    var spans = [];
+
+    function wrapWord(word, container) {
+      var mask = document.createElement("span");
+      mask.style.display = "inline-block";
+      mask.style.overflow = "hidden";
+      mask.style.verticalAlign = "top";
+      var inner = document.createElement("span");
+      inner.style.display = "inline-block";
+      inner.textContent = word;
+      mask.appendChild(inner);
+      container.appendChild(mask);
+      spans.push(inner);
+    }
+
+    function processNode(node, container) {
+      if (node.nodeType === 3) {
+        // text node — split into word masks appended to the current container
+        var words = node.textContent.split(/(\s+)/).filter(function (w) { return w.length; });
+        words.forEach(function (word) {
+          if (/^\s+$/.test(word)) {
+            container.appendChild(document.createTextNode(word));
+          } else {
+            wrapWord(word, container);
+          }
+        });
+      } else if (node.nodeType === 1) {
+        // element node (e.g. span.spanOne, span.contentSpanTwo) — clone the
+        // element itself (keeps tag/class/attrs/inline-styles) and recurse
+        // into its own children, so its background/padding styling is untouched
+        var clone = node.cloneNode(false);
+        Array.prototype.forEach.call(node.childNodes, function (child) {
+          processNode(child, clone);
+        });
+        container.appendChild(clone);
+      }
+    }
+
+    var originalChildren = Array.prototype.slice.call(el.childNodes);
+    el.innerHTML = "";
+    originalChildren.forEach(function (child) {
+      processNode(child, el);
+    });
+
+    el.dataset.split = "words";
+    return spans;
+  }
+
+  function splitChars(el) {
+    if (!el || el.dataset.split) return [];
+    var text = el.textContent;
+    el.innerHTML = "";
+    var spans = [];
+    text.split("").forEach(function (ch) {
+      var mask = document.createElement("span");
+      mask.style.display = "inline-block";
+      mask.style.overflow = "hidden";
+      mask.style.verticalAlign = "top";
+      var inner = document.createElement("span");
+      inner.style.display = "inline-block";
+      inner.textContent = ch === " " ? "\u00A0" : ch;
+      mask.appendChild(inner);
+      el.appendChild(mask);
+      spans.push(inner);
+    });
+    el.dataset.split = "chars";
+    return spans;
+  }
+
   var mm = gsap.matchMedia();
 
   mm.add("all", function () {
 
-    /* ---------- Defaults ---------- */
-    var EASE = "power3.out";
-    var DUR = 0.9;
+    var EASE = "power4.out";
 
-    function reveal(target, fromVars, triggerEl, start) {
-      gsap.from(target, {
-        ...fromVars,
-        duration: DUR,
+    /* ============================================================
+       HEADER — word-by-word clip reveal + button + image
+       ============================================================ */
+    var h1Words = splitWords(document.querySelector(".headerSection h1"));
+    if (h1Words.length) {
+      gsap.from(h1Words, {
+        yPercent: 130,
+        rotate: 6,
+        opacity: 0,
+        duration: 1,
         ease: EASE,
+        stagger: 0.06,
         scrollTrigger: {
-          trigger: triggerEl || target,
-          start: start || "top 85%",
+          trigger: ".headerSection",
+          start: "top 85%",
           toggleActions: "play reverse play reverse"
         }
       });
     }
 
-    /* ============================================================
-       HEADER SECTION
-       ============================================================ */
-    reveal(".headerSection .headerContent h1", { opacity: 0, x: -60 }, ".headerSection");
-    reveal(".headerSection .headerContent .orderBtn", { opacity: 0, y: 30 }, ".headerSection", "top 80%");
-    reveal(".headerSection .headerImg img", { opacity: 0, x: 80, scale: 1.5 }, ".headerSection");
+    gsap.from(".headerSection .orderBtn", {
+      opacity: 0,
+      y: 30,
+      scale: 0.9,
+      duration: 0.7,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: ".headerSection",
+        start: "top 78%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
 
-    /* ============================================================
-       ABOUT SECTION — left column (contentOne / leftImgContent)
-       ============================================================ */
-    reveal(".contentOne", { opacity: 0, y: 50 });
-    reveal(".leftImgContent", { opacity: 0, y: 60, scale: 0.95 }, ".leftImgContent", "top 88%");
-    reveal(".leftImgContent .rightTriangle", { opacity: 0, rotation: -25, scale: 0.6 }, ".leftImgContent", "top 80%");
-    reveal(".leftImgContent .leftTriangle", { opacity: 0, rotation: 25, scale: 0.6 }, ".leftImgContent", "top 80%");
-
-    /* ---------- About / Price content (right column) ---------- */
-    reveal(".aboutContent", { opacity: 0, y: 50 });
-
-    gsap.utils.toArray(".priceContentParent").forEach(function (el, i) {
-      reveal(el, { opacity: 0, y: 40 }, el, "top 90%");
+    gsap.from(".headerSection .headerImg img", {
+      opacity: 0,
+      x: 90,
+      scale: 1.55,
+      rotate: 4,
+      duration: 1.1,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".headerSection",
+        start: "top 85%",
+        toggleActions: "play reverse play reverse"
+      }
     });
 
     /* ============================================================
-       GALLERY SECTION — staggered card reveal
+       ABOUT SECTION — heading char reveal + card entrances
        ============================================================ */
-    gsap.from(".galleryParent .galleryContainer", {
+    gsap.utils.toArray(".contentOne h2").forEach(function (h2) {
+      var words = splitWords(h2);
+      gsap.from(words, {
+        yPercent: 120,
+        opacity: 0,
+        duration: 0.9,
+        ease: EASE,
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: ".contentOne",
+          start: "top 85%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    gsap.from(".contentOne", {
       opacity: 0,
-      y: 70,
-      scale: 0.85,
-      duration: 0.8,
+      y: 50,
+      scale: 0.96,
+      duration: 0.9,
       ease: EASE,
-      stagger: 0.15,
       scrollTrigger: {
-        trigger: ".gallerySection",
+        trigger: ".contentOne",
+        start: "top 88%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".leftImgContent", {
+      opacity: 0,
+      y: 60,
+      rotateX: 12,
+      transformPerspective: 800,
+      transformOrigin: "top center",
+      duration: 1,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".leftImgContent",
+        start: "top 88%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".leftImgContent .rightTriangle", {
+      opacity: 0,
+      rotation: -35,
+      scale: 0.4,
+      duration: 0.7,
+      ease: "back.out(2)",
+      scrollTrigger: {
+        trigger: ".leftImgContent",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".leftImgContent .leftTriangle", {
+      opacity: 0,
+      rotation: 35,
+      scale: 0.4,
+      duration: 0.7,
+      delay: 0.1,
+      ease: "back.out(2)",
+      scrollTrigger: {
+        trigger: ".leftImgContent",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    var aboutH2Words = splitWords(document.querySelector(".aboutContent h2"));
+    if (aboutH2Words.length) {
+      gsap.from(aboutH2Words, {
+        yPercent: 120,
+        opacity: 0,
+        duration: 0.8,
+        ease: EASE,
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: ".aboutContent",
+          start: "top 85%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    }
+
+    gsap.from(".aboutContent p, .aboutContent .orderBtn", {
+      opacity: 0,
+      y: 30,
+      duration: 0.7,
+      ease: EASE,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".aboutContent",
+        start: "top 82%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    /* ---------- Price / hygiene cards — diagonal card entrance ---------- */
+    gsap.utils.toArray(".priceContentParent").forEach(function (card, i) {
+      gsap.from(card, {
+        opacity: 0,
+        x: i % 2 === 0 ? -50 : 50,
+        y: 30,
+        rotate: i % 2 === 0 ? -3 : 3,
+        duration: 0.9,
+        ease: EASE,
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+
+      gsap.from(card.querySelector(".priceImg"), {
+        scale: 0.5,
+        opacity: 0,
+        rotate: -15,
+        duration: 0.6,
+        delay: 0.15,
+        ease: "back.out(2.2)",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 90%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    /* ============================================================
+       GALLERY SECTION — 3D "swing-open" reveal + hover interaction
+       Cards hinge in on the Y axis on alternating sides, like a
+       door/panel swinging open out of the page, with real depth
+       (translateZ) so the perspective actually reads as 3D.
+       ============================================================ */
+    var galleryParentEl = document.querySelector(".galleryParent");
+    if (galleryParentEl) {
+      galleryParentEl.style.perspective = "1400px";
+    }
+
+    gsap.utils.toArray(".galleryParent .galleryContainer").forEach(function (card, i) {
+      var fromLeft = i % 2 === 0;
+
+      gsap.set(card, {
+        transformPerspective: 1000,
+        transformStyle: "preserve-3d"
+      });
+
+      gsap.from(card, {
+        opacity: 0,
+        rotateY: fromLeft ? -110 : 110,
+        rotateX: 8,
+        z: -260,
+        x: fromLeft ? -40 : 40,
+        filter: "blur(6px)",
+        transformOrigin: fromLeft ? "left center" : "right center",
+        duration: 1.1,
+        delay: i * 0.16,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".gallerySection",
+          start: "top 78%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    gsap.utils.toArray(".galleryParent .galleryImgCard .galleryImg").forEach(function (img, i) {
+      gsap.from(img, {
+        scale: 0.6,
+        opacity: 0,
+        rotate: i % 2 === 0 ? -12 : 12,
+        duration: 0.8,
+        delay: 0.25 + i * 0.16,
+        ease: "back.out(1.8)",
+        scrollTrigger: {
+          trigger: ".gallerySection",
+          start: "top 78%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    gsap.utils.toArray(".galleryParent .galleryTxt p").forEach(function (txt, i) {
+      gsap.from(txt, {
+        opacity: 0,
+        y: 20,
+        rotateX: 45,
+        transformPerspective: 400,
+        duration: 0.6,
+        delay: 0.4 + i * 0.16,
+        ease: EASE,
+        scrollTrigger: {
+          trigger: ".gallerySection",
+          start: "top 75%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      gsap.utils.toArray(".galleryContainer").forEach(function (card) {
+        var rotX = gsap.quickTo(card, "rotateX", { duration: 0.4, ease: "power3.out" });
+        var rotY = gsap.quickTo(card, "rotateY", { duration: 0.4, ease: "power3.out" });
+        var lift = gsap.quickTo(card, "y", { duration: 0.4, ease: "power3.out" });
+
+        card.style.transformPerspective = 700;
+        card.style.transformStyle = "preserve-3d";
+
+        card.addEventListener("mousemove", function (e) {
+          var rect = card.getBoundingClientRect();
+          var px = (e.clientX - rect.left) / rect.width - 0.5;
+          var py = (e.clientY - rect.top) / rect.height - 0.5;
+          rotX(py * -12);
+          rotY(px * 12);
+          lift(-6);
+        });
+
+        card.addEventListener("mouseleave", function () {
+          rotX(0);
+          rotY(0);
+          lift(0);
+        });
+      });
+    }
+
+    /* ============================================================
+       COFFEE SECTION — heading char reveal + side images
+       ============================================================ */
+    var coffeeH2 = document.querySelector(".coffeeSection h2");
+    if (coffeeH2) {
+      var lines = coffeeH2.innerHTML.split("<br>");
+      coffeeH2.innerHTML = lines.map(function (line) {
+        return '<span class="ctLine" style="display:block;">' + line.trim() + "</span>";
+      }).join("");
+      var lineEls = coffeeH2.querySelectorAll(".ctLine");
+      var allChars = [];
+      lineEls.forEach(function (line) {
+        allChars = allChars.concat(splitChars(line));
+      });
+      gsap.from(allChars, {
+        yPercent: 100,
+        opacity: 0,
+        rotate: 8,
+        duration: 0.6,
+        ease: EASE,
+        stagger: 0.02,
+        scrollTrigger: {
+          trigger: ".coffeeSection",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    }
+
+    gsap.from(".coffeeSection .leftCoffeImg", {
+      opacity: 0,
+      x: -90,
+      rotation: -10,
+      duration: 1,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".coffeeSection",
+        start: "top 78%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".coffeeSection .rightCoffeImg", {
+      opacity: 0,
+      x: 90,
+      rotation: 10,
+      duration: 1,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".coffeeSection",
         start: "top 78%",
         toggleActions: "play reverse play reverse"
       }
     });
 
     /* ============================================================
-       COFFEE SECTION
+       PAYMENT SECTION — staggered cards + icon bounce + text
        ============================================================ */
-    reveal(".coffeeSection h2", { opacity: 0, y: 40, scale: 0.9 }, ".coffeeSection", "top 80%");
-    reveal(".coffeeSection .leftCoffeImg", { opacity: 0, x: -80, rotation: -8 }, ".coffeeSection", "top 75%");
-    reveal(".coffeeSection .rightCoffeImg", { opacity: 0, x: 80, rotation: 8 }, ".coffeeSection", "top 75%");
+    gsap.utils.toArray(".paymentContainer").forEach(function (card, i) {
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+
+      tl.from(card, {
+        opacity: 0,
+        y: 70,
+        scale: 0.9,
+        duration: 0.7,
+        ease: EASE
+      })
+      .from(card.querySelector(".paymentImg"), {
+        scale: 0.4,
+        rotate: -20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "back.out(2.4)"
+      }, "-=0.4")
+      .from(card.querySelectorAll(".paymentText h2, .paymentText p"), {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        ease: EASE,
+        stagger: 0.08
+      }, "-=0.3");
+
+      tl.delay(i * 0.1);
+    });
+
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      gsap.utils.toArray(".paymentContainer").forEach(function (card) {
+        card.addEventListener("mouseenter", function () {
+          gsap.to(card, { y: -10, scale: 1.03, duration: 0.35, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", function () {
+          gsap.to(card, { y: 0, scale: 1, duration: 0.35, ease: "power2.out" });
+        });
+      });
+    }
 
     /* ============================================================
-       PAYMENT SECTION — staggered steps
+       FOOTER SECTION — heading word reveal + images
        ============================================================ */
-    gsap.from(".paymentSection .paymentContainer", {
+    gsap.utils.toArray(".footerContent h2").forEach(function (h2) {
+      var words = splitWords(h2);
+      gsap.from(words, {
+        yPercent: 120,
+        opacity: 0,
+        duration: 0.8,
+        ease: EASE,
+        stagger: 0.04,
+        scrollTrigger: {
+          trigger: ".footerSection",
+          start: "top 85%",
+          toggleActions: "play reverse play reverse"
+        }
+      });
+    });
+
+    gsap.from(".footerContent p", {
+      opacity: 0,
+      y: 25,
+      duration: 0.7,
+      delay: 0.15,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".footerSection",
+        start: "top 82%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".footerRightImg", {
+      opacity: 0,
+      x: 70,
+      scale: 0.95,
+      duration: 0.9,
+      ease: EASE,
+      scrollTrigger: {
+        trigger: ".footerSection",
+        start: "top 85%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+
+    gsap.from(".footerBurgerImg", {
       opacity: 0,
       y: 60,
-      duration: 0.8,
+      scale: 0.9,
+      duration: 1,
       ease: EASE,
-      stagger: 0.2,
       scrollTrigger: {
-        trigger: ".paymentSection",
+        trigger: ".footerSection",
         start: "top 80%",
         toggleActions: "play reverse play reverse"
       }
     });
 
-    /* ============================================================
-       FOOTER SECTION
-       ============================================================ */
-    reveal(".footerContent", { opacity: 0, x: -60 }, ".footerSection", "top 85%");
-    reveal(".footerRightImg", { opacity: 0, x: 60 }, ".footerSection", "top 85%");
-    reveal(".footerBurgerImg", { opacity: 0, y: 50, scale: 0.9 }, ".footerSection", "top 80%");
-
   });
 
-  /* ---------- Recalculate positions once all images have loaded ---------- */
   window.addEventListener("load", function () {
     ScrollTrigger.refresh();
   });
 
 });
- </script>
+</script>
 
 
 </body>
