@@ -104,7 +104,7 @@ font-family: "Urbanist", sans-serif;
    .page-wrapper h1 {
     font-family: "Gloock", serif;
             color: #f79425;
-            font-size: 4rem;
+            font-size: 64px;
             line-height: 1.15;
             margin-bottom: 25px;
             font-weight: 400;
@@ -128,8 +128,7 @@ font-family: "Urbanist", sans-serif;
 
  .hero-section {
             position: relative;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-                              url('https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261041phpujYYfX.jpg');
+            background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261041phpujYYfX.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -140,24 +139,31 @@ font-family: "Urbanist", sans-serif;
             color: #fff;
             padding: 60px 15px;
         }
+        .page-wrapper .hero-section::after{
+            content: '';
+            background:  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
 
          
 
          
 .btn-order {
-            background-color: #f79425;
-            color: #fff;
-            font-family: "Urbanist", sans-serif;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 14px 34px 14px 14px;
-            border-radius: 50px;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
+    background-color: #f79425;
+    color: #fff;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    padding: 10px 34px 14px 14px;
+    border-radius: 50px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
         }
 
         .btn-order:hover {
@@ -168,18 +174,18 @@ font-family: "Urbanist", sans-serif;
         }
 
         .btn-order .arrow-circle {
-            width: 34px;
-            height: 34px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
         }
 
         .btn-order .arrow-circle svg {
-            width: 16px;
-            height: 16px;
+            width: 30px;
+            height: 30px;
         }
 
         /* =============== STEPS SECTION =============== */
@@ -188,17 +194,42 @@ font-family: "Urbanist", sans-serif;
         }
 
         .page-wrapper .step-box {
-            padding: 10px 15px;
+            padding: 25px;
+            transition: all 0.2s linear;
+            border-radius: 25px;
         }
-
+        .page-wrapper .step-box:hover {
+            box-shadow: 10px 10px 50px -12px rgb(0 0 0 / 25%);
+            background: #f1ffff;
+        }
+        .page-wrapper .step-box:hover .step-icon{
+            background: #fe8827;
+    border-radius: 50%; 
+    transition: all 0.2s linear;
+        }
+        .page-wrapper .step-box:hover .step-title{
+            color: #fe8827;
+    transition: all 0.2s linear;
+        }
+        .page-wrapper .step-box:hover .step-icon img{
+            filter: invert(1);
+            height: 50px;
+    transition: all 0.2s linear;
+        }
         .page-wrapper .step-icon {
             margin-bottom: 28px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+    align-items: center;
+    justify-content: center;
         }
 
         .page-wrapper .step-icon img {
             height: 80px;
             width: auto;
             display: block;
+    transition: all 0.2s linear;
         }
 
         .page-wrapper .step-title {
@@ -208,6 +239,7 @@ font-family: "Urbanist", sans-serif;
             line-height: 1.25;
             color: #000;
             margin-bottom: 18px;
+            transition: all 0.2s linear;
         }
 
         .page-wrapper .step-title.orange {
@@ -251,26 +283,19 @@ font-family: "Urbanist", sans-serif;
             max-width: 480px;
         }
 
-        .page-wrapper .about-text {
-            font-family: "Urbanist", sans-serif;
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 1.6;
-            color: #111;
-            margin-bottom: 32px;
-            max-width: 440px;
+        .page-wrapper .about-text { 
+            font-size: 19px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #111;
+    margin-bottom: 32px;
+    max-width: 440px;
+    letter-spacing: 1px;
         }
 
          /* ---- Gallery ---- */
-        .page-wrapper .about-gallery {
-            margin-left: -10px;
-            margin-right: -10px;
-        }
-
-        .page-wrapper .about-gallery > [class*="col-"] {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+        
+ 
 
         .page-wrapper .gallery-col-down {
             padding-top: 85px;
@@ -299,141 +324,243 @@ font-family: "Urbanist", sans-serif;
             transform: scale(1.05);
         }
 
-         /* =============== TREATS SECTION (STACKED CARDS) =============== */
-        .page-wrapper .treats-section {
-            position: relative;
-            padding: 90px 0 60px;
-            background: linear-gradient(to bottom, #ffefe0 52%, #eaf6fa 52%)
-        }
-
-        .page-wrapper .treats-heading {
-            font-family: "Gloock", serif;
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 1.2;
-            color: #f79425;
-            margin-bottom: 0;
-            max-width: 520px;
-        }
-
-       .page-wrapper  .treats-intro {
-            font-family: "Urbanist", sans-serif;
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 1.6;
-            color: #111;
-            margin: 0 0 0 auto;
-            max-width: 470px;
-        }
-
-        .page-wrapper .treats-header-row {
-            margin-bottom: 70px;
-        }
-
-        /* ---- Stacked cards stage ---- */
-        .page-wrapper .treats-stage {
-            position: relative;
-        }
-
-        .page-wrapper .treats-stack {
-            position: relative;
-            height: 632px; /* card 520px + 2 x 56px peeks */
-            border-radius: 24px;
-            overflow: hidden;
-        }
-
-        .page-wrapper .treat-card {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 520px;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 18px 40px rgba(30, 20, 10, 0.22);
-        }
-
-        .page-wrapper .treat-card:nth-child(1) { z-index: 1; }
-        .page-wrapper .treat-card:nth-child(2) { z-index: 2; }
-        .page-wrapper .treat-card:nth-child(3) { z-index: 3; }
-
-        .page-wrapper .treat-card-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .page-wrapper .treat-card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .page-wrapper .overlay-orange { background: linear-gradient(180deg, rgba(238, 132, 25, 0.62) 0%, rgba(224, 114, 10, 0.88) 100%); }
-        .page-wrapper .overlay-cocoa  { background: linear-gradient(180deg, rgba(96, 55, 32, 0.6) 0%, rgba(72, 38, 20, 0.88) 100%); }
-        .page-wrapper .overlay-berry  { background: linear-gradient(180deg, rgba(172, 46, 74, 0.58) 0%, rgba(140, 26, 58, 0.87) 100%); }
-
-        .page-wrapper .treat-card-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 48px 30px;
-            z-index: 2;
-        }
-
-        .page-wrapper .treat-card-text {
-            font-family: "Urbanist", sans-serif;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.55;
-            color: #fff;
-            max-width: 660px;
-            margin: 0 auto 26px;
-        }
-
-        .page-wrapper .treat-card-title {
-            font-family: "Gloock", serif;
-            font-size: 44px;
-            font-weight: 400;
-            line-height: 1.2;
-            color: #fff;
-            margin-bottom: 24px;
-        }
-
-        .page-wrapper .treat-card-btn {
-            width: 64px;
-            height: 64px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .page-wrapper .treat-card-btn svg {
-            width: 22px;
-            height: 22px;
-        }
-
-        .page-wrapper .treat-card-btn:hover {
-            transform: translate(4px, -4px);
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-        }
-
+        /* ---------- scope ---------- */
+ 
+ 
+    /* ---------- section ---------- */
+    .page-wrapper .svc-stack {
+      position:relative;
+      min-height:100vh;
+      padding:100px 40px;
+      background: linear-gradient(to bottom, #FCE7D5 0%, #FCE7D5 60%, #f1fffe 60%, #f1fffe 100%);
+      overflow:hidden;
+      font-family:'Poppins',sans-serif;
+    }
+ 
+    /* ---------- top row (heading + intro) ---------- */
+    .page-wrapper .svc-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:40px;
+      max-width:1440px;
+      margin:0 auto 46px;
+    }
+    .page-wrapper .svc-heading {
+      margin:0;
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      font-size:56px;
+      line-height:1.06;
+      color: #E97C36;
+      letter-spacing:.2px;
+      max-width:640px;
+    }
+    .page-wrapper .svc-intro {
+        margin: 8px 0 0;
+    max-width: 520px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #3a3a3a;
+    text-align: right;
+    letter-spacing: 1px;
+    }
+    .page-wrapper .svc-intro b { font-weight:500; }
+ 
+    /* ---------- stack area ---------- */
+    .page-wrapper .svc-stack-area {
+      position:relative;
+      max-width:1000px;
+      height:min(72vh,620px);
+      margin:0 auto;
+    }
+    
+    /* ---------- a card ---------- */
+    .page-wrapper .svc-card {
+      position:absolute;
+      inset:0;
+      border-radius:34px;
+      padding:56px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      overflow:hidden;
+      box-shadow:0 34px 40px -30px rgba(120,55,10,.55);
+      background-size:cover;
+      background-position:center;
+      will-change:transform;
+    }
+    .page-wrapper .svc-card:nth-child(1){ z-index:1; 
+        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
+    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phptHDUED.jpg") center/cover no-repeat;
+    }
+    .page-wrapper .svc-card:nth-child(2){ z-index:2; 
+        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
+    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpz8IRMs.jpg") center/cover no-repeat;
+    }
+    .page-wrapper .svc-card:nth-child(3){ z-index:3; 
+        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
+    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpwivEja.jpg") center/cover no-repeat;
+    }
+ 
+    /* no-JS / reduced-motion static deck (peeking edges) */
+    .page-wrapper .svc-card:nth-child(2){ transform:translateY(34px) scale(.965); }
+    .page-wrapper .svc-card:nth-child(3){ transform:translateY(68px) scale(.93); }
+ 
+    /* when JS is on, GSAP owns the transforms — start them overlapped */
+    html.gsap-js .page-wrapper .svc-card { transform:none; }
+ 
+    /* ---------- card content ---------- */
+    .page-wrapper .svc-body {
+      font-family:'Fredoka',sans-serif;
+      font-weight:500;
+      font-size:26px;
+      line-height:1.42;
+      max-width:720px;
+      margin:0 0 30px;
+      text-shadow:0 2px 14px rgba(90,35,5,.35);
+    }
+    .page-wrapper .svc-title {
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      font-size:52px;
+      margin:0 0 26px;
+      text-shadow:0 3px 18px rgba(90,35,5,.4);
+    }
+    .page-wrapper .svc-arrow {
+      display:grid;
+      place-items:center;
+      width:62px; height:62px;
+      border-radius:50%;
+      background:#fff;
+      border:0;
+      cursor:pointer;
+      transition:transform .35s ease, box-shadow .35s ease;
+      box-shadow:0 10px 24px -8px rgba(90,35,5,.5);
+    }
+    .page-wrapper .svc-arrow svg {     width: 40px;
+    height: 40px;
+    display: block; }
+    .page-wrapper .svc-arrow:hover { transform:translateY(-3px) rotate(45deg); box-shadow:0 16px 30px -10px rgba(90,35,5,.55); }
+    .page-wrapper .svc-arrow:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+ 
+    .page-wrapper .galleryCarouselSection {
+        padding: 50px 0 0;
+        z-index: 2;
+    }
+    .page-wrapper .owl-carousel .galleryImg {
+        width: 100%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 15px;
+    }
+    .page-wrapper .dish-content h3 {
+        position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    background: #fe8627ba;
+    padding: 10px 25px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 40px;
+    border-radius: 20px;
+    }
+    .page-wrapper .dish-content .arrowImg {
+        position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .page-wrapper .dish-content {
+        position: relative;
+    }
+    .page-wrapper .arrowImg img {
+        width: 35px;
+        transform: rotate(-35deg);
+        filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(462%) hue-rotate(345deg) brightness(93%) contrast(92%);
+    }
+    .page-wrapper .crepeContainer {
+        width: 100%;
+    height: 500px;
+    background: #f79424;
+    border-radius: 50px;
+    }
+    .page-wrapper .crepeImg {
+        position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 800px;
+    transform: scale(1.5);
+    transform-origin: bottom;
+    }
+    .page-wrapper .crepeContainer {
+        position: relative;
+    }
+    .page-wrapper .crepeTxt {
+        position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 85px;
+    text-align: center;
+    margin: 0 auto 0;
+    color: #ef7c1e;
+    font-weight: 900;
+    letter-spacing: 1px;
+    }
+    .page-wrapper .crepeTxt.two {
+        top: 20%;
+    }
+    .page-wrapper .crepeTxt.three {
+        top: 40%;
+    }
+    .page-wrapper .crepeTxt.four {
+        top: 60%;
+    }
+    .page-wrapper .crepeTxt.five {
+        top: 80%;
+    }
+    .page-wrapper .StrawberryImg {
+        position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;    
+    }
+    .page-wrapper .crepeSection {
+        padding: 75px 0 100px;
+    overflow: hidden;
+    }
+    .page-wrapper .aboutRightImg {
+        position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    }
+    .page-wrapper .aboutLeftImg {
+        position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    }
+    .page-wrapper .footerRightImg {
+        position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    }
 
     /* RESPONSIVE VIEW */
 
@@ -453,79 +580,192 @@ font-family: "Urbanist", sans-serif;
 
     @media (max-width:1500px)
     {
-
+      .page-wrapper .svc-heading { font-size:50px; }
+      .page-wrapper p {
+        font-size: 21px;
+        letter-spacing: 1px;
+      }
+      .page-wrapper .step-icon {
+        width: 80px;
+        height: 80px;
+      }
+      .page-wrapper .step-icon img {
+        width: 60px;
+        height: 60px;
+      }
+      .page-wrapper .step-text {
+        font-size: 18px;
+      }
+      .page-wrapper .step-box:hover .step-icon img {
+        height: 50px;
+    width: 50px;
+      }
+      .page-wrapper .about-section { 
+    padding: 0px 0 90px;
+} 
     }
 
     @media (max-width:1199px)
     {
+        .page-wrapper h1 {
+            font-size: 56px;
+        }
      .page-wrapper   .about-title {
-                font-size: 42px;
+                font-size: 32px;
             }
           .page-wrapper   .gallery-item img {
                 height: 230px;
             }
+            .page-wrapper .about-text {
+                font-size: 18px;
+            }
+            .page-wrapper .svc-heading { font-size:40px; }
+      .page-wrapper .svc-body { font-size:22px; }
+      .page-wrapper .svc-title { font-size:40px; }
+      .page-wrapper .svc-intro {
+        font-size: 17px;
+      }
+      .btn-order {
+        font-size: 18px;
+        padding: 10px 20px 10px 15px;
+        gap: 8px;
+      }
+      .page-wrapper .svc-arrow {
+            width: 50px;
+    height: 50px;
+      }
+      .page-wrapper .step-text {
+        font-size: 15px;
+    }
+    .page-wrapper .step-title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .page-wrapper .svc-stack {
+        min-height: 90vh;
+        padding: 80px 40px;
+    }
+    .page-wrapper .svc-arrow svg {
+    width: 35px;
+    height: 35px; 
+}
+    .page-wrapper .step-box:hover .step-icon img {
+        height: 42px;
+        width: 42px;
+    }
+    .page-wrapper .step-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .page-wrapper .step-box {
+        padding: 25px 20px;
+    }
+    .page-wrapper .step-icon img {
+        width: 50px;
+        height: 50px;
+    }
     }
 
     @media (max-width:991px)
     {
-      .page-wrapper  .hero-title {
-                font-size: 48px;
+      .page-wrapper h1 {
+                font-size: 45px;
             }
-
+            .page-wrapper p {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
           .page-wrapper   .step-title {
                 font-size: 30px;
             }
 
           .page-wrapper   .about-section {
-                padding: 50px 0 90px;
+                padding: 0px 0 90px;
             }
            .page-wrapper  .about-content {
-                padding-right: 0;
-                margin-bottom: 45px;
+                padding-right: 0; 
             }
            .page-wrapper  .about-title {
-                font-size: 38px;
+                font-size: 30px;
                 max-width: 100%;
             }
            .page-wrapper  .about-text {
                 max-width: 100%;
+                font-size: 16px;
             }
            .page-wrapper  .gallery-item img {
-                height: 250px;
+                        height: 205px;
+        border-radius: 8px;
+            }
+            .page-wrapper .aboutRightImg, .page-wrapper .aboutLeftImg {
+                width: 50%;
+                opacity: 0.5;
             }
            .page-wrapper  .gallery-col-down {
-                padding-top: 60px;
+                padding-top: 50px;
             }
-
-           .page-wrapper  .treats-heading {
-                font-size: 40px;
+            .btn-order .arrow-circle {
+                width: 30px;
+                height: 30px;
             }
-           .page-wrapper  .treats-header-row {
-                margin-bottom: 50px;
+            .hero-section {
+                padding: 60px 15px;
             }
-            /* card 460px + 2 x 40px peeks = 540px */
-            .page-wrapper .treats-stack { height: 540px; }
-            .page-wrapper .treat-card { height: 460px; }
-            .page-wrapper .treat-card-text { font-size: 18px; }
-            .page-wrapper .treat-card-title { font-size: 38px; }
-            .page-wrapper .treat-card-btn { width: 56px; height: 56px; }
+            .btn-order .arrow-circle svg {
+    width: 20px;
+    height: 20px;
+}
+            .page-wrapper .svc-stack { padding:50px 25px 0; }
+          .page-wrapper .svc-top {
+        gap: 22px;
+        margin-bottom: 38px;
+    }
+      .page-wrapper .svc-heading {         font-size: 30px;
+        max-width: 100%; }
+      .page-wrapper .svc-intro {         font-size: 15px;
+        max-width: 64%; }
+      .page-wrapper .svc-card { padding:44px; border-radius:28px; }
+      .page-wrapper .svc-body { font-size:21px; }
+      .page-wrapper .svc-title { font-size:40px; }
+.page-wrapper .svc-stack-area {
+        height: min(60vh, 500px);
+}
+.page-wrapper .svc-heading br {
+    display: none;
+}
+      .page-wrapper .step-text {
+        font-size: 15px;
+      }
+      .page-wrapper .step-icon {
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .page-wrapper .step-box {
+                padding: 15px 20px;
+                text-align: center;
+            }
+            .page-wrapper  .step-title {
+                font-size: 22px;
+            }
+           
     }
 
     @media (max-width:767px)
     {
        .page-wrapper .hero-section {
-                min-height: 80vh;
-                padding: 50px 15px;
+                min-height: 65vh;
+                padding: 50px 0px;
             }
-           .page-wrapper  .hero-title {
+           .page-wrapper h1{
                 font-size: 38px;
             }
            .page-wrapper  .hero-description {
                 font-size: 16px;
             }
            .page-wrapper  .btn-order {
-                font-size: 16px;
-                padding: 12px 28px 12px 12px;
+            font-size: 17px;
+            padding: 10px 18px 10px 13px;
             }
            .page-wrapper  .btn-order .arrow-circle {
                 width: 30px;
@@ -534,7 +774,7 @@ font-family: "Urbanist", sans-serif;
             }
 
           .page-wrapper   .steps-section {
-                padding: 60px 0;
+                padding: 50px 0;
             }
           .page-wrapper   .step-box {
                 text-align: center;
@@ -544,96 +784,116 @@ font-family: "Urbanist", sans-serif;
                 margin-left: auto;
                 margin-right: auto;
             }
-           .page-wrapper  .step-title {
-                font-size: 28px;
-            }
+           
           .page-wrapper   .step-text {
-                font-size: 16px;
-                margin-left: auto;
-                margin-right: auto;
+                font-size: 14px; 
             }
            .page-wrapper  .step-box:last-child {
                 margin-bottom: 0;
             }
-
+.page-wrapper .about-section {
+    text-align: center;
+}
+.page-wrapper .about-label {
+        font-size: 20px;
+            margin-bottom: 10px;
+}
           .page-wrapper   .about-title {
-                font-size: 34px;
+                font-size: 30px;
             }
            .page-wrapper  .about-text {
                 font-size: 16px;
+            }
+            .page-wrapper .about-gallery {
+                padding-top: 50px;
+            }
+            .page-wrapper .gallery-item img {
+                height: 100%;
             }
             .gallery-item img {
                 height: 200px;
             }
            .page-wrapper  .gallery-col-down {
-                padding-top: 40px;
+                padding-top: 0px;
             }
-
-           .page-wrapper  .treats-section {
-                padding: 65px 0 40px;
-            }
-           .page-wrapper  .treats-heading {
-                font-size: 36px;
-                margin-bottom: 22px;
-            }
-          .page-wrapper   .treats-intro {
-                margin-left: 0;
-            }
-           .page-wrapper  .treats-header-row {
-                margin-bottom: 45px;
-            }
-            /* card 400px + 2 x 24px peeks = 448px */
-           .page-wrapper .treats-stack { height: 448px; border-radius: 18px; }
-           .page-wrapper .treat-card { height: 400px; border-radius: 18px; }
-           .page-wrapper .treat-card-text { font-size: 17px; margin-bottom: 20px; }
-           .page-wrapper .treat-card-title { font-size: 34px; margin-bottom: 20px; }
-           .page-wrapper .treat-card-btn { width: 52px; height: 52px; }
-           .page-wrapper .treat-card-content { padding: 40px 22px; }
+            
+            .page-wrapper .svc-stack { padding:56px 18px 0; }
+      .page-wrapper .svc-heading { font-size:33px; }
+      .page-wrapper .svc-stack-area { height:min(76vh,560px); }
+      .page-wrapper .svc-card { padding:30px 26px; border-radius:24px; }
+      .page-wrapper .svc-body { font-size:18px; margin-bottom:24px; }
+      .page-wrapper .svc-title { font-size:34px; margin-bottom:20px; }
+      .page-wrapper .svc-arrow { width:54px; height:54px; }
+           .page-wrapper .aboutLeftImg, .page-wrapper .aboutRightImg {
+            opacity: 0.5;
+           }
     }
 
     @media (max-width:575px)
     {
-         .page-wrapper .hero-title {
-                font-size: 30px;
-            }
-            .page-wrapper .hero-description {
-                font-size: 15px;
-            }
 
-            .page-wrapper .step-icon img {
-                height: 70px;
-            }
-            .page-wrapper .step-title {
-                font-size: 26px;
-            }
-
-            .page-wrapper .about-label {
-                font-size: 20px;
-            }
-            .page-wrapper .about-title {
+        .page-wrapper .step-text {
+            max-width: 100%;
+        }
+        .page-wrapper .hero-section {
+            min-height: 60vh;
+        }
+         .page-wrapper h1 {
                 font-size: 28px;
             }
-            .page-wrapper .gallery-item img {
-                height: 165px;
+            .page-wrapper .hero-description {
+                       font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 1.5;
             }
+.page-wrapper  .about-text {
+                font-size: 15px;
+            }
+                .page-wrapper .btn-order {
+        font-size: 16px;
+        padding: 6px 16px 6px 9px;
+    }
+        .page-wrapper .btn-order .arrow-circle {
+        width: 25px;
+        height: 25px;
+        flex: 0 0 25px;
+    }
+        .page-wrapper .about-gallery {
+        padding-top: 50px;
+    }
+            .page-wrapper .step-icon img {
+                height: 50px;
+            }
+            .page-wrapper .step-title {
+                font-size: 20px;
+            }
+.page-wrapper .gallery-item {
+    border-radius: 5px;
+}
+            .page-wrapper .about-label {
+                font-size: 18px;
+            }
+            .page-wrapper .about-title {
+                font-size: 22px;
+            } 
             .page-wrapper .gallery-col-down {
-                padding-top: 30px;
+                padding-top: 0px;
             }
-
-            .page-wrapper .treats-heading {
-                font-size: 30px;
-            }
-            .page-wrapper .treats-intro {
-                font-size: 16px;
-            }
-            .page-wrapper .treat-card-text { font-size: 15px; }
-            .page-wrapper .treat-card-title { font-size: 30px; }
-            .page-wrapper .treat-card-btn { width: 48px; height: 48px; }
+            .page-wrapper .svc-heading { font-size:29px; }
+      .page-wrapper .svc-body { font-size:16px; }
+      .page-wrapper .svc-title { font-size:30px; }
     }
     
     @media (max-width:375px)
     {
 
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      /* keep the static deck, no scroll animation */
+      html.gsap-js .page-wrapper .svc-card:nth-child(2){ transform:translateY(34px) scale(.965) !important; }
+      html.gsap-js .page-wrapper .svc-card:nth-child(3){ transform:translateY(68px) scale(.93) !important; }
     }
 
 </style>
@@ -651,6 +911,7 @@ font-family: "Urbanist", sans-serif;
 
 
 
+
 <div class="page-wrapper">
 
 <section class="hero-section">
@@ -662,12 +923,12 @@ font-family: "Urbanist", sans-serif;
                         Crafted to Perfection!
                     </h1>
                     <p class="hero-description">
-                        Satisfy your sweet tooth from the comfort of your home with {TAKEAWAY NAME} in {TAKEAWAY TOWN}. Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
+                        Satisfy your sweet tooth from the comfort of your home with Temp1069 Scoopaholic 886319 23062026 in . Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
                     </p>
                     <a href="#" class="btn-order">
                         <span class="arrow-circle">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                         </span>
                         Order Now
@@ -677,180 +938,254 @@ font-family: "Urbanist", sans-serif;
         </div>
 </section>
 
-<section class="steps-section">
-        <div class="container">
-            <div class="row">
-
-                <!-- Step 1 -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="step-box">
-                        <div class="step-icon">
-                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpJRM3kN.png" alt="Pick a Favourite">
+<section class="position-relative">
+    
+    <section class="steps-section">
+            <div class="container">
+                <div class="row justify-content-center">
+    
+                    <!-- Step 1 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="step-box">
+                            <div class="step-icon">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpJRM3kN.png" alt="Pick a Favourite">
+                            </div>
+                            <h3 class="step-title">Pick a Favourite</h3>
+                            <p class="step-text">Browse the menu and choose something delicious</p>
                         </div>
-                        <h3 class="step-title orange">Pick a Favourite</h3>
-                        <p class="step-text">Browse the menu and choose something delicious</p>
                     </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="step-box">
-                        <div class="step-icon">
-                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpT9ia17.png" alt="Secure Payment">
+    
+                    <!-- Step 2 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="step-box">
+                            <div class="step-icon">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpT9ia17.png" alt="Secure Payment">
+                            </div>
+                            <h3 class="step-title">Secure Payment</h3>
+                            <p class="step-text">A smooth checkout with quick online payment</p>
                         </div>
-                        <h3 class="step-title">Secure Payment</h3>
-                        <p class="step-text">A smooth checkout with quick online payment</p>
                     </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="col-md-4 col-sm-12">
-                    <div class="step-box">
-                        <div class="step-icon">
-                            <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php1ZdhHs.png" alt="Fresh &amp; Ready">
+    
+                    <!-- Step 3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="step-box">
+                            <div class="step-icon">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php1ZdhHs.png" alt="Fresh &amp; Ready">
+                            </div>
+                            <h3 class="step-title">Fresh &amp; Ready</h3>
+                            <p class="step-text">Your meal is prepared to perfection and waiting for you</p>
                         </div>
-                        <h3 class="step-title">Fresh &amp; Ready</h3>
-                        <p class="step-text">Your meal is prepared to perfection and waiting for you</p>
                     </div>
+    
                 </div>
-
             </div>
-        </div>
-</section>
-
- <!-- =============== ABOUT SECTION =============== -->
+    </section>
+    
+    <!-- =============== ABOUT SECTION =============== -->
     <section class="about-section">
         <div class="container">
-            <div class="row align-items-center">
-
+            <div class="row align-items-center justify-content-center">
+    
                 <!-- Left : Content -->
-                <div class="col-lg-5 col-md-12">
+                <div class="col-lg-5 col-md-5">
                     <div class="about-content">
                         <h4 class="about-label">About Us</h4>
                         <h2 class="about-title">Freshly Made Desserts, Perfect for Every Occasion</h2>
                         <p class="about-text">
-                            Enjoy the finest desserts on the go! At {TAKEAWAY NAME} in {TAKEAWAY TOWN}, we make it easy to take home a taste of indulgence. From rich {dessert 1} to refreshing {dessert 2}, our freshly made sweets are available for takeaway—perfect for those who love a little luxury on the move
+                            Enjoy the finest desserts on the go! At Temp1069 Scoopaholic 886319 23062026 in , we make it easy to take home a taste of indulgence. From rich {dessert 1} to refreshing {dessert 2}, our freshly made sweets are available for takeaway—perfect for those who love a little luxury on the move
                         </p>
                         <a href="#" class="btn-order">
                             <span class="arrow-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </span>
                             Order Now
                         </a>
                     </div>
                 </div>
-
+    
                 <!-- Right : Gallery -->
-                <div class="col-lg-7 col-md-12">
+                <div class="col-lg-7 col-md-7">
                     <div class="row about-gallery">
-
+    
                         <div class="col-6 gallery-col-down">
                             <div class="gallery-item">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261012phpcbV8o0.jpg" alt="Dessert Gallery 1">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261012phpcbV8o0.jpg" alt="Dessert Gallery 1">
                             </div>
                             <div class="gallery-item">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpMXSBH3.jpg" alt="Dessert Gallery 2">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpMXSBH3.jpg" alt="Dessert Gallery 2">
                             </div>
                         </div>
-
+    
                         <div class="col-6 gallery-col-up">
                             <div class="gallery-item">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpdHXWlA.jpg" alt="Dessert Gallery 3">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpdHXWlA.jpg" alt="Dessert Gallery 3">
                             </div>
                             <div class="gallery-item">
-                                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpyKjn06.jpg" alt="Dessert Gallery 4">
+                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpyKjn06.jpg" alt="Dessert Gallery 4">
                             </div>
                         </div>
-
+    
                     </div>
                 </div>
-
+    
             </div>
         </div>
     </section>
+
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpVQ0k67.png" class="img-fluid aboutRightImg" alt="">
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php5pdXpN.png" class="img-fluid aboutLeftImg" alt="">
+
+</section>
+
 
       <!-- =============== TREATS SECTION (STACKED CARDS - GSAP) =============== -->
-    <section class="treats-section">
-        <div class="container">
+  
+  <div class="pin-spacer"><section class="svc-stack">
 
-            <!-- Header Row -->
-            <div class="row treats-header-row align-items-end">
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                    <h2 class="treats-heading">The Sweetest Treats You'll Ever Taste!</h2>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <p class="treats-intro text-lg-right">
-                        Craving something sweet but don't want to step out? {TAKEAWAY NAME} in {TAKEAWAY TOWN} offers the perfect solution with our delicious takeaway desserts. From creamy to crunchy, every bite is a moment of pure indulgence.
-                    </p>
-                </div>
-            </div>
+    <div class="svc-top">
+      <h2 class="svc-heading">The Sweetest Treats<br>You’ll Ever Taste!</h2>
+      <p class="svc-intro">
+        Craving something sweet but don’t want to step out?
+        <b>Temp1069 Scoopaholic 886319 23062026</b> in <b></b> offers the perfect
+        solution with our delicious takeaway desserts. From creamy to crunchy,
+        every bite is a moment of pure indulgence.
+      </p>
+    </div>
+ 
+    <div class="svc-stack-area">
+      <!-- Card 1 (visible first) -->
+      <article class="svc-card">
+        <p class="svc-body"> 
+          At Temp1069 Scoopaholic 886319 23062026, we take pride in serving delicious food with fast takeaway service in . No matter the occasion or dietary need, we’ve got something for you. Find your new favourite meal today!</p>
+        <h3 class="svc-title">Our Service</h3>
+        <button class="svc-arrow" type="button" aria-label="Our Service">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+        </button>
+      </article>
+ 
+      <!-- Card 2 (rises over card 1) -->
+      <article class="svc-card">
+        <p class="svc-body">
+            We bring you the best food in , made from the freshest ingredients. Our menu is always evolving with new dishes and customer favourites. Check out our latest menu and order online today!
+        </p>
+        <h3 class="svc-title">Our Menu</h3>
+        <button class="svc-arrow" type="button" aria-label="Our Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+        </button>
+      </article>
+ 
+      <!-- Card 3 (rises over card 2) -->
+      <article class="svc-card">
+        <p class="svc-body"> 
+          We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, Temp1069 Scoopaholic 886319 23062026 follows top-rated hygiene standards. Order now from a takeaway you can trust!
+        </p>
+        <h3 class="svc-title">Our Hygiene</h3>
+        <button class="svc-arrow" type="button" aria-label="Our Hygiene">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+        </button>
+      </article>
+    </div>
+  </section></div>
 
-            <!-- Stacked Cards -->
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-11 col-sm-12">
-                    <div class="treats-stage">
-                        <div class="treats-stack">
+  <section class="galleryCarouselSection">
+    <div class="container">
+        <div class="svc-top">
+            <h2 class="svc-heading">Order Now &amp; <br> Satisfy Your Sweet Cravings!</h2>
+            <p class="svc-intro">
+                Make every moment sweeter with (TAKEAWAY NAME) in {TAKEAWAY TOWN). Our takeaway desserts are crafted to perfection, whether you're treating yourself, surprising a loved one, or sharing
+                a little sweetness with friends
+            </p>
+          </div>
+    </div>
+    <!-- <div class="container-fluid px-0">
+        <div class="slider-section">
+            <div class="owl-carousel owl-theme">
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          <div class="arrowImg">
+                            <img loading=lazy src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpdGzonN.png" class="img-fluid" alt="">
+                          </div>
+                          <h3>
+                            Milkshake
+                          </h3>
+                    </a>
+                    </div> 
+               </div>                
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          </a>
+                    </div> 
+               </div>                
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          </a>
+                    </div> 
+               </div>                
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          </a>
+                    </div> 
+               </div>                
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          </a>
+                    </div> 
+               </div>                
+               <div class="item">
+                   <div class="dish-content">
+                    <a href="/order-now">
+                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
+                          </a>
+                    </div> 
+               </div>                
+           </div>
+         </div>
+    </div> -->
+  </section>
 
-                            <!-- Card 1 -->
-                            <article class="treat-card">
-                                <img class="treat-card-img" src="https://images.pexels.com/photos/6463655/pexels-photo-6463655.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Our Service">
-                                <div class="treat-card-overlay overlay-orange"></div>
-                                <div class="treat-card-content">
-                                    <p class="treat-card-text">
-                                        We're here to serve you delicious food, whether you need a quick bite, a family meal, or catering for a special occasion. With fresh ingredients and fast service, we never turn down a hungry customer!
-                                    </p>
-                                    <h3 class="treat-card-title">Our Service</h3>
-                                    <a href="#" class="treat-card-btn" aria-label="Go to Our Service">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <path d="M7 17L17 7M9 7h8v8" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </article>
+  <section class="crepeSection">
+    <div class="container">
+        <div class="svc-top flex-column">
+            <h2 class="svc-heading">
+                Handmade with Love, <br> Served with Joy!
+            </h2>
+            <a href="#" class="btn-order">
+                <span class="arrow-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+                Order Now
+            </a>
+          </div>
 
-                            <!-- Card 2 -->
-                            <article class="treat-card">
-                                <img class="treat-card-img" src="https://images.pexels.com/photos/5570888/pexels-photo-5570888.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Our Desserts">
-                                <div class="treat-card-overlay overlay-cocoa"></div>
-                                <div class="treat-card-content">
-                                    <p class="treat-card-text">
-                                        From velvety chocolate creations to creamy chilled treats, every dessert is handcrafted daily by our passionate chefs—giving you a taste you will never forget.
-                                    </p>
-                                    <h3 class="treat-card-title">Our Desserts</h3>
-                                    <a href="#" class="treat-card-btn" aria-label="Go to Our Desserts">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <path d="M7 17L17 7M9 7h8v8" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </article>
+          <div class="crepeContainer">
+            <p class="crepeTxt one"> CREPE CREPE CREPE CREPE CREPE </p>
+            <p class="crepeTxt two"> CREPE CREPE CREPE CREPE CREPE </p>
+            <p class="crepeTxt three"> CREPE CREPE CREPE CREPE CREPE </p>
+            <p class="crepeTxt four"> CREPE CREPE CREPE CREPE CREPE </p>
+            <p class="crepeTxt five"> CREPE CREPE CREPE CREPE CREPE </p>
+            <p class="crepeTxt six"> CREPE CREPE CREPE CREPE CREPE </p>
+            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpE8nLDd.png" class="img-fluid crepeImg" alt="">
+            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpzkxzYG.png" class="img-fluid StrawberryImg" alt="">
+          </div>
+    </div>
+    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpXYHvtN.png" class="img-fluid footerRightImg" alt="">
+  </section>
 
-                            <!-- Card 3 -->
-                            <article class="treat-card">
-                                <img class="treat-card-img" src="https://images.pexels.com/photos/3013817/pexels-photo-3013817.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Order With Ease">
-                                <div class="treat-card-overlay overlay-berry"></div>
-                                <div class="treat-card-content">
-                                    <p class="treat-card-text">
-                                        Order your favourites in just a few taps and enjoy quick collection or delivery in {TAKEAWAY TOWN}—sweet moments are always just around the corner.
-                                    </p>
-                                    <h3 class="treat-card-title">Order With Ease</h3>
-                                    <a href="#" class="treat-card-btn" aria-label="Order With Ease">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <path d="M7 17L17 7M9 7h8v8" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </article>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
 
 </div>
@@ -931,11 +1266,43 @@ font-family: "Urbanist", sans-serif;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-
+<script>
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js", function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin:20,
+            nav: false,
+            dots: false,
+            autoplay:false,
+            autoplayTimeout: 3000,
+            smartSpeed: 2000,
+            center: true,
+            autoplayHoverPause:true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1024: {
+                    items: 3
+                },
+                1025: {
+                   items: 3.5
+               },
+            }
+        })
+    });
+ </script>
  
  <!-- GSAP + ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -1009,38 +1376,78 @@ font-family: "Urbanist", sans-serif;
     });
 </script>
 
+<script>
+    (function () {
+      // Mark JS on so overlapped start states apply (avoids no-JS FOUC).
+      document.documentElement.classList.add('gsap-js');
+   
+      var GSAP = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js';
+      var ST   = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js';
+   
+      function boot() {
+        if (typeof jQuery === 'undefined') { return setTimeout(boot, 60); }
+        // $.getScript chain: GSAP -> ScrollTrigger -> init
+        jQuery.getScript(GSAP, function () {
+          jQuery.getScript(ST, function () {
+            init();
+          });
+        });
+      }
+   
+      function init() {
+        if (!window.gsap || !window.ScrollTrigger) return;
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.config({ ignoreMobileResize: true });
+   
+        var area  = document.querySelector('.page-wrapper .svc-stack-area');
+        var cards = gsap.utils.toArray('.page-wrapper .svc-card');
+        if (!area || cards.length < 3) return;
+   
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce) return; // CSS keeps the static deck
+   
+        // Cards 2 & 3 start just below, fully overlapping card 1.
+        gsap.set(cards[1], { yPercent: 112, scale: 1 });
+        gsap.set(cards[2], { yPercent: 112, scale: 1 });
+        gsap.set(cards[0], { yPercent: 0,  scale: 1 });
+   
+        var section = document.querySelector('.page-wrapper .svc-stack');
+   
+        var tl = gsap.timeline({
+          defaults: { ease: 'none' },
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: '+=2200',
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true
+          }
+        });
+   
+        // Phase 1: card 2 rises, card 1 recedes (top edge peeks).
+        tl.to(cards[0], { yPercent: -5,  scale: 0.955 }, 0)
+          .to(cards[1], { yPercent: 0,   scale: 1 },     0)
+          // Phase 2: card 3 rises, card 2 recedes, card 1 recedes further.
+          .to(cards[0], { yPercent: -10, scale: 0.91 },  1)
+          .to(cards[1], { yPercent: -5,  scale: 0.955 }, 1)
+          .to(cards[2], { yPercent: 0,   scale: 1 },     1);
+   
+        // Recalculate once fonts/images settle.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+        }
+        window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+      }
+   
+      boot();
+    })();
+    </script>
+
 
 </body>
 </html> 
  
-
-<!-- 
  
-Using My Images and Assets Create a responsive layout Using BS4 With GSAP Animations 
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785260989phpj7djgG.jpg
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261012phpcbV8o0.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261012php3icl3w.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpMXSBH3.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpE8nLDd.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpzkxzYG.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpwivEja.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phptHDUED.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpyKjn06.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpdHXWlA.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpJRM3kN.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpT9ia17.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php1ZdhHs.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpdGzonN.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpLslw37.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpx5OHJs.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261041phpujYYfX.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261041phpl7r1B6.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpXYHvtN.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpz8IRMs.jpg
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpVQ0k67.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php5pdXpN.png
-
- -->
 
