@@ -1,1453 +1,1615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dessert</title>
- 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spice Villa | Authentic Indian Cuisine</title>
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 4.6.2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 <!-- Font Awesome -->
-<link href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Bs 4 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> 
+<!-- Lenis smooth scroll -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
 
-<!-- Owl-Carousel --> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
-
-<!-- Animate Css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
- 
-
-
-<style type="text/css">
-
-
-
-/* 
-
-font-family: "Gloock", serif;
-font-family: "Urbanist", sans-serif;
-
-
-*/  
-
-    body .page-wrapper { 
-    font-family: "Urbanist", sans-serif; 
-    color: #6c6a6a; 
-    line-height: 24px; 
-    overflow-x: hidden; 
-    scroll-behavior: smooth; 
-    background-color: #f1ffff;
-    } 
-    
-   .page-wrapper p {
-       font-family: "Urbanist", sans-serif;
-    color: #fff;
-    font-size: 26px;
-    line-height: 1.2;
-    margin-bottom: 35px;
-    font-weight: 400;
-    margin-bottom: 35px;
-   }
-
-   .page-wrapper p > a {
-   color: inherit;
-   }
-   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-   line-height: 1.3;
-   font-family: "Gloock", serif;
-   }
-   .page-wrapper .row {
-   margin: 0 -15px!important;
-   }
-   .page-wrapper .bg-dark {
-   background-color: #fc673f!important;
-   }
-
-   .page-wrapper .bg-primary {
-   background-color: #241e5e!important;
-   }
-   .page-wrapper .bg-light {
-   background-color: #f1f1f1!important;
-   }
-   .page-wrapper section {
-   position: relative;
-   z-index: 1;
-   background-size: cover;
-   background-position: center center;
-   background-repeat: no-repeat;
-   }   
-   .page-wrapper .btn {
-   font-size: 14px;
-   border-radius: 0;
-   padding: 0 30px;
-   line-height: 50px;
-   }  
-
-   .page-wrapper .overlay{
-      content: "";
-    background: rgb(0 0 0 / 58%);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-   }
-
-   .page-wrapper h1 {
-    font-family: "Gloock", serif;
-            color: #f79425;
-            font-size: 64px;
-            line-height: 1.15;
-            margin-bottom: 25px;
-            font-weight: 400;
-   }
-   .page-wrapper h2 {
-    
-   }
-   .page-wrapper h3 {
-    
+<style>
+    :root {
+        --font-serif: "Libre Caslon Text", serif;
+        --font-sans: "Montserrat", sans-serif;
+        --cream: #F7EEDC;
+        --maroon: #7C1D18;
+        --maroon-dark: #5E1410;
+        --brick: #9E2B25;
+        --chip-red: #A8291F;
+        --bar-red: #B02A20;
+        --ink: #3E332A;
     }
-   .page-wrapper h4 {
-    
-   }
-   .page-wrapper h5 {
-    
-   }
-   .page-wrapper h6 {
-    
-   }
- 
 
- .hero-section {
-            position: relative;
-            background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261041phpujYYfX.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            padding: 60px 15px;
-        }
-        .page-wrapper .hero-section::after{
-            content: '';
-            background:  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-        }
+    html { scroll-behavior: auto; }
 
-         
-
-         
-.btn-order {
-    background-color: #f79425;
-    color: #fff;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 600;
-    font-size: 23px;
-    padding: 10px 34px 14px 14px;
-    border-radius: 50px;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-        }
-
-        .btn-order:hover {
-            background-color: #e0821a;
-            color: #fff;
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
-
-        .btn-order .arrow-circle {
-            width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-        }
-
-        .btn-order .arrow-circle svg {
-            width: 30px;
-            height: 30px;
-        }
-
-        /* =============== STEPS SECTION =============== */
-        .page-wrapper .steps-section { 
-            padding: 80px 0;
-        }
-
-        .page-wrapper .step-box {
-            padding: 25px;
-            transition: all 0.2s linear;
-            border-radius: 25px;
-        }
-        .page-wrapper .step-box:hover {
-            box-shadow: 10px 10px 50px -12px rgb(0 0 0 / 25%);
-            background: #f1ffff;
-        }
-        .page-wrapper .step-box:hover .step-icon{
-            background: #fe8827;
-    border-radius: 50%; 
-    transition: all 0.2s linear;
-        }
-        .page-wrapper .step-box:hover .step-title{
-            color: #fe8827;
-    transition: all 0.2s linear;
-        }
-        .page-wrapper .step-box:hover .step-icon img{
-            filter: invert(1);
-            height: 50px;
-    transition: all 0.2s linear;
-        }
-        .page-wrapper .step-icon {
-            margin-bottom: 28px;
-            width: 100px;
-            height: 100px;
-            display: flex;
-    align-items: center;
-    justify-content: center;
-        }
-
-        .page-wrapper .step-icon img {
-            height: 80px;
-            width: auto;
-            display: block;
-    transition: all 0.2s linear;
-        }
-
-        .page-wrapper .step-title {
-            font-family: "Gloock", serif;
-            font-size: 36px;
-            font-weight: 400;
-            line-height: 1.25;
-            color: #000;
-            margin-bottom: 18px;
-            transition: all 0.2s linear;
-        }
-
-        .page-wrapper .step-title.orange {
-            color: #f79425;
-        }
-
-        .page-wrapper .step-text { 
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 1.55;
-            color: #111;
-            margin-bottom: 0;
-            max-width: 320px;
-        }
-
-          /* =============== ABOUT SECTION =============== */
-        .page-wrapper .about-section {
-            position: relative;
-            padding: 60px 0 90px;
-        }
-
-        .page-wrapper .about-content {
-            padding-right: 20px;
-        }
-
-        .page-wrapper .about-label {
-            font-family: "Gloock", serif;
-            font-size: 22px;
-            font-weight: 400;
-            color: #000;
-            margin-bottom: 22px;
-        }
-
-        .page-wrapper .about-title {
-            font-family: "Gloock", serif;
-            font-size: 48px;
-            font-weight: 400;
-            line-height: 1.2;
-            color: #f79425;
-            margin-bottom: 26px;
-            max-width: 480px;
-        }
-
-        .page-wrapper .about-text { 
-            font-size: 19px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #111;
-    margin-bottom: 32px;
-    max-width: 440px;
-    letter-spacing: 1px;
-        }
-
-         /* ---- Gallery ---- */
-        
- 
-
-        .page-wrapper .gallery-col-down {
-            padding-top: 85px;
-        }
-
-        .page-wrapper .gallery-item {
-            margin-bottom: 20px;
-            border-radius: 14px;
-            overflow: hidden;
-        }
-
-        .page-wrapper .gallery-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .page-wrapper .gallery-item img {
-            width: 100%;
-            height: 265px;
-            object-fit: cover;
-            display: block;
-            border-radius: 14px;
-            transition: transform 0.4s ease;
-        }
-
-        .page-wrapper .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* ---------- scope ---------- */
- 
- 
-    /* ---------- section ---------- */
-    .page-wrapper .svc-stack {
-      position:relative;
-      min-height:100vh;
-      padding:100px 40px;
-      background: linear-gradient(to bottom, #FCE7D5 0%, #FCE7D5 60%, #f1fffe 60%, #f1fffe 100%);
-      overflow:hidden;
-      font-family:'Poppins',sans-serif;
+    body {
+        font-family: var(--font-sans);
+        background-color: var(--cream);
+        color: var(--ink);
+        overflow-x: hidden;
     }
- 
-    /* ---------- top row (heading + intro) ---------- */
-    .page-wrapper .svc-top {
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:40px;
-      max-width:1440px;
-      margin:0 auto 46px;
+
+    .font-serif { font-family: var(--font-serif) !important; }
+    .font-sans  { font-family: var(--font-sans) !important; }
+
+    /* ============ PRELOADER ============ */
+    .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #140806;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
-    .page-wrapper .svc-heading {
-      margin:0;
-      font-family:'Playfair Display',serif;
-      font-weight:700;
-      font-size:56px;
-      line-height:1.06;
-      color: #E97C36;
-      letter-spacing:.2px;
-      max-width:640px;
+    .preloader-inner { text-align: center; position: relative; z-index: 2; }
+    .preloader-brand {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: clamp(2rem, 6vw, 4.4rem);
+        color: #F7EEDC;
+        letter-spacing: .08em;
+        overflow: hidden;
     }
-    .page-wrapper .svc-intro {
-        margin: 8px 0 0;
-    max-width: 520px;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #3a3a3a;
-    text-align: right;
-    letter-spacing: 1px;
+    .preloader-brand span { display: inline-block; }
+    .preloader-bar {
+        width: 180px;
+        height: 2px;
+        background: rgba(255,255,255,.12);
+        margin: 22px auto 14px;
+        overflow: hidden;
+        border-radius: 2px;
     }
-    .page-wrapper .svc-intro b { font-weight:500; }
- 
-    /* ---------- stack area ---------- */
-    .page-wrapper .svc-stack-area {
-      position:relative;
-      max-width:1000px;
-      height:min(72vh,620px);
-      margin:0 auto;
+    .preloader-bar-fill {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #FFE600, #d32f2f);
+        transform: scaleX(0);
+        transform-origin: left center;
     }
-    
-    /* ---------- a card ---------- */
-    .page-wrapper .svc-card {
-      position:absolute;
-      inset:0;
-      border-radius:34px;
-      padding:56px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-      overflow:hidden;
-      box-shadow:0 34px 40px -30px rgba(120,55,10,.55);
-      background-size:cover;
-      background-position:center;
-      will-change:transform;
+    .preloader-count {
+        font-family: var(--font-sans);
+        font-weight: 600;
+        font-size: .85rem;
+        letter-spacing: .35em;
+        color: rgba(255,230,0,.85);
     }
-    .page-wrapper .svc-card:nth-child(1){ z-index:1; 
-        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
-    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phptHDUED.jpg") center/cover no-repeat;
+    .preloader-ember {
+        position: absolute;
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #ffcc00;
+        box-shadow: 0 0 10px #ff6600;
+        pointer-events: none;
     }
-    .page-wrapper .svc-card:nth-child(2){ z-index:2; 
-        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
-    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpz8IRMs.jpg") center/cover no-repeat;
+
+    /* ============ CURSOR + PROGRESS ============ */
+    .cursor-dot, .cursor-ring {
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 10000;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
     }
-    .page-wrapper .svc-card:nth-child(3){ z-index:3; 
-        background: linear-gradient(180deg, rgba(233, 124, 54, 0.72), rgba(217, 105, 31, 0.86)), 
-    url("https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpwivEja.jpg") center/cover no-repeat;
+    .cursor-dot {
+        width: 8px; height: 8px;
+        background: #FFE600;
     }
- 
-    /* no-JS / reduced-motion static deck (peeking edges) */
-    .page-wrapper .svc-card:nth-child(2){ transform:translateY(34px) scale(.965); }
-    .page-wrapper .svc-card:nth-child(3){ transform:translateY(68px) scale(.93); }
- 
-    /* when JS is on, GSAP owns the transforms — start them overlapped */
-    html.gsap-js .page-wrapper .svc-card { transform:none; }
- 
-    /* ---------- card content ---------- */
-    .page-wrapper .svc-body {
-      font-family:'Fredoka',sans-serif;
-      font-weight:500;
-      font-size:26px;
-      line-height:1.42;
-      max-width:720px;
-      margin:0 0 30px;
-      text-shadow:0 2px 14px rgba(90,35,5,.35);
+    .cursor-ring {
+        width: 42px; height: 42px;
+        border: 1.5px solid rgba(255,230,0,.7);
+        transition: width .25s ease, height .25s ease, background .25s ease;
     }
-    .page-wrapper .svc-title {
-      font-family:'Playfair Display',serif;
-      font-weight:700;
-      font-size:52px;
-      margin:0 0 26px;
-      text-shadow:0 3px 18px rgba(90,35,5,.4);
+    .cursor-ring.is-hover {
+        width: 72px; height: 72px;
+        background: rgba(255,230,0,.12);
     }
-    .page-wrapper .svc-arrow {
-      display:grid;
-      place-items:center;
-      width:62px; height:62px;
-      border-radius:50%;
-      background:#fff;
-      border:0;
-      cursor:pointer;
-      transition:transform .35s ease, box-shadow .35s ease;
-      box-shadow:0 10px 24px -8px rgba(90,35,5,.5);
+    .scroll-progress {
+        position: fixed;
+        top: 0; left: 0;
+        height: 3px;
+        width: 100%;
+        background: linear-gradient(90deg, #FFE600, #d32f2f);
+        transform: scaleX(0);
+        transform-origin: left center;
+        z-index: 9998;
+        pointer-events: none;
     }
-    .page-wrapper .svc-arrow svg {     width: 40px;
-    height: 40px;
-    display: block; }
-    .page-wrapper .svc-arrow:hover { transform:translateY(-3px) rotate(45deg); box-shadow:0 16px 30px -10px rgba(90,35,5,.55); }
-    .page-wrapper .svc-arrow:focus-visible { outline:3px solid #fff; outline-offset:3px; }
- 
-    .page-wrapper .galleryCarouselSection {
-        padding: 50px 0 0;
+    @media (pointer: coarse) {
+        .cursor-dot, .cursor-ring { display: none !important; }
+    }
+
+    /* ============ 1) HERO BANNER ============ */
+    .hero-banner {
+        position: relative;
+        background-color: #180D08;
+        background-image:
+            radial-gradient(circle at 92% 12%, rgba(255, 190, 60, .45) 0%, rgba(255, 120, 0, .2) 30%, transparent 60%),
+            radial-gradient(circle at 8% 68%, rgba(255, 75, 0, .30) 0%, rgba(180, 20, 0, .15) 45%, transparent 75%),
+            linear-gradient(to bottom, rgba(16, 8, 4, .3), rgba(16, 8, 4, .65)),
+            url('https://images.pexels.com/photos/12932215/pexels-photo-12932215.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=2000');
+        background-size: cover;
+        background-position: center 20%;
+        min-height: 100vh;
+        padding: 70px 0 120px;
+        overflow: hidden;
+    }
+
+    .lantern-glow-container {
+        position: absolute; top: 0; right: 0;
+        width: 220px; height: 240px;
+        pointer-events: none; z-index: 3;
+    }
+    .lantern-light {
+        position: absolute; top: -20px; right: 12px;
+        width: 80px; height: 80px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,200,1) 0%, rgba(255,200,50,.8) 35%, rgba(255,120,0,.3) 65%, transparent 100%);
+        box-shadow: 0 0 60px 30px rgba(255,180,0,.55);
+    }
+
+    .fiery-glow-left {
+        position: absolute; left: -10%; bottom: -12%;
+        width: 50%; height: 80%; pointer-events: none; z-index: 1;
+        background: radial-gradient(ellipse at center, rgba(255,100,0,.25) 0%, rgba(255,50,0,.10) 50%, transparent 75%);
+        filter: blur(20px);
+    }
+
+    .hero-text-wrapper { position: relative; z-index: 5; padding-top: 30px; }
+    .hero-title {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 3.4rem;
+        line-height: 1.25;
+        margin-bottom: 2.1rem;
+        text-shadow: 0 4px 18px rgba(0,0,0,.8), 0 2px 4px rgba(0,0,0,.9);
+        letter-spacing: -.5px;
+    }
+    .hero-title .line {
+        display: block;
+        overflow: hidden;
+    }
+    .hero-title .line-inner {
+        display: block;
+        will-change: transform;
+        transform: translateY(110%);
+    }
+    .hero-title .highlight-yellow {
+        color: #FFE600;
+        font-weight: 700;
+        display: inline-block;
+        text-shadow: 0 0 25px rgba(255,230,0,.5), 0 4px 10px rgba(0,0,0,.8);
+    }
+
+    .btn-order-pill {
+        font-family: var(--font-sans);
+        font-weight: 700; font-size: 1.05rem; letter-spacing: 1.8px;
+        color: #fff !important; text-transform: uppercase; text-decoration: none !important;
+        background: linear-gradient(180deg, #d32f2f 0%, #9a0000 100%);
+        border: 1.5px solid rgba(255,255,255,.5);
+        border-radius: 50px;
+        padding: 13px 42px;
+        display: inline-flex; align-items: center; justify-content: center;
+        box-shadow: 0 6px 20px rgba(185,28,28,.55), inset 0 1px 2px rgba(255,255,255,.5);
+        cursor: pointer;
+        will-change: transform;
+        opacity: 0;
+    }
+
+    .biryani-hero-wrapper { position: relative; z-index: 5; text-align: center; }
+    .biryani-img-container { position: relative; display: inline-block; max-width: 100%; }
+    .img-reveal {
+        overflow: hidden;
+        border-radius: 20px;
+        will-change: clip-path;
+        clip-path: inset(100% 0 0 0);
+    }
+    .biryani-main-img {
+        max-width: 100%; height: auto; border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0,0,0,.7), 0 0 40px rgba(255,140,0,.25);
+        filter: contrast(1.05) brightness(1.02);
+        will-change: transform;
+        display: block;
+    }
+
+    .steam-effect {
+        position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+        width: 70%; height: 60px; pointer-events: none;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,.2) 0%, rgba(255,220,180,.08) 50%, transparent 80%);
+        filter: blur(10px);
+    }
+
+    .ember-spark {
+        position: absolute; border-radius: 50%;
+        background: #ffcc00;
+        box-shadow: 0 0 8px #ff6600, 0 0 15px #ff3300;
+        pointer-events: none; opacity: 0; z-index: 4;
+    }
+
+    .scroll-hint {
+        position: absolute;
+        bottom: 78px; left: 50%;
+        transform: translateX(-50%);
+        z-index: 8;
+        color: rgba(255,255,255,.7);
+        font-size: .68rem;
+        letter-spacing: .28em;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: flex; flex-direction: column; align-items: center;
+    }
+    .scroll-hint-line {
+        width: 1px; height: 42px;
+        margin-top: 10px;
+        background: linear-gradient(180deg, #FFE600, transparent);
+        transform-origin: top center;
+    }
+
+    /* Torn paper bottom edge */
+    .torn-paper-bottom {
+        position: absolute; bottom: -1px; left: 0; width: 100%;
+        overflow: hidden; line-height: 0; z-index: 10;
+    }
+    .torn-paper-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 55px; }
+    .torn-paper-bottom .shape-fill { fill: var(--cream); }
+
+    /* ============ 2) TASTE THE MAGIC SECTION ============ */
+    .taste-section {
+        position: relative;
+        overflow: hidden;
+        padding: 60px 0 90px;
+        perspective: 1400px;
+    }
+    .taste-section::before {
+        content: '';
+        position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(circle at 84% 38%, rgba(255,190,150,.55) 0%, rgba(255,190,150,0) 55%);
+    }
+    .taste-content { position: relative; z-index: 2; }
+
+    .taste-card {
+        position: relative;
         z-index: 2;
+        background: linear-gradient(160deg, #83221c 0%, var(--maroon) 55%, #6a1611 100%);
+        border-radius: 18px;
+        padding: 44px 46px;
+        box-shadow: 0 20px 45px rgba(110, 25, 15, .35);
+        height: 100%;
+        transform-style: preserve-3d;
+        will-change: transform;
     }
-    .page-wrapper .owl-carousel .galleryImg {
-        width: 100%;
-    height: 650px;
-    object-fit: cover;
-    border-radius: 15px;
+    .taste-card h2 {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 18px;
+        overflow: hidden;
     }
-    .page-wrapper .dish-content h3 {
-        position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    width: fit-content;
-    background: #fe8627ba;
-    padding: 10px 25px;
-    color: #fff;
-    letter-spacing: 3px;
-    font-size: 40px;
-    border-radius: 20px;
+    .taste-card p {
+        color: rgba(255, 242, 232, .92);
+        font-size: .85rem;
+        line-height: 1.75;
+        margin-bottom: 0;
     }
-    .page-wrapper .dish-content .arrowImg {
-        position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .taste-card .card-underline {
+        width: 54px; height: 3px; background: #FFE600;
+        border-radius: 2px; margin-bottom: 18px;
+        transform-origin: left center;
     }
-    .page-wrapper .dish-content {
+
+    /* Circular rotating badge */
+    .circle-wrap {
         position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        will-change: transform;
     }
-    .page-wrapper .arrowImg img {
-        width: 35px;
-        transform: rotate(-35deg);
-        filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(462%) hue-rotate(345deg) brightness(93%) contrast(92%);
-    }
-    .page-wrapper .crepeContainer {
-        width: 100%;
-    height: 500px;
-    background: #f79424;
-    border-radius: 50px;
-    }
-    .page-wrapper .crepeImg {
-        position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 800px;
-    transform: scale(1.5);
-    transform-origin: bottom;
-    }
-    .page-wrapper .crepeContainer {
+    .circle-badge {
         position: relative;
+        width: 350px; height: 350px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 25%, #8c241c 0%, var(--maroon) 60%, #57110d 100%);
+        box-shadow: 0 22px 50px rgba(90,20,12,.4), inset 0 0 0 2px rgba(255,255,255,.06);
+        will-change: transform;
     }
-    .page-wrapper .crepeTxt {
+    .ring-svg {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%;
+        transform-origin: 50% 50%;
+        will-change: transform;
+    }
+    .ring-svg text {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 17.5px;
+        letter-spacing: 2px;
+        fill: #ffffff;
+    }
+    .circle-core {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56%; height: 56%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid rgba(247, 238, 220, .85);
+        box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+    .circle-core img {
+        width: 100%; height: 100%; object-fit: cover;
+        will-change: transform;
+    }
+
+    /* Chevron arrow decoration */
+    .down-arrow {
         position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    font-size: 85px;
-    text-align: center;
-    margin: 0 auto 0;
-    color: #ef7c1e;
-    font-weight: 900;
-    letter-spacing: 1px;
+        z-index: 4;
+        top: -6px; left: 50%;
+        transform: translateX(-96%) rotate(18deg);
+        opacity: .95;
+        transform-origin: center;
     }
-    .page-wrapper .crepeTxt.two {
-        top: 20%;
+
+    /* Spice bowl (top-right) */
+    .spice-bowl {
+        position: absolute; z-index: 2;
+        top: 10%; right: 5%;
+        width: 66px; height: 66px; border-radius: 50%;
+        border: 7px solid #ffffff;
+        background: radial-gradient(circle at 35% 30%, #d4502f, #a02313 65%, #7c150a);
+        box-shadow: 0 10px 18px rgba(90,30,10,.25), inset 0 5px 9px rgba(0,0,0,.3);
+        will-change: transform;
     }
-    .page-wrapper .crepeTxt.three {
-        top: 40%;
+
+    /* Wooden spoons with spice (right side) */
+    .spoons {
+        position: absolute; z-index: 1;
+        top: 34%; right: -26px;
+        width: 130px; height: 220px;
+        pointer-events: none;
+        will-change: transform;
     }
-    .page-wrapper .crepeTxt.four {
-        top: 60%;
-    }
-    .page-wrapper .crepeTxt.five {
-        top: 80%;
-    }
-    .page-wrapper .StrawberryImg {
+    .spoon {
         position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;    
+        width: 18px; height: 120px;
+        transform: rotate(40deg);
     }
-    .page-wrapper .crepeSection {
-        padding: 75px 0 100px;
-    overflow: hidden;
+    .spoon .spoon-head {
+        position: absolute; top: 0; left: -12px;
+        width: 42px; height: 50px;
+        border-radius: 48% 48% 44% 44%;
+        border: 4px solid #a56a38;
+        box-shadow: inset 0 -5px 8px rgba(0,0,0,.3);
     }
-    .page-wrapper .aboutRightImg {
-        position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -2;
-    }
-    .page-wrapper .aboutLeftImg {
-        position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -2;
-    }
-    .page-wrapper .footerRightImg {
-        position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -2;
-    }
-
-    /* RESPONSIVE VIEW */
-
-    @media(min-width:1200px){
-        .page-wrapper .container{
-            max-width: 1140px;
-        }
-    }
-
-    @media(min-width:1500px){
-        .page-wrapper .container{
-            max-width: 1440px;
-        }
-    }
-
-
-
-    @media (max-width:1500px)
-    {
-      .page-wrapper .svc-heading { font-size:50px; }
-      .page-wrapper p {
-        font-size: 21px;
-        letter-spacing: 1px;
-      }
-      .page-wrapper .step-icon {
-        width: 80px;
-        height: 80px;
-      }
-      .page-wrapper .step-icon img {
-        width: 60px;
-        height: 60px;
-      }
-      .page-wrapper .step-text {
-        font-size: 18px;
-      }
-      .page-wrapper .step-box:hover .step-icon img {
-        height: 50px;
-    width: 50px;
-      }
-      .page-wrapper .about-section { 
-    padding: 0px 0 90px;
-} 
-    }
-
-    @media (max-width:1199px)
-    {
-        .page-wrapper h1 {
-            font-size: 56px;
-        }
-     .page-wrapper   .about-title {
-                font-size: 32px;
-            }
-          .page-wrapper   .gallery-item img {
-                height: 230px;
-            }
-            .page-wrapper .about-text {
-                font-size: 18px;
-            }
-            .page-wrapper .svc-heading { font-size:40px; }
-      .page-wrapper .svc-body { font-size:22px; }
-      .page-wrapper .svc-title { font-size:40px; }
-      .page-wrapper .svc-intro {
-        font-size: 17px;
-      }
-      .btn-order {
-        font-size: 18px;
-        padding: 10px 20px 10px 15px;
-        gap: 8px;
-      }
-      .page-wrapper .svc-arrow {
-            width: 50px;
-    height: 50px;
-      }
-      .page-wrapper .step-text {
-        font-size: 15px;
-    }
-    .page-wrapper .step-title {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    .page-wrapper .svc-stack {
-        min-height: 90vh;
-        padding: 80px 40px;
-    }
-    .page-wrapper .svc-arrow svg {
-    width: 35px;
-    height: 35px; 
-}
-    .page-wrapper .step-box:hover .step-icon img {
-        height: 42px;
-        width: 42px;
-    }
-    .page-wrapper .step-icon {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 20px;
-    }
-    .page-wrapper .step-box {
-        padding: 25px 20px;
-    }
-    .page-wrapper .step-icon img {
-        width: 50px;
-        height: 50px;
-    }
-    }
-
-    @media (max-width:991px)
-    {
-      .page-wrapper h1 {
-                font-size: 45px;
-            }
-            .page-wrapper p {
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-          .page-wrapper   .step-title {
-                font-size: 30px;
-            }
-
-          .page-wrapper   .about-section {
-                padding: 0px 0 90px;
-            }
-           .page-wrapper  .about-content {
-                padding-right: 0; 
-            }
-           .page-wrapper  .about-title {
-                font-size: 30px;
-                max-width: 100%;
-            }
-           .page-wrapper  .about-text {
-                max-width: 100%;
-                font-size: 16px;
-            }
-           .page-wrapper  .gallery-item img {
-                        height: 205px;
+    .spoon .spoon-handle {
+        position: absolute; top: 42px; left: 3px;
+        width: 12px; height: 82px;
         border-radius: 8px;
-            }
-            .page-wrapper .aboutRightImg, .page-wrapper .aboutLeftImg {
-                width: 50%;
-                opacity: 0.5;
-            }
-           .page-wrapper  .gallery-col-down {
-                padding-top: 50px;
-            }
-            .btn-order .arrow-circle {
-                width: 30px;
-                height: 30px;
-            }
-            .hero-section {
-                padding: 60px 15px;
-            }
-            .btn-order .arrow-circle svg {
-    width: 20px;
-    height: 20px;
-}
-            .page-wrapper .svc-stack { padding:50px 25px 0; }
-          .page-wrapper .svc-top {
-        gap: 22px;
-        margin-bottom: 38px;
+        background: linear-gradient(90deg, #8a5a30, #b57e48 55%, #7c4c26);
     }
-      .page-wrapper .svc-heading {         font-size: 30px;
-        max-width: 100%; }
-      .page-wrapper .svc-intro {         font-size: 15px;
-        max-width: 64%; }
-      .page-wrapper .svc-card { padding:44px; border-radius:28px; }
-      .page-wrapper .svc-body { font-size:21px; }
-      .page-wrapper .svc-title { font-size:40px; }
-.page-wrapper .svc-stack-area {
-        height: min(60vh, 500px);
-}
-.page-wrapper .svc-heading br {
-    display: none;
-}
-      .page-wrapper .step-text {
-        font-size: 15px;
-      }
-      .page-wrapper .step-icon {
-                margin: auto;
-                margin-bottom: 20px;
-            }
-            .page-wrapper .step-box {
-                padding: 15px 20px;
-                text-align: center;
-            }
-            .page-wrapper  .step-title {
-                font-size: 22px;
-            }
-           
+    .spoon.s1 { top: 30px; left: 42px; }
+    .spoon.s1 .spoon-head { background: radial-gradient(circle at 35% 30%, #d94a28, #a31f0e 70%); }
+    .spoon.s2 { top: 92px; left: 14px; transform: rotate(32deg); }
+    .spoon.s2 .spoon-head { background: radial-gradient(circle at 35% 30%, #e08a2e, #b05a10 70%); }
+
+    /* Chana bowl (far left, clipped) */
+    .chana-bowl {
+        position: absolute; z-index: 1;
+        left: -54px; top: 42%;
+        width: 104px; height: 104px; border-radius: 50%;
+        border: 9px solid #cfc8ba;
+        background-color: #E7D4A9;
+        background-image: radial-gradient(circle, #C7A15E 32%, rgba(0,0,0,0) 37%);
+        background-size: 15px 15px;
+        box-shadow: inset 0 7px 14px rgba(0,0,0,.28), 0 12px 22px rgba(0,0,0,.14);
+        will-change: transform;
     }
 
-    @media (max-width:767px)
-    {
-       .page-wrapper .hero-section {
-                min-height: 65vh;
-                padding: 50px 0px;
-            }
-           .page-wrapper h1{
-                font-size: 38px;
-            }
-           .page-wrapper  .hero-description {
-                font-size: 16px;
-            }
-           .page-wrapper  .btn-order {
-            font-size: 17px;
-            padding: 10px 18px 10px 13px;
-            }
-           .page-wrapper  .btn-order .arrow-circle {
-                width: 30px;
-                height: 30px;
-                flex: 0 0 30px;
-            }
-
-          .page-wrapper   .steps-section {
-                padding: 50px 0;
-            }
-          .page-wrapper   .step-box {
-                text-align: center;
-                margin-bottom: 40px;
-            }
-           .page-wrapper  .step-icon img {
-                margin-left: auto;
-                margin-right: auto;
-            }
-           
-          .page-wrapper   .step-text {
-                font-size: 14px; 
-            }
-           .page-wrapper  .step-box:last-child {
-                margin-bottom: 0;
-            }
-.page-wrapper .about-section {
-    text-align: center;
-}
-.page-wrapper .about-label {
-        font-size: 20px;
-            margin-bottom: 10px;
-}
-          .page-wrapper   .about-title {
-                font-size: 30px;
-            }
-           .page-wrapper  .about-text {
-                font-size: 16px;
-            }
-            .page-wrapper .about-gallery {
-                padding-top: 50px;
-            }
-            .page-wrapper .gallery-item img {
-                height: 100%;
-            }
-            .gallery-item img {
-                height: 200px;
-            }
-           .page-wrapper  .gallery-col-down {
-                padding-top: 0px;
-            }
-            
-            .page-wrapper .svc-stack { padding:56px 18px 0; }
-      .page-wrapper .svc-heading { font-size:33px; }
-      .page-wrapper .svc-stack-area { height:min(76vh,560px); }
-      .page-wrapper .svc-card { padding:30px 26px; border-radius:24px; }
-      .page-wrapper .svc-body { font-size:18px; margin-bottom:24px; }
-      .page-wrapper .svc-title { font-size:34px; margin-bottom:20px; }
-      .page-wrapper .svc-arrow { width:54px; height:54px; }
-           .page-wrapper .aboutLeftImg, .page-wrapper .aboutRightImg {
-            opacity: 0.5;
-           }
+    /* ============ 3) OUR MENU SECTION ============ */
+    .menu-section { position: relative; padding: 50px 0 60px; overflow: hidden; }
+    .menu-heading {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        color: var(--brick);
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 3rem;
+        overflow: hidden;
+    }
+    .menu-heading .char {
+        display: inline-block;
+        will-change: transform;
     }
 
-    @media (max-width:575px)
-    {
-
-        .page-wrapper .step-text {
-            max-width: 100%;
-        }
-        .page-wrapper .hero-section {
-            min-height: 60vh;
-        }
-         .page-wrapper h1 {
-                font-size: 28px;
-            }
-            .page-wrapper .hero-description {
-                       font-size: 15px;
-        font-weight: 300;
-        letter-spacing: 1px;
-        line-height: 1.5;
-            }
-.page-wrapper  .about-text {
-                font-size: 15px;
-            }
-                .page-wrapper .btn-order {
-        font-size: 16px;
-        padding: 6px 16px 6px 9px;
+    .dish-card {
+        position: relative;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 10px;
+        box-shadow: 0 10px 30px rgba(120, 60, 20, .09);
+        height: 100%;
+        transform-style: preserve-3d;
+        will-change: transform;
+        cursor: pointer;
     }
-        .page-wrapper .btn-order .arrow-circle {
-        width: 25px;
-        height: 25px;
-        flex: 0 0 25px;
+    .dish-img-box {
+        position: relative;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
     }
-        .page-wrapper .about-gallery {
-        padding-top: 50px;
-    }
-            .page-wrapper .step-icon img {
-                height: 50px;
-            }
-            .page-wrapper .step-title {
-                font-size: 20px;
-            }
-.page-wrapper .gallery-item {
-    border-radius: 5px;
-}
-            .page-wrapper .about-label {
-                font-size: 18px;
-            }
-            .page-wrapper .about-title {
-                font-size: 22px;
-            } 
-            .page-wrapper .gallery-col-down {
-                padding-top: 0px;
-            }
-            .page-wrapper .svc-heading { font-size:29px; }
-      .page-wrapper .svc-body { font-size:16px; }
-      .page-wrapper .svc-title { font-size:30px; }
-    }
-    
-    @media (max-width:375px)
-    {
-
+    .dish-img-box img {
+        width: 100%; height: 100%; object-fit: cover;
+        will-change: transform;
     }
 
-    @media (prefers-reduced-motion: reduce){
-      /* keep the static deck, no scroll animation */
-      html.gsap-js .page-wrapper .svc-card:nth-child(2){ transform:translateY(34px) scale(.965) !important; }
-      html.gsap-js .page-wrapper .svc-card:nth-child(3){ transform:translateY(68px) scale(.93) !important; }
+    .dish-chip {
+        position: absolute;
+        left: 14px; bottom: 14px;
+        background: var(--chip-red);
+        color: #ffffff;
+        font-family: var(--font-sans);
+        font-weight: 700;
+        font-size: .78rem;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding: 7px 15px;
+        border-radius: 4px;
+        box-shadow: 0 5px 12px rgba(0,0,0,.3);
     }
 
+    .cart-btn {
+        position: absolute;
+        top: 14px; right: 14px;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        border: none;
+        background: #ffffff;
+        color: var(--brick);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,.18);
+        cursor: pointer;
+        z-index: 3;
+        will-change: transform;
+    }
+    .dish-price-tag {
+        position: absolute;
+        top: 14px; left: 14px;
+        background: rgba(255,255,255,.95);
+        color: var(--brick);
+        font-weight: 800;
+        font-size: .8rem;
+        padding: 5px 11px;
+        border-radius: 20px;
+        box-shadow: 0 3px 8px rgba(0,0,0,.15);
+    }
+
+    /* Green leaf sprig decoration */
+    .leaf-sprig {
+        position: absolute;
+        pointer-events: none;
+        z-index: 1;
+        filter: blur(1.6px);
+        opacity: .85;
+        will-change: transform;
+    }
+    .leaf-right  { right: -35px; top: 20px; width: 150px; transform: rotate(9deg); }
+    .leaf-left   { left: -38px; bottom: -50px; width: 150px; transform: rotate(-11deg); }
+
+    /* ============ 4) DISCOVER SECTION ============ */
+    .discover-section {
+        position: relative;
+        overflow: hidden;
+        padding: 30px 0 60px;
+    }
+    .discover-title {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        color: var(--brick);
+        font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+        line-height: 1.4;
+        text-align: center;
+    }
+    .discover-title .word {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: bottom;
+    }
+    .discover-title .word-inner {
+        display: inline-block;
+        will-change: transform;
+    }
+    .sketch-wrap { position: relative; display: inline-block; white-space: nowrap; }
+    .sketch-wrap svg {
+        position: absolute;
+        left: -7%; top: -22%;
+        width: 114%; height: 144%;
+        transform: rotate(-2deg);
+        pointer-events: none;
+    }
+    .sketch-wrap svg path {
+        fill: none;
+        stroke: var(--brick);
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+    }
+    .discover-text {
+        max-width: 730px;
+        margin: 1.4rem auto 0;
+        color: #5a4a3d;
+        font-size: .95rem;
+        line-height: 1.75;
+        text-align: center;
+    }
+    .btn-order-solid {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 2.5px;
+        color: #ffffff;
+        background: #6E1512;
+        border: none;
+        border-radius: 3px;
+        padding: 15px 48px;
+        margin-top: 2.2rem;
+        cursor: pointer;
+        will-change: transform;
+    }
+
+    /* ============ 5) FEATURES BAR ============ */
+    .features-bar {
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(180deg, #b92e22 0%, #a5241a 100%);
+        border-radius: 14px;
+        box-shadow: 0 16px 36px rgba(150, 30, 20, .28);
+        margin-bottom: 70px;
+        overflow: hidden;
+        will-change: transform;
+    }
+    .feature-col {
+        text-align: center;
+        padding: 34px 22px;
+        color: #ffffff;
+    }
+    .feature-col + .feature-col { border-top: 1px solid rgba(255,255,255,.35); }
+    .feature-col i {
+        font-size: 2.3rem;
+        margin-bottom: 14px;
+        color: #ffffff;
+        display: inline-block;
+    }
+    .feature-col h5 {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+        color: #ffffff;
+    }
+    .feature-col p {
+        font-size: .78rem;
+        color: rgba(255,255,255,.85);
+        margin-bottom: 0;
+    }
+    @media (min-width: 768px) {
+        .feature-col + .feature-col { border-top: none; border-left: 1px solid rgba(255,255,255,.35); }
+    }
+
+    /* ============ 6) GIANT WATERMARK ============ */
+    .giant-word {
+        overflow: hidden;
+        position: relative;
+        line-height: 1;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .giant-word span {
+        display: block;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 17vw;
+        letter-spacing: .04em;
+        color: rgba(140, 108, 58, .10);
+        transform: translateY(34%);
+        user-select: none;
+        will-change: transform;
+    }
+
+    /* ============ ORDER MODAL ============ */
+    .modal-content { border-radius: 16px; }
+    .order-modal-header {
+        background: var(--maroon);
+        border-radius: 16px 16px 0 0 !important;
+    }
+    .order-modal-header .modal-title {
+        font-family: var(--font-serif);
+        color: #ffe9b0;
+        font-weight: 700;
+    }
+    .order-modal-header .close { color: #fff; }
+    .quick-item {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px dashed #e5d8c2;
+    }
+    .quick-item:last-child { border-bottom: none; }
+    .quick-item img {
+        width: 56px; height: 56px; border-radius: 8px;
+        object-fit: cover; margin-right: 14px;
+    }
+    .qty-badge {
+        display: inline-block;
+        min-width: 26px; height: 26px;
+        line-height: 26px;
+        text-align: center;
+        background: var(--cream);
+        color: var(--brick);
+        border-radius: 50%;
+        font-weight: 800;
+        font-size: .8rem;
+        margin: 0 8px;
+    }
+    .btn-qty {
+        width: 26px; height: 26px;
+        border-radius: 50%;
+        border: 1px solid #d9c9ac;
+        background: #fff;
+        color: var(--brick);
+        font-size: .75rem;
+        line-height: 1;
+        padding: 0;
+    }
+    .btn-qty:hover { background: var(--chip-red); color: #fff; border-color: var(--chip-red); }
+
+    /* ============ TOAST ============ */
+    .toast-container { position: fixed; top: 20px; right: 20px; z-index: 1050; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1199.98px) {
+        .hero-title { font-size: 3rem; }
+        .circle-badge { width: 310px; height: 310px; }
+    }
+    @media (max-width: 991.98px) {
+        .hero-banner { text-align: center; padding-bottom: 100px; min-height: auto; }
+        .hero-title { font-size: 2.6rem; }
+        .hero-text-wrapper { margin-bottom: 35px; }
+        .btn-order-pill { margin-top: 6px; }
+        .taste-card { margin-right: 0 !important; }
+        .circle-wrap { margin-top: 35px; }
+        .down-arrow { top: -34px; left: 50%; }
+        .chana-bowl { display: none; }
+        .scroll-hint { display: none; }
+    }
+    @media (max-width: 575.98px) {
+        .hero-title { font-size: 2rem; margin-bottom: 1.5rem; }
+        .btn-order-pill { width: 78%; max-width: 280px; }
+        .torn-paper-bottom svg { height: 35px; }
+        .taste-card { padding: 32px 26px; }
+        .taste-card h2 { font-size: 1.55rem; }
+        .circle-badge { width: 265px; height: 265px; }
+        .spoons { display: none; }
+        .spice-bowl { top: 2%; right: 4%; width: 54px; height: 54px; }
+        .leaf-sprig { display: none; }
+        .giant-word span { font-size: 27vw; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .preloader { display: none !important; }
+        .cursor-dot, .cursor-ring, .scroll-progress { display: none !important; }
+        .hero-title .line-inner { transform: none !important; }
+        .btn-order-pill { opacity: 1 !important; }
+        .img-reveal { clip-path: none !important; }
+    }
 </style>
-
-
-
 </head>
-
-
 <body>
 
-    
-
-<div id="page-top-margin"></div>
-
-
-
-
-<div class="page-wrapper">
-
-<section class="hero-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8 text-center">
-                    <h1 class="hero-title">
-                        Sweet Indulgence, <br>
-                        Crafted to Perfection!
-                    </h1>
-                    <p class="hero-description">
-                        Satisfy your sweet tooth from the comfort of your home with Temp1069 Scoopaholic 886319 23062026 in . Our freshly made desserts are perfect for any occasion—whether it's a midweek treat, a family gathering, or a late-night craving. Order now and let us bring the sweetness to you!
-                    </p>
-                    <a href="#" class="btn-order">
-                        <span class="arrow-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </span>
-                        Order Now
-                    </a>
-                </div>
-            </div>
-        </div>
-</section>
-
-<section class="position-relative">
-    
-    <section class="steps-section">
-            <div class="container">
-                <div class="row justify-content-center">
-    
-                    <!-- Step 1 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="step-box">
-                            <div class="step-icon">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpJRM3kN.png" alt="Pick a Favourite">
-                            </div>
-                            <h3 class="step-title">Pick a Favourite</h3>
-                            <p class="step-text">Browse the menu and choose something delicious</p>
-                        </div>
-                    </div>
-    
-                    <!-- Step 2 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="step-box">
-                            <div class="step-icon">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpT9ia17.png" alt="Secure Payment">
-                            </div>
-                            <h3 class="step-title">Secure Payment</h3>
-                            <p class="step-text">A smooth checkout with quick online payment</p>
-                        </div>
-                    </div>
-    
-                    <!-- Step 3 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="step-box">
-                            <div class="step-icon">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php1ZdhHs.png" alt="Fresh &amp; Ready">
-                            </div>
-                            <h3 class="step-title">Fresh &amp; Ready</h3>
-                            <p class="step-text">Your meal is prepared to perfection and waiting for you</p>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-    </section>
-    
-    <!-- =============== ABOUT SECTION =============== -->
-    <section class="about-section">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-    
-                <!-- Left : Content -->
-                <div class="col-lg-5 col-md-5">
-                    <div class="about-content">
-                        <h4 class="about-label">About Us</h4>
-                        <h2 class="about-title">Freshly Made Desserts, Perfect for Every Occasion</h2>
-                        <p class="about-text">
-                            Enjoy the finest desserts on the go! At Temp1069 Scoopaholic 886319 23062026 in , we make it easy to take home a taste of indulgence. From rich {dessert 1} to refreshing {dessert 2}, our freshly made sweets are available for takeaway—perfect for those who love a little luxury on the move
-                        </p>
-                        <a href="#" class="btn-order">
-                            <span class="arrow-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </span>
-                            Order Now
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Right : Gallery -->
-                <div class="col-lg-7 col-md-7">
-                    <div class="row about-gallery">
-    
-                        <div class="col-6 gallery-col-down">
-                            <div class="gallery-item">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261012phpcbV8o0.jpg" alt="Dessert Gallery 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpMXSBH3.jpg" alt="Dessert Gallery 2">
-                            </div>
-                        </div>
-    
-                        <div class="col-6 gallery-col-up">
-                            <div class="gallery-item">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpdHXWlA.jpg" alt="Dessert Gallery 3">
-                            </div>
-                            <div class="gallery-item">
-                                <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpyKjn06.jpg" alt="Dessert Gallery 4">
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>
-
-    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpVQ0k67.png" class="img-fluid aboutRightImg" alt="">
-    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028php5pdXpN.png" class="img-fluid aboutLeftImg" alt="">
-
-</section>
-
-
-      <!-- =============== TREATS SECTION (STACKED CARDS - GSAP) =============== -->
-  
-  <div class="pin-spacer"><section class="svc-stack">
-
-    <div class="svc-top">
-      <h2 class="svc-heading">The Sweetest Treats<br>You’ll Ever Taste!</h2>
-      <p class="svc-intro">
-        Craving something sweet but don’t want to step out?
-        <b>Temp1069 Scoopaholic 886319 23062026</b> in <b></b> offers the perfect
-        solution with our delicious takeaway desserts. From creamy to crunchy,
-        every bite is a moment of pure indulgence.
-      </p>
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+        <div class="preloader-brand" id="preloaderBrand">SPICE VILLA</div>
+        <div class="preloader-bar"><span class="preloader-bar-fill"></span></div>
+        <div class="preloader-count" id="preloaderCount">00</div>
     </div>
- 
-    <div class="svc-stack-area">
-      <!-- Card 1 (visible first) -->
-      <article class="svc-card">
-        <p class="svc-body"> 
-          At Temp1069 Scoopaholic 886319 23062026, we take pride in serving delicious food with fast takeaway service in . No matter the occasion or dietary need, we’ve got something for you. Find your new favourite meal today!</p>
-        <h3 class="svc-title">Our Service</h3>
-        <button class="svc-arrow" type="button" aria-label="Our Service">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-        </button>
-      </article>
- 
-      <!-- Card 2 (rises over card 1) -->
-      <article class="svc-card">
-        <p class="svc-body">
-            We bring you the best food in , made from the freshest ingredients. Our menu is always evolving with new dishes and customer favourites. Check out our latest menu and order online today!
-        </p>
-        <h3 class="svc-title">Our Menu</h3>
-        <button class="svc-arrow" type="button" aria-label="Our Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-        </button>
-      </article>
- 
-      <!-- Card 3 (rises over card 2) -->
-      <article class="svc-card">
-        <p class="svc-body"> 
-          We take food hygiene seriously! From fresh ingredient sourcing to careful meal preparation, Temp1069 Scoopaholic 886319 23062026 follows top-rated hygiene standards. Order now from a takeaway you can trust!
-        </p>
-        <h3 class="svc-title">Our Hygiene</h3>
-        <button class="svc-arrow" type="button" aria-label="Our Hygiene">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#D9691F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
-        </button>
-      </article>
-    </div>
-  </section></div>
-
-  <section class="galleryCarouselSection">
-    <div class="container">
-        <div class="svc-top">
-            <h2 class="svc-heading">Order Now &amp; <br> Satisfy Your Sweet Cravings!</h2>
-            <p class="svc-intro">
-                Make every moment sweeter with (TAKEAWAY NAME) in {TAKEAWAY TOWN). Our takeaway desserts are crafted to perfection, whether you're treating yourself, surprising a loved one, or sharing
-                a little sweetness with friends
-            </p>
-          </div>
-    </div>
-    <!-- <div class="container-fluid px-0">
-        <div class="slider-section">
-            <div class="owl-carousel owl-theme">
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          <div class="arrowImg">
-                            <img loading=lazy src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpdGzonN.png" class="img-fluid" alt="">
-                          </div>
-                          <h3>
-                            Milkshake
-                          </h3>
-                    </a>
-                    </div> 
-               </div>                
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          </a>
-                    </div> 
-               </div>                
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          </a>
-                    </div> 
-               </div>                
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          </a>
-                    </div> 
-               </div>                
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          </a>
-                    </div> 
-               </div>                
-               <div class="item">
-                   <div class="dish-content">
-                    <a href="/order-now">
-                          <img loading=lazy loading="eager" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1762758472phpcryboH.jpg" class="img-fluid galleryImg" alt="Temp1069 Scoopaholic 886319 23062026 Cart">
-                          </a>
-                    </div> 
-               </div>                
-           </div>
-         </div>
-    </div> -->
-  </section>
-
-  <section class="crepeSection">
-    <div class="container">
-        <div class="svc-top flex-column">
-            <h2 class="svc-heading">
-                Handmade with Love, <br> Served with Joy!
-            </h2>
-            <a href="#" class="btn-order">
-                <span class="arrow-circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M5 12h14M13 6l6 6-6 6" stroke="#f79425" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </span>
-                Order Now
-            </a>
-          </div>
-
-          <div class="crepeContainer">
-            <p class="crepeTxt one"> CREPE CREPE CREPE CREPE CREPE </p>
-            <p class="crepeTxt two"> CREPE CREPE CREPE CREPE CREPE </p>
-            <p class="crepeTxt three"> CREPE CREPE CREPE CREPE CREPE </p>
-            <p class="crepeTxt four"> CREPE CREPE CREPE CREPE CREPE </p>
-            <p class="crepeTxt five"> CREPE CREPE CREPE CREPE CREPE </p>
-            <p class="crepeTxt six"> CREPE CREPE CREPE CREPE CREPE </p>
-            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpE8nLDd.png" class="img-fluid crepeImg" alt="">
-            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261013phpzkxzYG.png" class="img-fluid StrawberryImg" alt="">
-          </div>
-    </div>
-    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1785261028phpXYHvtN.png" class="img-fluid footerRightImg" alt="">
-  </section>
-
-
-
-
 </div>
 
+<!-- Custom cursor + scroll progress -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
 
-<script>
-   window.addEventListener("load", function(){
-   pageTopmargin();
-   $(window).scrollTop($(window).scrollTop()+1);
-   });
-   pageTopmargin();
-   function pageTopmargin() {
-   var headerHeight = $('#header').height();
-   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
-   }
-   $("#banner_content").appendTo($("#offer-section"));
-   var pageSection = $('[data-background]');
-   pageSection.each(function(indx){
-   if ($(this).attr("data-background")){
-   $(this).css("background-image", "url(" + $(this).data("background") + ")");
-   }
-   });
-</script>
+<!-- Toast Container -->
+<div class="toast-container" id="toastBox"></div>
 
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
- <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
-  
+<!-- ================= 1) HERO BANNER ================= -->
+<section class="hero-banner d-flex align-items-center" id="home">
+    <div id="embersContainer"></div>
 
-<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+    <div class="lantern-glow-container"><div class="lantern-light"></div></div>
+    <div class="fiery-glow-left"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 hero-text-wrapper">
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner">Spice Up Your Day</span></span>
+                    <span class="line"><span class="line-inner">with the Best</span></span>
+                    <span class="line"><span class="line-inner"><span class="highlight-yellow">Indian</span> Cuisine!</span></span>
+                </h1>
+                <a href="#" class="btn btn-order-pill js-magnetic js-hover" data-toggle="modal" data-target="#orderModal">ORDER NOW</a>
+            </div>
 
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                <div class="biryani-hero-wrapper">
+                    <div class="biryani-img-container">
+                        <div class="steam-effect"></div>
+                        <div class="img-reveal">
+                            <img src="https://images.pexels.com/photos/15059053/pexels-photo-15059053.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1000"
+                                 alt="Authentic Indian Biryani in Copper Handi Pot" class="biryani-main-img img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
- <script> 
+    <div class="scroll-hint">
+        <span>Scroll</span>
+        <span class="scroll-hint-line"></span>
+    </div>
 
-  var $owl = $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: false,
-    dots: false,
-    autoplay: false,
-    center: false,
-    autoplayTimeout: 4000,
-    smartSpeed: 2000,
-    responsive: {
-      0:   { items: 1 },
-      576: { items: 2, center: false },
-      768: { items: 3 },
-      992: { items: 3.5 }
-    }
-  });
+    <!-- Torn paper edge -->
+    <div class="torn-paper-bottom">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path class="shape-fill" d="M0,60 L0,25 Q15,18 30,26 T60,20 T90,28 T120,16 T150,24 T180,14 T210,22 T240,18 T270,30 T300,15 T330,26 T360,18 T390,24 T420,12 T450,26 T480,20 T510,16 T540,28 T570,14 T600,24 T630,18 T660,30 T690,16 T720,23 T750,14 T780,26 T810,18 T840,32 T870,14 T900,24 T930,16 T960,28 T990,14 T1020,26 T1050,20 T1080,15 T1110,28 T1140,18 T1170,24 T1200,16 L1200,60 Z"></path>
+        </svg>
+    </div>
+</section>
 
-  function setActiveCard() {
-    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
-    var $visibleItems = $('.owl-carousel .owl-item.active');
-    $visibleItems.eq(0).find('.slider-wrapper').addClass('active');
-  }
+<!-- ================= 2) TASTE THE MAGIC OF INDIA ================= -->
+<section class="taste-section">
+    <!-- Decorations -->
+    <div class="chana-bowl" aria-hidden="true"></div>
+    <div class="spice-bowl" aria-hidden="true"></div>
+    <div class="spoons" aria-hidden="true">
+        <div class="spoon s1"><div class="spoon-head"></div><div class="spoon-handle"></div></div>
+        <div class="spoon s2"><div class="spoon-head"></div><div class="spoon-handle"></div></div>
+    </div>
 
-  $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
-    setActiveCard();
-  });
+    <div class="container taste-content">
+        <div class="row align-items-center">
+            <!-- Maroon intro card -->
+            <div class="col-12 col-lg-6">
+                <div class="taste-card lg-neg">
+                    <h2>Taste the Magic of<br>India with Every Bite!</h2>
+                    <div class="card-underline"></div>
+                    <p>At <strong>Spice Villa</strong>, we bring the vibrant flavours of India to
+                    <strong>Leeds</strong>, offering an authentic dining experience that blends rich
+                    traditions with fresh ingredients. Our chefs craft every dish with aromatic spices
+                    and time-honoured techniques, ensuring every meal is a celebration of Indian cuisine.
+                    Whether you're dining with family or friends, expect warm hospitality, bold flavours,
+                    and an unforgettable culinary journey.</p>
+                </div>
+            </div>
 
-  setActiveCard();
- 
-  $(document).on('mouseenter', '.owl-item .slider-wrapper', function () {
-    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
-  });
+            <!-- Rotating circular badge -->
+            <div class="col-12 col-lg-6">
+                <div class="circle-wrap">
+                    <div class="circle-badge">
+                        <!-- Down chevron arrow -->
+                        <svg class="down-arrow" width="72" height="72" viewBox="0 0 60 60" aria-hidden="true">
+                            <path d="M8 16 L30 40 L52 16" stroke="#5E1410" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
 
-  $(document).on('mouseleave', '.owl-item .slider-wrapper', function () {
-    setActiveCard();
-  });
- 
-</script>
+                        <!-- Rotating circular text -->
+                        <svg class="ring-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <path id="ringPath" d="M150,150 m0,-88 a88,88 0 1,1 0,176 a88,88 0 1,1 0,-176"/>
+                            </defs>
+                            <text>
+                                <textPath href="#ringPath" startOffset="0">SLOW-COOKED, HANDCRAFTED &amp; BURSTING WITH FLAVOUR!</textPath>
+                            </text>
+                        </svg>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+                        <!-- Centre photo -->
+                        <div class="circle-core">
+                            <img src="https://images.pexels.com/photos/28674565/pexels-photo-28674565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Slow-cooked Indian curry in rustic pot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<script>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js", function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin:20,
-            nav: false,
-            dots: false,
-            autoplay:false,
-            autoplayTimeout: 3000,
-            smartSpeed: 2000,
-            center: true,
-            autoplayHoverPause:true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                576: {
-                    items: 2
-                },
-                768: {
-                    items: 3
-                },
-                1024: {
-                    items: 3
-                },
-                1025: {
-                   items: 3.5
-               },
-            }
-        })
-    });
- </script>
- 
- <!-- GSAP + ScrollTrigger -->
+<!-- ================= 3) OUR MENU ================= -->
+<section class="menu-section" id="menu">
+    <svg class="leaf-sprig leaf-right" viewBox="0 0 140 320" aria-hidden="true">
+        <path d="M70 320 C 62 220, 78 120, 70 0" stroke="#3d6b23" stroke-width="6" fill="none"/>
+        <ellipse cx="45" cy="50" rx="30" ry="14" fill="#5f9c39" transform="rotate(-38 45 50)"/>
+        <ellipse cx="95" cy="92" rx="30" ry="14" fill="#4d8a2c" transform="rotate(35 95 92)"/>
+        <ellipse cx="40" cy="132" rx="30" ry="14" fill="#69a844" transform="rotate(-42 40 132)"/>
+        <ellipse cx="98" cy="178" rx="30" ry="14" fill="#558f31" transform="rotate(38 98 178)"/>
+        <ellipse cx="42" cy="218" rx="30" ry="14" fill="#4d8a2c" transform="rotate(-35 42 218)"/>
+        <ellipse cx="95" cy="258" rx="28" ry="13" fill="#5f9c39" transform="rotate(40 95 258)"/>
+        <ellipse cx="52" cy="292" rx="24" ry="11" fill="#4d8a2c" transform="rotate(-30 52 292)"/>
+    </svg>
+
+    <div class="container position-relative">
+        <h2 class="menu-heading">OUR MENU</h2>
+
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="dish-card js-hover">
+                    <div class="dish-img-box">
+                        <img src="https://images.pexels.com/photos/32986479/pexels-photo-32986479.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Veg Biryani">
+                        <span class="dish-price-tag">$13.99</span>
+                        <span class="dish-chip">Veg Biryani</span>
+                        <button class="cart-btn js-hover" aria-label="Add Veg Biryani to order" onclick="addToCart('Veg Biryani', 13.99, this)">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="dish-card js-hover">
+                    <div class="dish-img-box">
+                        <img src="https://images.pexels.com/photos/15801057/pexels-photo-15801057.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Samosa">
+                        <span class="dish-price-tag">$6.99</span>
+                        <span class="dish-chip">Samosa</span>
+                        <button class="cart-btn js-hover" aria-label="Add Samosa to order" onclick="addToCart('Samosa', 6.99, this)">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="dish-card js-hover">
+                    <div class="dish-img-box">
+                        <img src="https://images.pexels.com/photos/34203198/pexels-photo-34203198.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Veg Pakora">
+                        <span class="dish-price-tag">$9.99</span>
+                        <span class="dish-chip">Veg Pakora</span>
+                        <button class="cart-btn js-hover" aria-label="Add Veg Pakora to order" onclick="addToCart('Veg Pakora', 9.99, this)">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 4) DISCOVER THE MAGIC ================= -->
+<section class="discover-section">
+    <svg class="leaf-sprig leaf-left" viewBox="0 0 140 320" aria-hidden="true">
+        <path d="M70 320 C 62 220, 78 120, 70 0" stroke="#3d6b23" stroke-width="6" fill="none"/>
+        <ellipse cx="45" cy="50" rx="30" ry="14" fill="#5f9c39" transform="rotate(-38 45 50)"/>
+        <ellipse cx="95" cy="92" rx="30" ry="14" fill="#4d8a2c" transform="rotate(35 95 92)"/>
+        <ellipse cx="40" cy="132" rx="30" ry="14" fill="#69a844" transform="rotate(-42 40 132)"/>
+        <ellipse cx="98" cy="178" rx="30" ry="14" fill="#558f31" transform="rotate(38 98 178)"/>
+        <ellipse cx="42" cy="218" rx="30" ry="14" fill="#4d8a2c" transform="rotate(-35 42 218)"/>
+        <ellipse cx="95" cy="258" rx="28" ry="13" fill="#5f9c39" transform="rotate(40 95 258)"/>
+        <ellipse cx="52" cy="292" rx="24" ry="11" fill="#4d8a2c" transform="rotate(-30 52 292)"/>
+    </svg>
+
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <h2 class="discover-title">
+                    Discover the Magic of
+                    <span class="sketch-wrap">Indian Spices
+                        <svg viewBox="0 0 300 120" preserveAspectRatio="none" aria-hidden="true">
+                            <path d="M150,12 C 235,6 293,32 290,60 C 287,90 205,112 122,108 C 52,104 8,84 10,54 C 12,28 78,12 165,14"/>
+                            <path d="M120,10 C 45,12 12,40 15,60 C 19,88 90,108 185,110"/>
+                        </svg>
+                    </span>
+                    <br>One Dish at a Time!
+                </h2>
+                <p class="discover-text">
+                    Craving Indian food but short on time? <strong>Spice Villa</strong> in <strong>Leeds</strong>
+                    offers freshly prepared, authentic Indian dishes for takeaway. Whether it's a quick
+                    lunch, a family dinner, or a feast with friends, enjoy the bold spices and rich
+                    flavours of India from the comfort of your home.
+                </p>
+                <div class="text-center">
+                    <button class="btn btn-order-solid js-magnetic js-hover" data-toggle="modal" data-target="#orderModal">ORDER NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 5) FEATURES BAR ================= -->
+<section class="pb-2">
+    <div class="container">
+        <div class="features-bar">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-4 feature-col">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h5>Find Your Feast</h5>
+                    <p>From classics to new flavours, pick what tempts you most.</p>
+                </div>
+                <div class="col-12 col-md-4 feature-col">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h5>Hassle-Free Checkout</h5>
+                    <p>Pay securely in just a few taps.</p>
+                </div>
+                <div class="col-12 col-md-4 feature-col">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <h5>Enjoy Every Bite</h5>
+                    <p>Served hot, fresh, and exactly how you like it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 6) GIANT WATERMARK ================= -->
+<div class="giant-word" aria-hidden="true"><span>ORDER NOW</span></div>
+
+<!-- ================= ORDER MODAL ================= -->
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header order-modal-header">
+                <h5 class="modal-title"><i class="fa-solid fa-bolt mr-2"></i>Your Royal Order</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted small mb-3">Add your favourites — your live order summary updates below.</p>
+
+                <div class="quick-item">
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/15059053/pexels-photo-15059053.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=120&w=120" alt="Chicken Dum Biryani">
+                        <div>
+                            <h6 class="mb-0 font-weight-bold">Chicken Dum Biryani</h6>
+                            <small class="text-muted">$16.99</small>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="addToCart('Chicken Dum Biryani', 16.99)"><i class="fa-solid fa-plus mr-1"></i>Add</button>
+                </div>
+                <div class="quick-item">
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/32986479/pexels-photo-32986479.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=120&w=120" alt="Veg Biryani">
+                        <div>
+                            <h6 class="mb-0 font-weight-bold">Veg Biryani</h6>
+                            <small class="text-muted">$13.99</small>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="addToCart('Veg Biryani', 13.99)"><i class="fa-solid fa-plus mr-1"></i>Add</button>
+                </div>
+                <div class="quick-item">
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/15801057/pexels-photo-15801057.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=120&w=120" alt="Samosa">
+                        <div>
+                            <h6 class="mb-0 font-weight-bold">Samosa</h6>
+                            <small class="text-muted">$6.99</small>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="addToCart('Samosa', 6.99)"><i class="fa-solid fa-plus mr-1"></i>Add</button>
+                </div>
+                <div class="quick-item">
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.pexels.com/photos/34203198/pexels-photo-34203198.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=120&w=120" alt="Veg Pakora">
+                        <div>
+                            <h6 class="mb-0 font-weight-bold">Veg Pakora</h6>
+                            <small class="text-muted">$9.99</small>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="addToCart('Veg Pakora', 9.99)"><i class="fa-solid fa-plus mr-1"></i>Add</button>
+                </div>
+
+                <hr>
+                <h6 class="font-weight-bold mb-2"><i class="fa-solid fa-receipt mr-1 text-danger"></i>Order Summary</h6>
+                <div id="orderItemsList">
+                    <p class="text-center text-muted py-3 mb-0">Your order is empty — add something delicious above!</p>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="h5 font-weight-bold mb-0">Total</span>
+                    <span class="h4 font-weight-bold text-danger mb-0" id="orderTotal">$0.00</span>
+                </div>
+                <button class="btn btn-block text-white font-weight-bold rounded-pill mt-3 py-2" style="background:#6E1512;" onclick="placeOrder()">
+                    <i class="fa-solid fa-circle-check mr-1"></i> Place My Order
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 4 JS Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7zA90TZX6eSIF241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- GSAP + ScrollTrigger + Lenis -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    const stackEl = document.querySelector('.treats-stack');
-    let stackTrigger = null;
-    let stackTl = null;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
 
-    function buildStack() {
-        if (!stackEl) return;
-
-        // Kill previous instance (used for rebuild on resize)
-        if (stackTrigger) { stackTrigger.kill(true); stackTrigger = null; }
-        if (stackTl) { stackTl.kill(); stackTl = null; }
-
-        const cards = gsap.utils.toArray('.treat-card');
-        const n = cards.length;
-
-        // Peek height (px) per breakpoint - matches CSS sizing
-        const peek = () => (window.innerWidth < 768 ? 24 : window.innerWidth < 992 ? 40 : 56);
-        const frameH = () => stackEl.offsetHeight;
-
-        // Reset any old transforms
-        gsap.set(cards, { clearProps: 'transform' });
-
-        // Initial state: card 1 bottom-flush & visible, others hidden below the frame
-        gsap.set(cards, {
-            y: (index) => (index === 0 ? peek() * (n - 1) : frameH() + 32)
+    /* ===== Smooth scroll (Lenis) ===== */
+    let lenis;
+    function initSmoothScroll() {
+        if (reduceMotion || typeof Lenis === 'undefined') return;
+        lenis = new Lenis({
+            duration: 1.15,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            touchMultiplier: 1.1
         });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+    }
 
-        // Scrubbed, pinned timeline
-        stackTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: stackEl,
-                start: 'center center',
-                end: () => '+=' + frameH() * (n - 1),
-                pin: true,
-                scrub: 1,
-                anticipatePin: 1,
-                invalidateOnRefresh: true
+    /* ===== Split helpers ===== */
+    function splitChars(el) {
+        const text = el.textContent;
+        el.textContent = '';
+        text.split('').forEach((ch) => {
+            const span = document.createElement('span');
+            span.className = 'char';
+            span.textContent = ch === ' ' ? '\u00A0' : ch;
+            el.appendChild(span);
+        });
+        return el.querySelectorAll('.char');
+    }
+
+    function splitWordsPreserve(el) {
+        const walk = (node) => {
+            if (node.nodeType === 3) {
+                const parts = node.textContent.split(/(\s+)/);
+                const frag = document.createDocumentFragment();
+                parts.forEach((p) => {
+                    if (!p) return;
+                    if (!p.trim()) {
+                        frag.appendChild(document.createTextNode(p));
+                        return;
+                    }
+                    const wrap = document.createElement('span');
+                    wrap.className = 'word';
+                    const inner = document.createElement('span');
+                    inner.className = 'word-inner';
+                    inner.textContent = p;
+                    wrap.appendChild(inner);
+                    frag.appendChild(wrap);
+                });
+                node.parentNode.replaceChild(frag, node);
+                return;
             }
+            if (node.nodeType === 1) {
+                if (node.tagName === 'SVG') return;
+                Array.from(node.childNodes).forEach(walk);
+            }
+        };
+        Array.from(el.childNodes).forEach(walk);
+        return el.querySelectorAll('.word-inner');
+    }
+
+    /* ===== Embers (GSAP looping) ===== */
+    function initEmbers() {
+        const container = document.getElementById('embersContainer');
+        if (!container) return;
+        const count = reduceMotion ? 0 : 16;
+        for (let i = 0; i < count; i++) {
+            const ember = document.createElement('div');
+            ember.className = 'ember-spark';
+            const size = Math.floor(Math.random() * 5) + 3;
+            ember.style.width = size + 'px';
+            ember.style.height = size + 'px';
+            ember.style.left = (Math.random() * 92) + '%';
+            ember.style.bottom = (Math.random() * 18) + '%';
+            container.appendChild(ember);
+
+            const dur = 4 + Math.random() * 5;
+            gsap.set(ember, { opacity: 0, y: 40, x: 0 });
+            gsap.to(ember, {
+                y: -360 - Math.random() * 80,
+                x: gsap.utils.random(-40, 70),
+                opacity: gsap.utils.random(0.4, 1),
+                scale: 0.2,
+                duration: dur,
+                delay: Math.random() * 4,
+                repeat: -1,
+                ease: 'none',
+                onRepeat: function () {
+                    gsap.set(ember, { left: (Math.random() * 92) + '%', opacity: 0, scale: 1 });
+                }
+            });
+            gsap.to(ember, {
+                opacity: 0,
+                duration: dur * 0.25,
+                delay: Math.random() * 4 + dur * 0.75,
+                repeat: -1,
+                ease: 'power1.in'
+            });
+        }
+    }
+
+    /* ===== Cursor ===== */
+    function initCursor() {
+        if (isTouch || reduceMotion) return;
+        const dot = document.getElementById('cursorDot');
+        const ring = document.getElementById('cursorRing');
+        gsap.set([dot, ring], { xPercent: -50, yPercent: -50 });
+
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.08, overwrite: 'auto' });
+            gsap.to(ring, { x: e.clientX, y: e.clientY, duration: 0.28, ease: 'power3.out', overwrite: 'auto' });
         });
 
-        // Each step: next card rises to the front,
-        // previously revealed cards drift up leaving a visible "peek" edge
-        for (let i = 1; i < n; i++) {
-            stackTl.to(cards, {
-                y: (index) => {
-                    if (index < i) return peek() * (index + n - 1 - i); // older cards drift up
-                    if (index === i) return peek() * (n - 1);           // arriving card lands front-bottom
-                    return frameH() + 32;                               // upcoming cards wait below
-                },
-                ease: 'none',
-                duration: 1
+        document.querySelectorAll('a, button, .js-hover').forEach((el) => {
+            el.addEventListener('mouseenter', () => ring.classList.add('is-hover'));
+            el.addEventListener('mouseleave', () => ring.classList.remove('is-hover'));
+        });
+    }
+
+    /* ===== Magnetic buttons ===== */
+    function initMagnetic() {
+        if (isTouch || reduceMotion) return;
+        document.querySelectorAll('.js-magnetic').forEach((el) => {
+            el.addEventListener('mousemove', (e) => {
+                const r = el.getBoundingClientRect();
+                const x = e.clientX - (r.left + r.width / 2);
+                const y = e.clientY - (r.top + r.height / 2);
+                gsap.to(el, { x: x * 0.28, y: y * 0.32, duration: 0.35, ease: 'power3.out' });
+            });
+            el.addEventListener('mouseleave', () => {
+                gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: 'elastic.out(1, 0.4)' });
+            });
+        });
+    }
+
+    /* ===== 3D tilt on menu cards ===== */
+    function initCardTilt() {
+        if (isTouch || reduceMotion) return;
+        document.querySelectorAll('.dish-card').forEach((card) => {
+            const img = card.querySelector('img');
+            card.addEventListener('mousemove', (e) => {
+                const r = card.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width - 0.5;
+                const y = (e.clientY - r.top) / r.height - 0.5;
+                gsap.to(card, {
+                    rotateY: x * 12,
+                    rotateX: -y * 10,
+                    y: -8,
+                    transformPerspective: 900,
+                    duration: 0.35,
+                    ease: 'power2.out'
+                });
+                if (img) gsap.to(img, { x: x * 16, y: y * 16, scale: 1.08, duration: 0.35 });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.7, ease: 'power3.out' });
+                if (img) gsap.to(img, { x: 0, y: 0, scale: 1, duration: 0.7, ease: 'power3.out' });
+            });
+        });
+    }
+
+    /* ===== Preloader + hero intro ===== */
+    function runPreloader() {
+        const brand = document.getElementById('preloaderBrand');
+        if (brand && !brand.querySelector('span')) {
+            const letters = brand.textContent.split('');
+            brand.textContent = '';
+            letters.forEach((ch) => {
+                const s = document.createElement('span');
+                s.textContent = ch === ' ' ? '\u00A0' : ch;
+                brand.appendChild(s);
             });
         }
 
-        stackTrigger = stackTl.scrollTrigger;
+        if (reduceMotion) {
+            gsap.set('#preloader', { display: 'none' });
+            gsap.set(['.hero-title .line-inner', '.btn-order-pill', '.img-reveal', '.biryani-main-img', '.scroll-hint'], { clearProps: 'all' });
+            return Promise.resolve();
+        }
+
+        gsap.set('.hero-title .line-inner', { yPercent: 110 });
+        gsap.set('.btn-order-pill', { autoAlpha: 0, y: 24 });
+        gsap.set('.img-reveal', { clipPath: 'inset(100% 0% 0% 0%)' });
+        gsap.set('.biryani-main-img', { scale: 1.28 });
+        gsap.set('.scroll-hint', { autoAlpha: 0 });
+        gsap.set('.lantern-light', { scale: 0.6, opacity: 0 });
+
+        const count = { val: 0 };
+        const tl = gsap.timeline();
+
+        tl.from('#preloaderBrand span', {
+            y: 40, opacity: 0, rotateX: -70,
+            stagger: 0.04, duration: 0.7, ease: 'power3.out'
+        })
+        .to('.preloader-bar-fill', { scaleX: 1, duration: 1.35, ease: 'power2.inOut' }, 0.15)
+        .to(count, {
+            val: 100,
+            duration: 1.35,
+            ease: 'power2.inOut',
+            onUpdate: function () {
+                document.getElementById('preloaderCount').textContent =
+                    String(Math.round(count.val)).padStart(2, '0');
+            }
+        }, 0.15)
+        .to('#preloaderBrand span', { y: -30, opacity: 0, stagger: 0.02, duration: 0.4, ease: 'power2.in' }, '+=0.1')
+        .to('#preloader', { yPercent: -100, duration: 1.05, ease: 'power4.inOut' }, '-=0.1');
+
+        return tl;
     }
 
-    buildStack();
+    function heroIntro() {
+        if (reduceMotion) return;
+        const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+        tl.to('.hero-title .line-inner', {
+            yPercent: 0,
+            duration: 1.15,
+            stagger: 0.12
+        }, 0)
+        .to('.highlight-yellow', {
+            textShadow: '0 0 32px rgba(255,230,0,.85), 0 4px 10px rgba(0,0,0,.8)',
+            scale: 1.04,
+            duration: 0.5,
+            yoyo: true,
+            repeat: 1,
+            ease: 'power2.inOut'
+        }, 0.55)
+        .to('.img-reveal', {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            duration: 1.35,
+            ease: 'power4.inOut'
+        }, 0.15)
+        .to('.biryani-main-img', {
+            scale: 1,
+            duration: 1.5,
+            ease: 'power3.out'
+        }, 0.15)
+        .to('.btn-order-pill', { autoAlpha: 1, y: 0, duration: 0.7 }, 0.55)
+        .to('.lantern-light', { scale: 1, opacity: 1, duration: 1.2, ease: 'power2.out' }, 0.2)
+        .to('.scroll-hint', { autoAlpha: 1, duration: 0.6 }, 0.9);
 
-    // Rebuild on resize (debounced) for responsive heights/peeks
-    let resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            buildStack();
-            ScrollTrigger.refresh();
-        }, 350);
-    });
-</script>
+        gsap.to('.scroll-hint-line', {
+            scaleY: 0.2,
+            opacity: 0.3,
+            duration: 1.2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+        });
 
-<script>
-    (function () {
-      // Mark JS on so overlapped start states apply (avoids no-JS FOUC).
-      document.documentElement.classList.add('gsap-js');
-   
-      var GSAP = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js';
-      var ST   = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js';
-   
-      function boot() {
-        if (typeof jQuery === 'undefined') { return setTimeout(boot, 60); }
-        // $.getScript chain: GSAP -> ScrollTrigger -> init
-        jQuery.getScript(GSAP, function () {
-          jQuery.getScript(ST, function () {
-            init();
-          });
+        gsap.to('.lantern-light', {
+            scale: 1.08,
+            opacity: 1,
+            duration: 2.4,
+            yoyo: true,
+            repeat: -1,
+            ease: 'sine.inOut'
         });
-      }
-   
-      function init() {
-        if (!window.gsap || !window.ScrollTrigger) return;
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.config({ ignoreMobileResize: true });
-   
-        var area  = document.querySelector('.page-wrapper .svc-stack-area');
-        var cards = gsap.utils.toArray('.page-wrapper .svc-card');
-        if (!area || cards.length < 3) return;
-   
-        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduce) return; // CSS keeps the static deck
-   
-        // Cards 2 & 3 start just below, fully overlapping card 1.
-        gsap.set(cards[1], { yPercent: 112, scale: 1 });
-        gsap.set(cards[2], { yPercent: 112, scale: 1 });
-        gsap.set(cards[0], { yPercent: 0,  scale: 1 });
-   
-        var section = document.querySelector('.page-wrapper .svc-stack');
-   
-        var tl = gsap.timeline({
-          defaults: { ease: 'none' },
-          scrollTrigger: {
-            trigger: section,
-            start: 'top top',
-            end: '+=2200',
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            invalidateOnRefresh: true
-          }
+
+        gsap.to('.steam-effect', {
+            y: -16, opacity: 0.75, scale: 1.08,
+            duration: 2.6, yoyo: true, repeat: -1, ease: 'sine.inOut'
         });
-   
-        // Phase 1: card 2 rises, card 1 recedes (top edge peeks).
-        tl.to(cards[0], { yPercent: -5,  scale: 0.955 }, 0)
-          .to(cards[1], { yPercent: 0,   scale: 1 },     0)
-          // Phase 2: card 3 rises, card 2 recedes, card 1 recedes further.
-          .to(cards[0], { yPercent: -10, scale: 0.91 },  1)
-          .to(cards[1], { yPercent: -5,  scale: 0.955 }, 1)
-          .to(cards[2], { yPercent: 0,   scale: 1 },     1);
-   
-        // Recalculate once fonts/images settle.
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+    }
+
+    /* ===== Scroll-triggered scenes ===== */
+    function initScrollScenes() {
+        /* Progress bar */
+        gsap.to('#scrollProgress', {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: { scrub: 0.25 }
+        });
+
+        /* Hero parallax exit */
+        gsap.to('.hero-title', {
+            y: -70, opacity: 0.15,
+            ease: 'none',
+            scrollTrigger: { trigger: '.hero-banner', start: 'top top', end: 'bottom top', scrub: true }
+        });
+        gsap.to('.biryani-hero-wrapper', {
+            y: 110, scale: 1.06,
+            ease: 'none',
+            scrollTrigger: { trigger: '.hero-banner', start: 'top top', end: 'bottom top', scrub: true }
+        });
+        gsap.to('.hero-banner', {
+            backgroundPosition: '50% 80%',
+            ease: 'none',
+            scrollTrigger: { trigger: '.hero-banner', start: 'top top', end: 'bottom top', scrub: true }
+        });
+        gsap.to('.scroll-hint', {
+            autoAlpha: 0,
+            scrollTrigger: { trigger: '.hero-banner', start: '20% top', end: '45% top', scrub: true }
+        });
+
+        /* Taste card cinematic enter */
+        const tasteTl = gsap.timeline({
+            scrollTrigger: { trigger: '.taste-section', start: 'top 72%', once: true }
+        });
+        tasteTl.from('.taste-card', {
+            x: -90, rotateY: 14, opacity: 0,
+            duration: 1.15, ease: 'power3.out'
+        })
+        .from('.taste-card h2', { y: 40, opacity: 0, duration: 0.7 }, '-=0.55')
+        .from('.card-underline', { scaleX: 0, duration: 0.55, ease: 'power2.out' }, '-=0.35')
+        .from('.taste-card p', { y: 24, opacity: 0, duration: 0.7 }, '-=0.4');
+
+        gsap.from('.circle-wrap', {
+            scale: 0.55, rotate: -28, opacity: 0,
+            duration: 1.25, ease: 'power3.out',
+            scrollTrigger: { trigger: '.circle-wrap', start: 'top 78%', once: true }
+        });
+
+        /* Continuous ring spin + extra scroll spin */
+        gsap.to('.ring-svg', { rotation: 360, duration: 36, repeat: -1, ease: 'none' });
+        gsap.to('.circle-badge', {
+            rotation: 18,
+            ease: 'none',
+            scrollTrigger: { trigger: '.taste-section', start: 'top bottom', end: 'bottom top', scrub: 1.2 }
+        });
+        gsap.to('.circle-core img', {
+            scale: 1.18,
+            ease: 'none',
+            scrollTrigger: { trigger: '.taste-section', start: 'top bottom', end: 'bottom top', scrub: true }
+        });
+
+        /* Decor parallax */
+        gsap.to('.spice-bowl', {
+            y: -70, rotate: 18,
+            ease: 'none',
+            scrollTrigger: { trigger: '.taste-section', start: 'top bottom', end: 'bottom top', scrub: 1 }
+        });
+        gsap.to('.spoons', {
+            y: 80, rotate: -10, x: 20,
+            ease: 'none',
+            scrollTrigger: { trigger: '.taste-section', start: 'top bottom', end: 'bottom top', scrub: 1.4 }
+        });
+        gsap.to('.chana-bowl', {
+            y: 60, rotate: -25,
+            ease: 'none',
+            scrollTrigger: { trigger: '.taste-section', start: 'top bottom', end: 'bottom top', scrub: 1.1 }
+        });
+        gsap.to('.down-arrow', {
+            y: 10, rotation: 8,
+            duration: 1.6, yoyo: true, repeat: -1, ease: 'sine.inOut'
+        });
+
+        /* Menu heading characters */
+        const chars = splitChars(document.querySelector('.menu-heading'));
+        gsap.from(chars, {
+            yPercent: 120, opacity: 0, rotateX: -80,
+            stagger: 0.05, duration: 0.85, ease: 'power3.out',
+            scrollTrigger: { trigger: '.menu-heading', start: 'top 80%', once: true }
+        });
+
+        /* Menu cards stagger + image scale */
+        gsap.from('.dish-card', {
+            y: 90, opacity: 0, rotateX: 16,
+            stagger: 0.16, duration: 1.05, ease: 'power3.out',
+            scrollTrigger: { trigger: '.menu-section', start: 'top 68%', once: true }
+        });
+        gsap.from('.dish-img-box img', {
+            scale: 1.35,
+            stagger: 0.16, duration: 1.3, ease: 'power3.out',
+            scrollTrigger: { trigger: '.menu-section', start: 'top 68%', once: true }
+        });
+        gsap.from('.dish-chip', {
+            y: 20, opacity: 0, stagger: 0.16, duration: 0.6, delay: 0.35,
+            scrollTrigger: { trigger: '.menu-section', start: 'top 68%', once: true }
+        });
+
+        gsap.to('.leaf-right', {
+            y: 90, rotate: 16,
+            ease: 'none',
+            scrollTrigger: { trigger: '.menu-section', start: 'top bottom', end: 'bottom top', scrub: 1.2 }
+        });
+        gsap.to('.leaf-left', {
+            y: -80, rotate: -14,
+            ease: 'none',
+            scrollTrigger: { trigger: '.discover-section', start: 'top bottom', end: 'bottom top', scrub: 1.2 }
+        });
+
+        /* Discover words + hand-drawn circle */
+        const words = splitWordsPreserve(document.querySelector('.discover-title'));
+        gsap.from(words, {
+            yPercent: 110, opacity: 0,
+            stagger: 0.06, duration: 0.85, ease: 'power3.out',
+            scrollTrigger: { trigger: '.discover-title', start: 'top 78%', once: true }
+        });
+        gsap.to('.sketch-wrap svg path', {
+            strokeDashoffset: 0,
+            duration: 1.5, stagger: 0.18, ease: 'power2.inOut',
+            scrollTrigger: { trigger: '.discover-title', start: 'top 70%', once: true }
+        });
+        gsap.from('.discover-text', {
+            y: 30, opacity: 0, duration: 0.9,
+            scrollTrigger: { trigger: '.discover-text', start: 'top 85%', once: true }
+        });
+        gsap.from('.btn-order-solid', {
+            y: 24, opacity: 0, duration: 0.7,
+            scrollTrigger: { trigger: '.btn-order-solid', start: 'top 90%', once: true }
+        });
+
+        /* Features bar */
+        const feat = gsap.timeline({
+            scrollTrigger: { trigger: '.features-bar', start: 'top 82%', once: true }
+        });
+        feat.from('.features-bar', { y: 70, scale: 0.92, opacity: 0, duration: 0.9, ease: 'power3.out' })
+            .from('.feature-col', { y: 28, opacity: 0, stagger: 0.14, duration: 0.55 }, '-=0.35')
+            .from('.feature-col i', { scale: 0, rotate: -25, stagger: 0.14, duration: 0.55, ease: 'back.out(1.8)' }, '-=0.7');
+
+        /* Giant watermark scrub */
+        gsap.fromTo('.giant-word span',
+            { xPercent: 12, y: '34%' },
+            {
+                xPercent: -12, y: '34%',
+                ease: 'none',
+                scrollTrigger: { trigger: '.giant-word', start: 'top bottom', end: 'bottom top', scrub: 1 }
+            }
+        );
+    }
+
+    /* ===== Boot ===== */
+    document.addEventListener('DOMContentLoaded', function () {
+        initSmoothScroll();
+        initEmbers();
+        initCursor();
+        initMagnetic();
+        initCardTilt();
+
+        const mq = window.matchMedia('(min-width: 992px)');
+        const card = document.querySelector('.taste-card');
+        const applyMq = () => { if (card) card.style.marginRight = mq.matches ? '-70px' : '0'; };
+        applyMq();
+        mq.addEventListener ? mq.addEventListener('change', applyMq) : mq.addListener(applyMq);
+
+        const intro = runPreloader();
+        if (intro && intro.then) {
+            intro.then(function () { heroIntro(); initScrollScenes(); });
+        } else if (intro && intro.eventCallback) {
+            intro.eventCallback('onComplete', function () {
+                heroIntro();
+                initScrollScenes();
+                requestAnimationFrame(function () { ScrollTrigger.refresh(); });
+            });
+        } else {
+            heroIntro();
+            initScrollScenes();
         }
-        window.addEventListener('load', function () { ScrollTrigger.refresh(); });
-      }
-   
-      boot();
-    })();
-    </script>
 
+        /* Safety: never leave the hero clipped if GSAP intro is skipped */
+        setTimeout(function () {
+            const pill = document.querySelector('.btn-order-pill');
+            if (pill && getComputedStyle(pill).opacity === '0') {
+                gsap.set(['.hero-title .line-inner', '.btn-order-pill', '.img-reveal', '.biryani-main-img', '.scroll-hint'], { clearProps: 'all' });
+            }
+        }, 4500);
 
+        /* Pause Lenis while Bootstrap modal is open */
+        $('#orderModal').on('show.bs.modal', function () { if (lenis) lenis.stop(); });
+        $('#orderModal').on('hidden.bs.modal', function () { if (lenis) lenis.start(); });
+    });
+
+    /* ===== Order cart logic ===== */
+    let order = [];
+
+    function addToCart(name, price, btn) {
+        const found = order.find(i => i.name === name);
+        if (found) { found.qty += 1; }
+        else { order.push({ name, price, qty: 1 }); }
+        renderOrder();
+        showToast('Added "' + name + '" to your order!');
+        if (btn && window.gsap) {
+            gsap.fromTo(btn, { scale: 1 }, { scale: 1.25, duration: 0.16, yoyo: true, repeat: 1, ease: 'power2.out' });
+        }
+    }
+
+    function changeQty(idx, delta) {
+        if (!order[idx]) return;
+        order[idx].qty += delta;
+        if (order[idx].qty <= 0) order.splice(idx, 1);
+        renderOrder();
+    }
+
+    function removeItem(idx) {
+        order.splice(idx, 1);
+        renderOrder();
+    }
+
+    function renderOrder() {
+        const box = document.getElementById('orderItemsList');
+        if (order.length === 0) {
+            box.innerHTML = '<p class="text-center text-muted py-3 mb-0">Your order is empty — add something delicious above!</p>';
+            document.getElementById('orderTotal').textContent = '$0.00';
+            return;
+        }
+        let total = 0, html = '';
+        order.forEach((it, i) => {
+            total += it.price * it.qty;
+            html +=
+                '<div class="d-flex justify-content-between align-items-center py-2 border-bottom">' +
+                    '<div>' +
+                        '<h6 class="mb-0 font-weight-bold" style="font-size:.9rem;">' + it.name + '</h6>' +
+                        '<small class="text-muted">$' + it.price.toFixed(2) + ' each</small>' +
+                    '</div>' +
+                    '<div class="d-flex align-items-center">' +
+                        '<button class="btn btn-qty" onclick="changeQty(' + i + ',-1)">-</button>' +
+                        '<span class="qty-badge">' + it.qty + '</span>' +
+                        '<button class="btn btn-qty" onclick="changeQty(' + i + ',1)">+</button>' +
+                        '<button class="btn btn-sm text-danger ml-3 p-0" style="background:none;border:none;" onclick="removeItem(' + i + ')"><i class="fa-solid fa-trash"></i></button>' +
+                    '</div>' +
+                '</div>';
+        });
+        box.innerHTML = html;
+        document.getElementById('orderTotal').textContent = '$' + total.toFixed(2);
+    }
+
+    function placeOrder() {
+        if (order.length === 0) {
+            showToast('Your order is empty! Add some dishes first.');
+            return;
+        }
+        order = [];
+        renderOrder();
+        $('#orderModal').modal('hide');
+        showToast('Order placed! Your food is being prepared with royal care. 🍛');
+    }
+
+    /* ===== Toast helper ===== */
+    let toastSeq = 0;
+    function showToast(msg) {
+        const id = 'toast-' + (++toastSeq);
+        document.getElementById('toastBox').insertAdjacentHTML('beforeend',
+            '<div id="' + id + '" class="toast" role="alert" aria-live="assertive" aria-atomic="true" ' +
+            'style="background:#3E1F14;color:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3);">' +
+            '<div class="toast-body d-flex align-items-center py-2">' +
+            '<i class="fa-solid fa-circle-check fa-lg mr-2" style="color:#FFE600;"></i><span>' + msg + '</span></div></div>');
+        const t = document.getElementById(id);
+        t.classList.add('show');
+        if (window.gsap) {
+            gsap.from(t, { x: 80, opacity: 0, duration: 0.45, ease: 'power3.out' });
+        }
+        setTimeout(() => {
+            if (window.gsap) {
+                gsap.to(t, { x: 80, opacity: 0, duration: 0.35, onComplete: () => t.remove() });
+            } else {
+                t.classList.remove('show');
+                setTimeout(() => t.remove(), 350);
+            }
+        }, 2800);
+    }
+</script>
 </body>
-</html> 
- 
- 
-
+</html>
