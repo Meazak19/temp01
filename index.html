@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dessert</title>
  
-<!-- Google Fonts --> 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oi&family=Smythe&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
 
 <!-- Font Awesome -->
 <link href="https://fonts.googleapis.com/css2?family=Ephesis&amp;family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
@@ -27,958 +29,510 @@
 
 
 
-<style>
-     
+<style type="text/css">
 
-html,body {
-  margin: 0px;
-    padding: 0px;
-    --Off-White: #FAF7E5;
-    --Dark-blue: #160937;
-    --Light-blue: #8DAAD6;
-    --Black: #111;
-    --Grey: #9e989d;
-    --Dimmed-White: #F8F2E4;
-    --Royal-Blue: #0d2082;
-    --Dark-Grey: #171717;
-    --Darkish-Grey: #76756e;
-    --Lighter-Grey: #bbb;
-    --Menu-blue: #1B2B79;
-    scroll-padding-top: 150px
+:root {
+    --font-serif: "Libre Caslon Text", serif;
+    --font-sans: "Montserrat", sans-serif;
+    --white: #fff;
+    --red: #c02510;
+    --yellow: #fff200;
+    --brown: #6e1203;
+    --cream: #f4eacf;
+    --bar-red: #B02A20;
+    --black: #000;
 }
 
- 
-
-.page-wrapper a {
-  text-decoration: none;
-}
-
- 
+    /* 
     
-html section,body section {
-  width: 100%;
-    height: 100vh;
-    position: relative
-}
-
- 
-  .page-wrapper .paymentSection {
-         padding: 100px 0 100px;
-    z-index: 1;
-    background: #d42a0b;
-    height: 100vh;
+      font-family: "Libre Caslon Text", serif;
+      font-family: "Montserrat", sans-serif;
+    
+     
+    
+    
+    */  
+    
+        body .page-wrapper { 
+        font-family: var(--font-sans); 
+        color: #6c6a6a; 
+        line-height: 24px; 
+        overflow-x: hidden; 
+        scroll-behavior: smooth; 
+        background-color: var(--cream);
+        } 
+        
+       .page-wrapper p {
+        font-size: 18px;
+       font-family: var(--font-sans);
+       color: var(--cream);
+       letter-spacing: 1px;
+       line-height: 1.6;
+       }
+    
+       .page-wrapper p > a {
+       color: inherit;
+       }
+       .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+       line-height: 1.3;
+       font-family: var(--font-serif); 
+       }
+       .page-wrapper .row {
+       margin: 0 -15px!important;
+       }
+       .page-wrapper .bg-dark {
+       background-color: #fc673f!important;
+       }
+    
+       .page-wrapper .bg-primary {
+       background-color: #241e5e!important;
+       }
+       .page-wrapper .bg-light {
+       background-color: #f1f1f1!important;
+       }
+       .page-wrapper section {
+       position: relative;
+       z-index: 1;
+       background-size: cover;
+       background-position: center center;
+       background-repeat: no-repeat;
+       }   
+       .page-wrapper .btn {
+       font-size: 14px;
+       border-radius: 0;
+       padding: 0 30px;
+       line-height: 50px;
+       }  
+    
+       .page-wrapper .overlay{
+          content: "";
+        background: rgb(0 0 0 / 58%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+       }
+    
+       .page-wrapper h1 { 
+        color: var(--white);
+    font-size: 72px;
+    font-weight: 600;
+       }
+       .page-wrapper h1 span {
+        color: var(--yellow);
+       }
+       .page-wrapper h2 {
+        color: var(--white);
+        font-size: 45px;
+       }
+       .page-wrapper h3 {
+        
+        }
+       .page-wrapper h4 {
+        
+       }
+       .page-wrapper h5 {
+        
+       }
+       .page-wrapper h6 {
+        
+       }
+       .page-wrapper a {
+        text-decoration: none;
+       }
+       .page-wrapper .headerSection {
+        background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787504927phpgTKSkN.jpg');
+        padding: 100px 0;
+    min-height: 90vh;
     display: flex;
     align-items: center;
-  } 
-header {
-  width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    background: #000
-}
-
-header div.background-image {
-  position: relative;
-    top: 0px;
-    left: 0px;
+    background-position: right;
+       }
+       .page-wrapper .orderBtn {
+        font-size: 25px;
+    display: inline-block;
+    background: var(--red);
+    padding: 20px 30px;
+    font-family: var(--font-serif);
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 45px;
+       }
+    
+       .page-wrapper .badge-wrapper {
+        position: relative;
     width: 100%;
     height: 100%;
-    z-index: -2
-}
-
-header div.background-image div.image-element {
-  position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100lvh;
-    background-size: cover;
-    background-position: center center
-}
-
-header div.background-fade {
-  display: block;
-    width: 100%;
-    height: 200%;
-    background: #000;
-    position: absolute;
-    left: 0px;
-    top: -100%;
+    border: 15px solid var(--brown);
+    margin-right: 5%;
+    margin-left: auto;
+    border-radius: 50%;
+    background: #fceee3;
+    padding: 5px;
+    transform: translateY(-100px);
+            }
+    
+            .page-wrapper .badge-svg {
+                width: 100%;
+        height: 100%;
+        animation: rotateBadge 20s linear infinite;
+        padding: 5px;
+        background: var(--white);
+        border-radius: 50%;
+            }
+    
+            .page-wrapper .inner-circle-static {
+                position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        padding: 15px; 
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        padding: 25px;
+            }
+            .page-wrapper .inner-circle-static img{
+                border-radius: 50%;
+            }
+    
+            @keyframes rotateBadge {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .page-wrapper .svgTxt {
+                font-size: 16px;
+    letter-spacing: 0.8px;
+        font-family: 'Roboto Condensed', sans-serif;
+        fill: var(--brown);
+            }
+            .page-wrapper .aboutSection {
+                padding: 250px 0 50px;
+            }
+            .page-wrapper .aboutRow::after {
+                content: '';
+              background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787507063phpGsC1cU.png');
+              position: absolute;
+              height: 300px;
+    width: 650px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1.7) translate(-25px, 10px);
+    transform-origin: left;
+    top: 0;
     z-index: -1;
-    opacity: .4
+    filter: brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(6835%) hue-rotate(355deg) brightness(94%) contrast(104%);
+            }
+            .page-wrapper .aboutRow {
+                position: relative;
+                min-height: 375px;
+            }
+            .page-wrapper .menuSection h2 {
+                text-align: center;
+    margin-bottom: 70px;
+    transform: scale(1.3);
+    color: var(--brown);
+    font-weight: 600;
+    text-transform: uppercase;
+            }
+            .page-wrapper .menuSection h2 span{ 
+                color: var(--red);
+            }
+            .page-wrapper .menuSection {
+                padding: 0 0 100px;
+            }
+            .page-wrapper .galleryImg {
+                background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+            }
+            .page-wrapper .galleryInnerImg {
+                border-radius: inherit;
+            }
+
+
+   .page-wrapper .paymentSection { 
+        padding: 100px 0 160px;
+    overflow: hidden;
+   }
+   .page-wrapper .footerBtmTxt {
+    position: absolute;
+    color: var(--red);
+    bottom: -15px;
+    text-align: center;
+    width: 100%;
+    font-size: 175px;
+    text-transform: uppercase;
+    font-family: var(--font-serif);
+    opacity: 0.3;
+    line-height: 0.5;
+   }
+ 
+.page-wrapper .paymentContainer {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: 25px auto;
+    text-align: center;
 }
-header::after {
+.page-wrapper .paymentImgContainer { 
+    margin-bottom: 30px;
+}
+.page-wrapper .paymentTxt {
+            color: #ffe5cc;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 0;
+}
+.page-wrapper .paymentContainer h2 {
+           color: var(--cream);
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.page-wrapper .paymentParentContainer {
+          background: var(--red);
+    border-radius: 50px;
+    padding: 25px 0;
+    width: 75%;
+}
+.page-wrapper .paymentImgContainer img {
+        filter: invert(1);
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    object-position: bottom;
+}
+.page-wrapper .paymentContainer.two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+   width: 3px;
+    height: 100%;
+    background: var(--cream);
+}
+.page-wrapper .paymentContainer.two::before {
        content: '';
     position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 90%;
-    height: 85%;
-    border: 5px solid red;
-    bottom: 0;
-    border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    border: 12px double #ff0000;
-}
-header::before {
-   content: '';
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 90%;
-    height: 85%;
-    border: 5px solid red;
-    bottom: 0;
-    opacity: 0;
-}
-
-header img {
-  width: calc(100% - 52px - 52px);
-    max-width: 658px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
-
-.page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
-  font-family: "Alfa Slab One", serif;
-    line-height: 1.5;
-}
-.page-wrapper p {
-    font-family: "Smythe", system-ui;
-}
-
- 
-
-body section.home.split-scroll-sticky div.slide.lhs p {
-  width: calc(100% - 42px - 42px);
-    color: var(--Dark-blue);
-    text-align: center;
-    font-family: "Alfa Slab One", serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44px;
-    letter-spacing: 9.6px
-}
-
-body section.home.split-scroll-sticky div.slide.lhs p b,body section.home.split-scroll-sticky div.slide.lhs p strong {
-  font-size: 80px;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-1 div.height-wrapper {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url("/wp-content/themes/ach/images/homepage_slide_lhs_slide1.jfif") #000 50%/cover no-repeat
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-1 div.height-wrapper p {
-      color: #ff0000;
-      filter: drop-shadow(1px 3px 1px #d8842a);
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-1 a:focus div.height-wrapper {
-  outline: 5px solid #fff;
-    outline-offset: -5px
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper {
-  background: url("/wp-content/themes/ach/images/homepage_slide_lhs_slide2.jfif") #000 50%/cover no-repeat
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper div.image-container {
-  display: block;
-    width: calc(100% - 56px - 56px);
-    height: auto;
-    position: relative
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper div.image-container img {
-  width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper div.image-container img.overlay {
-  position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 2;
-    object-fit: fill
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper,body section.home.split-scroll-sticky div.slide.lhs.slide-5 div.height-wrapper {
-  position: relative
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper img.background,body section.home.split-scroll-sticky div.slide.lhs.slide-5 div.height-wrapper img.background {
-  position: absolute
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container,body section.home.split-scroll-sticky div.slide.lhs.slide-5 div.height-wrapper div.image-container {
-  position: absolute
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container img,body section.home.split-scroll-sticky div.slide.lhs.slide-5 div.height-wrapper div.image-container img {
-  width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container img.overlay,body section.home.split-scroll-sticky div.slide.lhs.slide-5 div.height-wrapper div.image-container img.overlay {
-  position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 2;
-    object-fit: fill
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper {
-  background: url("/wp-content/themes/ach/images/homepage_slide_lhs_slide3.jfif");
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper img.background {
-  width: auto;
-    height: 47%;
-    left: 61.4%;
-    top: 50.5%;
-    transform: translate(-50%, -50%) rotate(0deg)
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container {
-  width: 69%;
-    height: 46%;
-    left: 47%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-4.579deg)
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-4 {
-  background: var(--Dark-blue)
-}
-
-body section.home.split-scroll-sticky div.slide.lhs.slide-4 div.height-wrapper {
-  background: url("/wp-content/themes/ach/images/homepage_slide_lhs_slide4.jfif");
-    background-size: cover;
-    background-position: center;
-    mix-blend-mode: multiply
-}
-
-body section.home.split-scroll-sticky div.slide.rhs h1,body section.home.split-scroll-sticky div.slide.rhs h2,body section.home.split-scroll-sticky div.slide.rhs p {
-  width: 70%; 
-    text-align: center;  
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44px;
-    letter-spacing: 3.6px;
-    
-}
- 
-.page-wrapper p.desktopDishName {
-color: #ff0000 !important;
-      filter: drop-shadow(1px 3px 1px #d8842a);
-}
-body section.home.split-scroll-sticky div.slide.rhs h1 {
-  font-size: 32px
-}
-
-body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper {
-  justify-content: center
-}
-
-body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner {
-  display: flex;
-    width: calc(100% - 36px - 36px);
-    height: auto;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    z-index: 2;
-}
-
-body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner h1.header,body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner h2.header,body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner p.header {
-  width: 100%; 
-}
-
-body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner p:not(.header) {
-  width: 100%; 
-    text-align: center;  
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: unset; 
-}
- 
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-1 a:focus div.height-wrapper {
-  outline: 5px solid #fff;
-    outline-offset: -5px
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-1 div.height-wrapper {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url("/wp-content/themes/ach/images/homepage_slide_rhs_slide1.jfif") #000 50%/cover no-repeat
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-1 div.height-wrapper p { 
-  font-family: "Alfa Slab One", serif;
-  font-size: 80px;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-2 div.height-wrapper,body section.home.split-scroll-sticky div.slide.rhs.slide-4 div.height-wrapper {
-  background:#ffba00;
-    background-size: cover,auto;
-    background-repeat: no-repeat,repeat;
-    background-blend-mode: multiply,normal
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-3 div.buttons,body section.home.split-scroll-sticky div.slide.rhs.slide-4 div.buttons {
-  display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-bottom: 32px;
-    flex-direction: column
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-3 div.buttons a,body section.home.split-scroll-sticky div.slide.rhs.slide-4 div.buttons a {
-  display: flex;
-    justify-content: center
-}
-
-body section.home.split-scroll-sticky div.slide.rhs.slide-3 div.height-wrapper {
-  background-image: url("/wp-content/themes/ach/images/noise.png");
-    background-color: #d42a0b;
-    background-size: 15%;
-    background-blend-mode: multiply,normal
-}
-
-body.location-global section.split-scroll-sticky div.slide.rhs.slide-1 p,body.location-global section.split-scroll-sticky div.slide.lhs.slide-1 p {
-  width: 100%
-}
-
-body.location-global section.split-scroll-sticky div.slide.rhs.slide-1 p b,body.location-global section.split-scroll-sticky div.slide.rhs.slide-1 p strong,body.location-global section.split-scroll-sticky div.slide.lhs.slide-1 p b,body.location-global section.split-scroll-sticky div.slide.lhs.slide-1 p strong {
-  font-size: 48px
-}
-
-section.split-scroll-sticky {
-  height: 700vh;
-    z-index: 0;
-    position: relative
-}
-
-section.split-scroll-sticky div.scroll-down-arrow {
-  display: block;
-    width: 32px;
-    height: 17px;
-    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDMyIDE3IiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE1Ljk5OTggMTYuNTkzNUwzMiAwLjU5MzI2OEwzMS40MDY3IC0yLjU5MzI2ZS0wOEwzMS44OTk1IDAuNjE2ODA0TDE1Ljk4MzEgNy4wODgyNEwwLjA1MTA0MjUgMC41NDE4MTlMLTAuMDAwNDA0Mzg0IDAuNTkzMjY2TDE1Ljk5OTggMTYuNTkzNVoiIGZpbGw9IiNGQUY3RTUiLz4KPC9zdmc+");
-    position: absolute;
-    top: -90px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    cursor: pointer;
-    pointer-events: all
-}
-
-section.split-scroll-sticky div.mobile {
-  display: block
-}
-
-section.split-scroll-sticky div.desktop {
-  display: none
-}
-
-section.split-scroll-sticky div.row {
-  display: flex;
-    width: 100%;
-    height: 100%
-}
-
-section.split-scroll-sticky div.row div.col {
-  width: 100%
-}
-
-section.split-scroll-sticky div.row div.col div.slide {
-  height: 100vh;
-    background-color: var(--Dark-blue);
-    overflow-x: hidden;
-    position: sticky;
-    top: 0px
-}
-
-section.split-scroll-sticky div.row div.col div.slide.sticks {
-  height: 100vh
-}
-
-section.split-scroll-sticky div.row div.col div.slide.scrolls-up {
-  position: relative
-}
-
-section.split-scroll-sticky div.row div.col div.slide div.height-wrapper {
-  display: flex;
-    height: 100vh;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center
-} 
-@media screen and (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: .001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .001ms !important
-  }
-}
-
- 
- 
-
-  body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper div.image-container {
-    max-width:45%
-  }
-
-  body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper {
-    background:url("/wp-content/themes/ach/images/homepage_slide_lhs_slide3.jfif");
-        background-size: cover;
-        background-position: 45% 80%;
-        background-repeat: no-repeat
-  }
-
-  body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper img.background {
-    width:auto;
-        height: 65%;
-        left: 60.4%;
-        top: 54.3%;
-        transform: translate(-50%, -50%) rotate(0deg)
-  }
-
-  body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container {
-    width:auto;
-        max-width: 45%;
-        height: 64%;
-        left: 50%;
-        top: 53%
-  }
-
-  section.split-scroll-sticky div.scroll-down-arrow {
-    top:-36px
-  }
-
-  section.split-scroll-sticky div.mobile {
-    display:none
-  }
-
-  section.split-scroll-sticky div.desktop {
-    display:block
-  }
-
-  section.split-scroll-sticky div.row div.col {
-    width:50%
-  }
-
-  section.split-scroll-sticky div.row div.col div.slide.sticks {
-    height:200vh
-  }
- 
- 
- 
-
-  body section.home.split-scroll-sticky div.slide.lhs p {
-    width:70%
-  }
-
-  body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner {
-    width:70%
-  }
-
-  body.location-global section.split-scroll-sticky div.slide.rhs.slide-1 p b,body.location-global section.split-scroll-sticky div.slide.rhs.slide-1 p strong,body.location-global section.split-scroll-sticky div.slide.lhs.slide-1 p b,body.location-global section.split-scroll-sticky div.slide.lhs.slide-1 p strong {
-    font-size:64px
-  }
-  
- 
-  body section.home.split-scroll-sticky div.slide.lhs.slide-2 div.height-wrapper div.image-container {
-    max-width:75%
-  }
-
-  body section.home.split-scroll-sticky div.slide.lhs.slide-3 div.height-wrapper div.image-container {
-    max-width:45%
-  }
-  
- 
-  body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner {
-    width:70%
-  } 
- 
-  body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner h1.header,body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner h2.header,body section.home.split-scroll-sticky div.slide.rhs div.height-wrapper div.inner p.header {
-    width:80%; 
-  }
- 
-
- 
-
-  body section.home.split-scroll-sticky div.slide.rhs.slide-2 div.icons {
-    margin-top:32px
-  } 
- 
-
-
-  .page-wrapper .paymentContainer {
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 350px; 
-  margin-top: -50px;
-  }
-  .page-wrapper .paymentImg {
-    width: 270px;
-  height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: contain;
-  }
-  .page-wrapper .paymentBackground {
-    position: absolute;
-  z-index: -2;
-  width: 100%;
-  top: -20px;
-
-      filter: brightness(0) saturate(100%) invert(91%) sepia(12%) saturate(4524%) hue-rotate(1deg) brightness(106%) contrast(103%);
-  }
-  .page-wrapper .paymentImgs { 
-  display: flex;
-  width: 110px;
-  filter: invert(1);
-  }
-  .page-wrapper .paymentContainer p {
-    font-size: 28px;
-    color: #ffffffd1;
-    font-weight: 500;
-    letter-spacing: 2px;
-    max-width: 300px;
-  }
-  .page-wrapper .paymentImg::after {
-    content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  z-index: -1;
-  filter: blur(17px);
-  background: #d42a0b;
-  }
-  .page-wrapper .paymentContainer.one {
-    margin-left: auto;
-  }
-  .page-wrapper .paymentContainer.two {
-    margin: auto;
-    margin-top: 150px;
-  }
-  .page-wrapper .paymentContainer.three {
-    margin-right: auto;
-  }
-  .page-wrapper .paymentContent h3 {
-    color: #fff;
-    font-size: 30px;
-  }
-
-   /* --- SVG Badge Styling --- */
-        .badge-wrapper {
-             width: 200px;
-    height: 200px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50vh;
-    transform: translateX(-50%);
-    margin-top: -45px;
-    margin-left: -3px;
-    z-index: 2;
-        }
-        .page-wrapper .height-wrapper {
-          position: relative;
-        }
-
-        .badge-svg {
-            width: 100%;
-            height: 100%;
-            animation: rotateBadge 20s linear infinite;
-            padding: 5px;
-        }
-
-        .inner-circle-static {
-            position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110px;
-    height: 110px;
-    background-color: #ed0200;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
-        }
-
-        @keyframes rotateBadge {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .page-wrapper .svgTxt {
-        font-size: 19px;
-    letter-spacing: 1px;
-    font-family: 'Roboto Condensed', sans-serif;
-        }
-
-        .page-wrapper p.para {
-  width: 100%;
-    text-align: center;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    font-family: "Smythe", system-ui;
-    line-height: 1.5;
-    letter-spacing: 2px;
-        color: #262626;
-}
-
-.page-wrapper .slide-3 p, .page-wrapper .slide-3 h2 {
-   color: #e1e1e1;
-}
-
-
-
-  .page-wrapper #main-content::after {
-      content: '';
-      position: absolute;
-      background-image: url('https://png.pngtree.com/png-vector/20250519/ourmid/pngtree-grid-png-white-background-transparent-simple-design-minimal-black-png-image_16289349.png');
-          width: 100%;
-    height: 100%;
     top: 0;
-    background-size: contain;
-    background-repeat: repeat;
-    z-index: -3;
-    opacity: 0.05;
-    }
-    .page-wrapper .paymentSection h2{
-      color: #fff;
-      font-size: 60px;
-    }
-    .page-wrapper .headerContent {
-          position: absolute;
-    top: 15%;
-    z-index: 3;
-    text-align: center;
-    }
-    .page-wrapper h1 {
-              font-size: 55px;
-    text-align: center;
-    color: #ffffff;
-    filter: drop-shadow(1px 4px 2px #ff0000);
-    }
-    /* From Uiverse.io by Randdose */ 
-.button {
-          all: unset;
-    display: flex;
-    position: relative;
-    padding: 5px 35px;
-    border: #ff0000 solid 3px;
-    border-radius: 0.25em;
-    color: #fff000;
-    font-size: 29px;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: border 300ms, color 300ms;
-    user-select: none;
-    max-width: fit-content;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.button p {
-  z-index: 1;
-  font-size: 35px;
-}
-
-.button:hover {
-  color: #212121;
-}
-
-.button:active {
-  border-color: teal;
-}
-
-.button::after, .button::before {
-     content: "";
-    position: absolute;
-    width: 240px;
-    aspect-ratio: 1;
-    background: #fff000;
-    opacity: 80%;
-    border-radius: 50%;
-    transition: transform 500ms, background 300ms;
-}
-
-.button::before {
-  left: 0;
-  transform: translateX(-8em);
-}
-
-.button::after {
-  right: 0;
-  transform: translateX(8em);
-}
-
-.button:hover:before {
-  transform: translateX(-1em);
-}
-
-.button:hover:after {
-  transform: translateX(1em);
-}
-
-.button:active:before,
-.button:active:after {
-  background: teal;
-}
-.page-wrapper p {
-  font-size: 28px;
-}
-.page-wrapper h2 {
-      font-size: 35px;
-    line-height: 1.5;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-        color: #202020;
-}
-.page-wrapper .slide-2 .height-wrapper::after, .page-wrapper .slide-3 .height-wrapper::after, .page-wrapper .slide-4 .height-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766553938phpWLI5Zr.png');
-      width: 100%;
+    left: 0;
+    width: 3px;
     height: 100%;
-    z-index: 0;
-    background-size: contain;
-    opacity: 0.05;
+    background: var(--cream);
 }
-/* RESPONSIVE  */
-  @media(min-width:1200px){
-      .page-wrapper .container{
-          max-width: 1140px;
-      }
-  }
-
-  @media(min-width:1500px){
-      .page-wrapper .container{
-          max-width: 1440px;
-      }
-  }
-
-    @media (max-width:1500px)
-  { 
-  .page-wrapper h2 {
-        font-size: 32px;
-            margin-bottom: 16px;
-  }
-  .page-wrapper .badge-wrapper {
-        width: 180px;
-    height: 180px;
-       }
-       .page-wrapper .badge-svg {
-        padding: 2px;
-       }
-       .page-wrapper .svgTxt {
-            font-size: 17px;
-    letter-spacing: 2px;
-       }
-       p.desktopDishName b {
-        font-size: 60px;
-       }
-       .page-wrapper .paymentSection h2 {
-        font-size: 60px;
-       }
-       .page-wrapper .paymentContainer p {
-            font-size: 24px; 
-    letter-spacing: 2px;
-    max-width: 250px;
-       }
-       .page-wrapper p.para {
-        font-size: 26px;
-       }
-  }
-    @media (max-width:1199px)
-  {  
- 
- .page-wrapper h1 {
-  font-size: 45px;
- }
-section.split-scroll-sticky div.row div.col div.slide.sticks {
-    height: 200vh;
-}
-section.split-scroll-sticky div.mobile {
-    display: none;
-}
-section.split-scroll-sticky div.desktop {
-    display: block;
-}
-   .page-wrapper .paymentImg {
-        width: 180px;
-        height: 180px;
+    .page-wrapper .discoverSection h2 {
+            text-align: center;
+    color: var(--red);
+    font-weight: 600;
+    transform: scale(1.1);
     }
-        .page-wrapper .paymentImgs {
-        width: 85px;
+    .page-wrapper .discoverSection h2 span{
+        color: var(--brown);
     }
-        .page-wrapper .paymentSection {
-        padding: 100px 0 100px;
+    .page-wrapper .discoverSection p {
+            color: #68180f;
+    font-weight: 500;
+    text-align: center;
+    max-width: 70%;
+    margin: 35px auto;
     }
-    
-    .page-wrapper .paymentContainer p {
-    font-size: 18px;
-}
-.page-wrapper .paymentContainer.two {
-        margin-top: 70px;
+    .page-wrapper .discoverSection .orderBtn.two {
+            background: var(--brown);
+    border-radius: 0;
+    transform: scale(1.5);
+    margin: 35px 0;
     } 
-      .page-wrapper .badge-wrapper {
-        width: 160px;
-        height: 160px;
+    .page-wrapper .vectorImg {
+            position: absolute;
+    left: -50px;
+    top: -50px;
+    width: 80px;
+    filter: brightness(0) saturate(100%) invert(11%) sepia(60%) saturate(3286%) hue-rotate(2deg) brightness(105%) contrast(109%);
     }
-        .page-wrapper .inner-circle-static {
-        width: 90px;
-        height: 90px;
+    .page-wrapper .rightLeafImg {
+            position: absolute;
+    right: 0;
+    width: 12%;
     }
-    .page-wrapper p.desktopDishName b {
-          font-size: 50px !important;
-          letter-spacing: 5px;
+    .page-wrapper .leftLeafImg {
+            position: absolute;
+    left: 0;
+    width: 17%;
+    top: 10%;
     }
-        .page-wrapper h2 {
-        font-size: 30px;
-        letter-spacing: 2px !important;
-        margin-bottom: 14px;
-    }
-        .page-wrapper .paymentSection h2 {
-        font-size: 50px;
-    }
-    section.split-scroll-sticky div.row div.col div.slide div.height-wrapper, section.split-scroll-sticky div.row div.col div.slide {
-      height: 80vh;
-    }
-        section.split-scroll-sticky div.row div.col div.slide.sticks {
-        height: 152vh;
-    }
-    section.split-scroll-sticky {
-      height: 536vh;
-    }
-    .slide.sticks {
-      height: 80vh;
-    }
-  }
-    @media (max-width:991px)
-  {
-      .page-wrapper .badge-wrapper {
-        width: 140px;
-        height: 140px;
-    }
-        .page-wrapper .inner-circle-static {
-        width: 80px;
-        height: 80px;
-    }
-    .page-wrapper .spoonImg { 
-    width: 45px;
-}
-  }
-    @media (max-width:767px)
-  {
-    .page-wrapper .paymentSection h3 {
-  margin-bottom: 50px;
-}
-    .page-wrapper .paymentSection {
-        padding: 55px 0 50px;
-    }
-    .page-wrapper .paymentContainer.three {
-    margin-top: 50px;
-}
-.page-wrapper .paymentContainer, .page-wrapper .paymentContainer.two {
-  margin-top: 0;
-}
- .page-wrapper .badge-wrapper {
-        width: 120px;
-        height: 120px;
-        margin-right: 5%;
-    }
-        .page-wrapper .inner-circle-static {
-        width: 65px;
-        height: 65px;
-    }
-        .page-wrapper .spoonImg {
-        width: 35px;
-    }
-    .page-wrapper .rotateTxt {
-        display: flex;
-    }
-  }
-    @media (max-width:575px)
-  {
-     .page-wrapper .paymentContainer.one, .page-wrapper .paymentContainer.three {
-    margin-left: auto;
-    margin-right: auto;
-}
-.page-wrapper .paymentContainer {
-  margin-bottom: 50px;
-}
-.page-wrapper .paymentSection .circle.five {
-  right: 0;
-}
-    .page-wrapper .paymentImg {
-        width: 150px;
-        height: 150px;
-    }
-        .page-wrapper .paymentImgs {
-        width: 60px;
-        top: -5px;
-        position: relative;
-    }
-     .page-wrapper .badge-wrapper {
-        width: 100px;
-        height: 100px;
-        margin-right: 0%;
-        margin-top: 10px;
-    }
-        .page-wrapper .svgTxt {
-        font-size: 19px;
-        letter-spacing: 1px;
-        font-weight: 400;
-    }
-        .page-wrapper .inner-circle-static {
-        width: 50px;
-        height: 50px;
-    }
-        .page-wrapper .spoonImg {
-        width: 27px;
-    }
-  }
+        /* RESPONSIVE VIEW */
+    
+        @media(min-width:1200px){
+            .page-wrapper .container{
+                max-width: 1140px;
+            }
+        }
+    
+        @media(min-width:1500px){
+            .page-wrapper .container{
+                max-width: 1440px;
+            }
+        }
+    
+    
+    
+       /* ================= RESPONSIVE ================= */
 
- </style>
+@media (max-width:1500px) {
+    .page-wrapper .paymentTxt { font-size: 23px; }
+    .page-wrapper .paymentSection::after { width: 95%; }
+
+    .page-wrapper h1 { font-size: 60px; }
+    .page-wrapper h2 { font-size: 40px; }
+    .page-wrapper p { font-size: 17px; }
+    .page-wrapper .headerSection { padding: 90px 0; }
+    .page-wrapper .orderBtn { font-size: 22px; padding: 18px 28px; }
+    .page-wrapper .badge-wrapper { border-width: 13px; transform: translateY(-90px); }
+    .page-wrapper .aboutSection { padding: 220px 0 50px; }
+    .page-wrapper .aboutRow::after { height: 260px; width: 560px; }
+    .page-wrapper .aboutRow { min-height: 340px; }
+    .page-wrapper .vectorImg { width: 70px; left: -40px; top: -40px; }
+    .page-wrapper .paymentContainer h2 { font-size: 27px; }
+    .page-wrapper .paymentTxt { font-size: 15px; }
+    .page-wrapper .footerBtmTxt { font-size: 150px; }
+    .page-wrapper .paymentSection { padding: 90px 0 140px; }
+}
+
+@media (max-width:1199px) {
+    .page-wrapper h1 { font-size: 48px; }
+    .page-wrapper h2 { font-size: 34px; }
+    .page-wrapper p { font-size: 16px; letter-spacing: 0.5px; }
+    .page-wrapper .headerSection { padding: 80px 0; min-height: 80vh; }
+    .page-wrapper .orderBtn { font-size: 19px; padding: 15px 25px; }
+    .page-wrapper .badge-wrapper { border-width: 11px; transform: translateY(-70px); }
+    .page-wrapper .svgTxt { font-size: 15px; }
+    .page-wrapper .inner-circle-static { padding: 18px; }
+    .page-wrapper .aboutSection { padding: 180px 0 40px; }
+    .page-wrapper .aboutRow { min-height: 300px; }
+    .page-wrapper .aboutRow::after { height: 220px; width: 470px; transform: scale(1.6) translate(-20px, 8px); }
+    .page-wrapper .vectorImg { width: 60px; left: -30px; top: -30px; }
+    .page-wrapper .menuSection h2 { margin-bottom: 55px; transform: scale(1.2); }
+    .page-wrapper .menuSection { padding: 0 0 80px; }
+    .page-wrapper .galleryImg { padding: 20px; border-radius: 24px; }
+    .page-wrapper .discoverSection p { max-width: 80%; margin: 30px auto; }
+    .page-wrapper .discoverSection .orderBtn.two { transform: scale(1.3); margin: 30px 0; }
+    .page-wrapper .paymentParentContainer { width: 85%; border-radius: 45px; }
+    .page-wrapper .paymentContainer { max-width: 220px; }
+    .page-wrapper .paymentContainer h2 { font-size: 24px; }
+    .page-wrapper .paymentImgContainer { margin-bottom: 22px; }
+    .page-wrapper .paymentImgContainer img { width: 48px; height: 48px; }
+    .page-wrapper .footerBtmTxt { font-size: 120px; }
+    .page-wrapper .paymentSection { padding: 80px 0 120px; }
+    .page-wrapper .rightLeafImg { width: 13%; }
+    .page-wrapper .leftLeafImg { width: 16%; }
+}
+
+@media (max-width:991px) {
+    .page-wrapper h1 { font-size: 36px; }
+    .page-wrapper h2 { font-size: 27px; }
+    .page-wrapper p { font-size: 15px; line-height: 1.5; }
+    .page-wrapper .headerSection { padding: 60px 0; min-height: 70vh; }
+    .page-wrapper .orderBtn { font-size: 16px; padding: 12px 22px; border-radius: 35px; }
+    .page-wrapper .badge-wrapper { border-width: 8px; transform: translateY(-45px); margin-right: 0; }
+    .page-wrapper .svgTxt { font-size: 14px; letter-spacing: 0.5px; }
+    .page-wrapper .inner-circle-static { padding: 12px; }
+    .page-wrapper .aboutSection { padding: 120px 0 30px; }
+    .page-wrapper .aboutRow { min-height: 250px; }
+    .page-wrapper .aboutRow::after { height: 170px; width: 360px; transform: scale(1.5) translate(-15px, 6px); }
+    .page-wrapper .vectorImg { width: 45px; left: -18px; top: -18px; }
+    .page-wrapper .menuSection h2 { margin-bottom: 40px; transform: scale(1.1); }
+    .page-wrapper .menuSection { padding: 0 0 60px; }
+    .page-wrapper .galleryImg { padding: 14px; border-radius: 18px; }
+    .page-wrapper .discoverSection p { max-width: 90%; margin: 25px auto; }
+    .page-wrapper .discoverSection .orderBtn.two { transform: scale(1.15); margin: 25px 0; }
+    .page-wrapper .paymentParentContainer { width: 92%; border-radius: 35px; padding: 20px 0; }
+    .page-wrapper .paymentContainer { max-width: 190px; margin: 15px auto; }
+    .page-wrapper .paymentContainer h2 { font-size: 20px; }
+    .page-wrapper .paymentTxt { font-size: 14px; }
+    .page-wrapper .paymentImgContainer { margin-bottom: 16px; }
+    .page-wrapper .paymentImgContainer img { width: 40px; height: 40px; }
+    .page-wrapper .footerBtmTxt { font-size: 85px; bottom: -10px; }
+    .page-wrapper .paymentSection { padding: 60px 0 90px; }
+    .page-wrapper .rightLeafImg { width: 14%; }
+    .page-wrapper .leftLeafImg { width: 15%; top: 12%; }
+}
+
+@media (max-width:767px) {
+    .page-wrapper h1 { font-size: 28px; }
+    .page-wrapper h2 { font-size: 22px; }
+    .page-wrapper p { font-size: 14px; letter-spacing: 0.3px; }
+    .page-wrapper .headerSection { padding: 45px 0; min-height: 60vh; }
+    .page-wrapper .orderBtn { font-size: 14px; padding: 10px 18px; border-radius: 30px; }
+    .page-wrapper .badge-wrapper { border-width: 6px; transform: translateY(-30px); }
+    .page-wrapper .svgTxt { font-size: 13px; letter-spacing: 0.3px; }
+    .page-wrapper .inner-circle-static { padding: 8px; }
+    .page-wrapper .aboutSection { padding: 80px 0 25px; }
+    .page-wrapper .aboutRow { min-height: 200px; }
+    .page-wrapper .aboutRow::after { height: 130px; width: 270px; transform: scale(1.4) translate(-10px, 5px); }
+    .page-wrapper .vectorImg { width: 35px; left: -12px; top: -12px; }
+    .page-wrapper .menuSection h2 { margin-bottom: 30px; transform: scale(1.05); }
+    .page-wrapper .menuSection { padding: 0 0 45px; }
+    .page-wrapper .galleryImg { padding: 10px; border-radius: 14px; }
+    .page-wrapper .discoverSection p { max-width: 95%; margin: 20px auto; }
+    .page-wrapper .discoverSection .orderBtn.two { transform: scale(1); margin: 20px 0; }
+    .page-wrapper .paymentParentContainer { width: 95%; border-radius: 28px; padding: 15px 0; }
+    .page-wrapper .paymentContainer { max-width: 155px; margin: 12px auto; }
+    .page-wrapper .paymentContainer h2 { font-size: 17px; }
+    .page-wrapper .paymentTxt { font-size: 12px; line-height: 1.4; }
+    .page-wrapper .paymentImgContainer { margin-bottom: 12px; }
+    .page-wrapper .paymentImgContainer img { width: 34px; height: 34px; }
+    .page-wrapper .footerBtmTxt { font-size: 60px; bottom: -6px; }
+    .page-wrapper .paymentSection { padding: 45px 0 70px; }
+    .page-wrapper .rightLeafImg { width: 15%; }
+    .page-wrapper .leftLeafImg { width: 15%; top: 15%; }
+}
+
+@media (max-width:575px) {
+    .page-wrapper h1 { font-size: 30px; }
+    .page-wrapper h2 { font-size: 24px; }
+    .page-wrapper p { font-size: 14px; }
+    .page-wrapper .headerSection { padding: 60px 0; min-height: 65vh; text-align: center; }
+    .page-wrapper .headerSection .col-sm-12 { text-align: center; }
+    .page-wrapper .orderBtn { font-size: 15px; padding: 12px 22px; }
+    .page-wrapper .badge-wrapper { width: 280px; height: 280px; margin: 0 auto; border-width: 8px; transform: translateY(-40px); }
+    .page-wrapper .svgTxt { font-size: 14px; }
+    .page-wrapper .inner-circle-static { padding: 14px; }
+    .page-wrapper .aboutSection { padding: 60px 0 20px; text-align: center; }
+    .page-wrapper .aboutRow { min-height: auto; }
+    .page-wrapper .aboutRow::after { height: 120px; width: 100%; transform: none; background-position: center; opacity: 0.9; }
+    .page-wrapper .vectorImg { width: 32px; left: 0; top: -10px; }
+    .page-wrapper .menuSection h2 { margin-bottom: 25px; transform: none; }
+    .page-wrapper .menuSection { padding: 0 0 40px; }
+    .page-wrapper .galleryImg { padding: 12px; border-radius: 16px; margin-bottom: 18px; }
+    .page-wrapper .discoverSection p { max-width: 100%; margin: 18px auto; }
+    .page-wrapper .discoverSection .orderBtn.two { transform: none; margin: 18px 0; }
+    .page-wrapper .paymentParentContainer { width: 92%; border-radius: 25px; padding: 20px 0; }
+    .page-wrapper .paymentContainer { max-width: 240px; margin: 18px auto; }
+    .page-wrapper .paymentContainer h2 { font-size: 20px; }
+    .page-wrapper .paymentTxt { font-size: 13px; }
+    .page-wrapper .paymentContainer.two::before,
+    .page-wrapper .paymentContainer.two::after { width: 100%; height: 2px; top: auto; }
+    .page-wrapper .paymentContainer.two::before { top: -10px; left: 0; }
+    .page-wrapper .paymentContainer.two::after { bottom: -10px; right: 0; }
+    .page-wrapper .paymentImgContainer { margin-bottom: 14px; }
+    .page-wrapper .paymentImgContainer img { width: 38px; height: 38px; }
+    .page-wrapper .footerBtmTxt { font-size: 42px; bottom: -4px; }
+    .page-wrapper .paymentSection { padding: 40px 0 60px; }
+    .page-wrapper .rightLeafImg { width: 22%; }
+    .page-wrapper .leftLeafImg { width: 22%; top: 8%; }
+}
+    
+    </style>
 
 
 
@@ -993,275 +547,153 @@ section.split-scroll-sticky div.desktop {
 
 
 
- <div class="page-wrapper">
-    <header>
-         <div class="background-image">
-            <!-- <div class="image-element" style="background-image: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1771876840phpifGgkm.png');"></div> -->
-            <!-- <video  src="https://assets.touch2success.com/static/ce7c9d9857decba736138605dbddfa1d/img/1783342260phprhK7AI.mp4"></video> -->
-            <video  autoplay="" muted="" loop="" class="video-sec image-element" id="myvideo" style="width: 100%;height: auto;margin: 0 auto;display: block;">
-               <source src="https://assets.touch2success.com/static/ce7c9d9857decba736138605dbddfa1d/img/1783342260phprhK7AI.mp4" type="video/mp4">
-            </video>
-         </div>
-         <div class="background-fade" style=""></div> 
-         <div class="headerContent">
-          <h1>
-            A PERFECT BLEND OF TASTE <br> IN EVERY DISH!
-          </h1>
-          <a class="button" href="/order-now"> 
-            <p class="mb-0">Order Now</p> 
-          </a>
-         </div>
-      </header>
 
-      
-
-      <main id="main-content">
-         <section class="home split-scroll-sticky">
-            <div class="scroll-down-arrow fade-in delay-750" role="button" tabindex="0" aria-label="Scroll down the page"></div>
-             <!-- <div class="badge-wrapper monogram">
-                   <svg class="badge-svg" viewBox="0 0 200 200">
-                       <defs>
-                           <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                       </defs>
-                       <text fill="white" class="svgTxt">
-                           <textPath href="#circlePath">
-                               SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
-                           </textPath>
-                       </text>
-                   </svg>
-                   <div class="inner-circle-static">
-                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1766550640php7b7eqx.png" class="img-fluid spoonImg" alt="">
-                   </div>
-               </div> -->
-            <div class="mobile">
-   <div class="row">
-      <div class="col mixed">
-         <div class="slide sticks lhs slide-1" data-top="0">
-            <a href="https://ambassadorsclubhouse.com/london/" aria-label="Visit the London page">
-               <div class="height-wrapper" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779936778phpfOgYbr.png') #d3d3d3 50%/cover no-repeat;">
-                  <p><b>Burger</b><br></p>
-               </div>
-            </a>
-         </div>
-         <div class="slide rhs slide-1 sticks" data-slideid="1" data-top="827">
-            <a href="https://ambassadorsclubhouse.com/newyork/" aria-label="Visit the New York page">
-               <div class="height-wrapper" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779937321phpIok33P.png') #d3d3d3 50%/cover no-repeat;">
-                  <p><b>Kebab</b><br></p>
-               </div>
-            </a>
-         </div>
-         <div class="slide sticks rhs rhs slide-2" data-slideid="2" data-top="1654">
-            <div class="height-wrapper">
-               <div class="inner">
-                  <h1 class="header" role="heading">Welcome<br></h1>
-                  <p class="para">A place of abundance, high spirits and generosity. <br>
-                     <br>
-                     An ode to our grandfather and his residence, the former Indian Ambassador and our restaurant’s namesake. We draw inspiration from North India's grand party mansions, celebrating the warmth and generosity of classic Punjabi hospitality through the sharing of fine North Indian food and liquor.<br>
-                     <br>
-                     Welcome to Ambassadors Clubhouse. The party has begun.
-                  </p> 
-               </div>
+<div class="page-wrapper">
+    
+    <section class="headerSection">
+      <div class="container">
+       <div class="row bgImg">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="headerContent">
+                    <h1>
+                        Spice Up Your Day with the Best <span>Indian</span> Cuisine!
+                    </h1> 
+                    <a class="orderBtn" href="/order-now">Order Now</a>
+                </div>
             </div>
-         </div>
-         <div class="slide sticks lhs slide-2" id="our-story" data-top="2481">
-            <div class="height-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779937321phpIok33P.png') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;">
-               <!-- <div class="image-container">
-                  <img loading="lazy" src="https://ambassadorsclubhouse.com/wp-content/uploads/2024/07/1-1-500x739.png" alt="">
-                  <img loading="lazy" src="/wp-content/themes/ach/images/threebox_image_overlay_scaled.png" class="overlay" alt="">
-               </div> -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                
             </div>
-         </div>
-         <div class="slide sticks rhs slide-3" data-slideid="3" data-top="3308">
-            <div class="height-wrapper">
-               <div class="inner">
-                  <h2 class="header" role="heading"><strong>Culinary Traditions</strong><br>
-                     from North India’s <strong>Punjab Region</strong><br>
-                  </h2>
-                  <p class="para">Feasts find their roots in roadside stalls, family homes and the royal palaces of Punjab. <br>
-                     <br>
-                     Cocktails capture the spirit of generosity and theatre alongside large-serves and a playful list of shots. An all-day drinks list moves through lunch to dinner to late-night party.
-                  </p> 
-               </div>
-            </div>
-         </div>
-         <div class="slide sticks lhs slide-3" data-top="4135">
-            <div class="height-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779936778phpfOgYbr.png') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;">
-               <!-- <img loading="lazy" src="/wp-content/themes/ach/images/homepage_slide_lhs_slide3_background.png" class="background" alt=""> -->
-               <!-- <div class="image-container">
-                  <img loading="lazy" src="https://ambassadorsclubhouse.com/wp-content/uploads/2024/07/2-500x681.png" alt="">
-                  <img loading="lazy" src="/wp-content/themes/ach/images/threebox_image_overlay_scaled.png" class="overlay" alt="">
-               </div> -->
-            </div>
-         </div>
-         <div class="slide sticks rhs slide-4" data-slideid="4" data-top="4962">
-            <div class="height-wrapper">
-               <div class="inner">
-                  <h2 class="header" role="heading"><b>Private Dining</b><br></h2>
-                  <p class="para">Hark back to a time of celebration in the party mansions of Northern India, with feasts courtesy of the Ambassador.</p>
-                  <div class="buttons">
-                  </div>
-                  <p></p>
-                  
-               </div>
-            </div>
-         </div>
-         <div class="slide sticks lhs slide-4" data-top="5789">
-            <div class="height-wrapper" style="background: url('https://ambassadorsclubhouse.com/wp-content/uploads/2024/08/24043037-03a-M-2-683x1024.jpg') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;"> 
-            </div>
-         </div>
-         <div class="slide sticks lhs slide-4" data-top="6616">
-            <div class="height-wrapper" style="background: url('https://ambassadorsclubhouse.com/wp-content/uploads/2024/08/24043037-03a-M-2-683x1024.jpg') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;"> 
-
-            </div>
-         </div>
+       </div>
       </div>
-   </div>
-</div>
-            <div class="desktop">
-               <div class="row m-0 p-0">
-                  <div class="col lhs p-0">
-                     <div class="slide sticks lhs slide-1 ">
-                        <a href="https://ambassadorsclubhouse.com/london/" aria-label="Visit the London page">
-                           <div class="height-wrapper" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779936778phpfOgYbr.png') #d3d3d3 50%/cover no-repeat;">
-                              <p class="desktopDishName"><b>Burger</b><br></p>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="slide sticks lhs slide-2" id="our-story">
-                        <div class="height-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779937321phpIok33P.png') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;">
-                           <!-- <div class="image-container">
-                              <img loading="lazy" src="https://ambassadorsclubhouse.com/wp-content/uploads/2024/07/1-1-500x739.png" alt="">
-                              <img loading="lazy" src="/wp-content/themes/ach/images/threebox_image_overlay_scaled.png" class="overlay" alt="">
-                           </div> -->
-                        </div>
-                     </div>
-                     <div class="slide sticks lhs slide-3">
-                        <div class="height-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779936778phpfOgYbr.png') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;">
-                           <img loading="lazy" src="/wp-content/themes/ach/images/homepage_slide_lhs_slide3_background.png" class="background" alt="">
-                           <!-- <div class="image-container">
-                              <img loading="lazy" src="https://ambassadorsclubhouse.com/wp-content/uploads/2024/07/2-500x681.png" alt="">
-                              <img loading="lazy" src="/wp-content/themes/ach/images/threebox_image_overlay_scaled.png" class="overlay" alt="">
-                           </div> -->
-                        </div>
-                     </div>
-                     <div class="slide sticks lhs slide-4">
-                        <div class="height-wrapper" style="background: url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779937321phpIok33P.png') #d3d3d3 50%/cover no-repeat; mix-blend-mode: unset;">
-                           <!-- no content here, it's just a background image! -->
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col rhs p-0">
-                     <div class="slide scrolls-up rhs slide-1 " data-slideid="1">
-                        <a href="https://ambassadorsclubhouse.com/newyork/" aria-label="Visit the New York page">
-                           <div class="height-wrapper" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url('https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1779937321phpIok33P.png') #d3d3d3 50%/cover no-repeat;">
-                              <p class="desktopDishName"><b>Kebab</b><br></p>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="slide sticks rhs rhs slide-2" data-slideid="2">
-                        <div class="height-wrapper"> 
-                           <div class="inner">
-                              <h2 class="header" role="heading">Welcome to<br>{TAKEAWAY NAME}</h2>
-                              <p class="para"> 
-                                Welcome to the company where the choice of authentic Chinese flavours is vast. Our menu is filled with high quality ingredients and traditional cooking methods to ensure every bite is a journey through China's rich culinary history.   
-                              </p> 
-                           </div>
-                        </div>
-                     </div>
-                     <div class="slide sticks rhs slide-3" data-slideid="3">
-                        <div class="height-wrapper">
-                           <div class="inner">
-                             <h2 class="header" role="heading">Welcome to<br>{TAKEAWAY NAME}</h2>
-                              <p class="para"> 
-                                Welcome to the company where the choice of authentic Chinese flavours is vast. Our menu is filled with high quality ingredients and traditional cooking methods to ensure every bite is a journey through China's rich culinary history.   
-                              </p>                               
-                           </div>
-                        </div>
-                     </div>
-                     <div class="slide sticks rhs slide-4" data-slideid="4">
-                        <div class="height-wrapper">
-                           <div class="inner">
-                             <h2 class="header" role="heading">Welcome to<br>{TAKEAWAY NAME}</h2>
-                              <p class="para"> 
-                                Welcome to the company where the choice of authentic Chinese flavours is vast. Our menu is filled with high quality ingredients and traditional cooking methods to ensure every bite is a journey through China's rich culinary history.   
-                              </p> 
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+      <!-- <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png" class="img-fluid waveImg" alt=""> -->
+    </section>
 
-         
-           <section class="paymentSection"> 
-    <div class="circle one"> </div>
-    <div class="circle five"> </div>
-    <div class="circle eight"> </div>
+    <section class="aboutSection">
+        <div class="container aboutRow">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>
+                        Taste the Magic of <br> India with Every Bite!
+                    </h2>
+                    <p>
+                        At Temp1069 Scoopaholic 886319 23062026, we bring the vibrant flavours of India to , offering an authentic dining experience that blends rich traditions with fresh ingredients. Our chefs craft every dish with aromatic spices and time-honoured techniques, ensuring every meal is a celebration of Indian cuisine. Whether you're dining with family or friends, expect warm hospitality, bold flavours, and an unforgettable culinary journey.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="badge-wrapper">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid vectorImg" alt="">
+                        <svg class="badge-svg" viewBox="0 0 200 200">
+                            <defs>
+                                <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+                            </defs>
+                            <text fill="red" class="svgTxt">
+                                <textPath href="#circlePath">
+                                    • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="inner-circle-static">
+                             <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1776941005phpWChcEz.jpg" class="img-fluid spoonImg" alt="Temp1069 Scoopaholic 886319 23062026 smile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container">
-      <h2 class="text-center">
-        How it works
-      </h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="paymentContainer one">
-                <div class="position-relative paymentImg">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767808774phpPz0HaJ.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/0a240991920be7c739a1e2c8e3f37fb7/img/1653299274phpjim4JL.png" class="paymentImgs" alt="TEMP-1069-Kabana - 879533  GB pick dish">
+    <section class="menuSection">
+        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204phpkVXcB7.png" class="img-fluid rightLeafImg" alt="">
+        <div class="container">
+            <h2>
+                Our <span>Menu</span>
+            </h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="galleryImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                    </div>
                 </div>
-                <div class="paymentContent">
-                    <h3 class="mb-0">
-                        Flavour Awaits
-                    </h3>
-                    <p class="mb-0">
-                        Browse, select, and let the feast begin!
-                    </p>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="galleryImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="galleryImg">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <section class="discoverSection text-center">
+        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204php0nRZgo.png" class="img-fluid leftLeafImg" alt="">
+        <div class="container">
+            <h2>
+                Discover the Magic of <span>Indian Spices</span> <br> One Dish at a Time!
+            </h2>
+            <p>
+                Craving Indian food but short on time? {TAKEAWAY NAME) in (TAKEAWAY TOWN) offers freshly prepared, authentic Indian dishes for takeaway. Whether it's a quick lunch, a family dinner, or a feast with friends, enjoy the bold spices and rich flavours of India from the comfort of your home.
+            </p>
+            <a class="orderBtn two" href="/order-now">Order Now</a>
+        </div>
+    </section>
+
+    <section class="paymentSection">
+        <div class="container paymentParentContainer">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="paymentContainer">
+                        <div class="paymentImgContainer">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1761663228phpopeQ0y.png" alt="Temp1069 Scoopaholic 886319 23062026 Search Icon" class="img-fluid">  
+                        </div>
+                        <h2>
+                            Order in Seconds
+                        </h2>
+                        <p class="paymentTxt">
+                            Choose your go-to meal from the menu
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-6">
+                    <div class="paymentContainer two">
+                        <div class="paymentImgContainer">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1761663228phpluDggq.png" alt="Temp1069 Scoopaholic 886319 23062026 Cards Icon" class="img-fluid">  
+                        </div>
+                            <h2>
+                                Secure Checkout
+                            </h2>
+                            <p class="paymentTxt">
+                                Paying is effortless, so you can focus on the food.
+                            </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-6">
+                    <div class="paymentContainer three">
+                        <div class="paymentImgContainer">
+                            <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1761663228phpinEHvh.png" alt="Temp1069 Scoopaholic 886319 23062026 Receive food" class="img-fluid">  
+                        </div>
+                            <h2>
+                                Served Fresh
+                            </h2>
+                            <p class="paymentTxt">
+                                Freshly made and good to go when you are.
+                            </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="paymentContainer two">
-                <div class="position-relative paymentImg">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767973800phpUUeh9g.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/0a240991920be7c739a1e2c8e3f37fb7/img/1653299274phpbDuHIO.png" class="paymentImgs" alt="TEMP-1069-Kabana - 879533  GB pick dish">
-                </div>
-                <div class="paymentContent">
-                    <h3 class="mb-0">
-                      Easy Payment
-                    </h3>
-                    <p class="mb-0">
-                      A smooth process from start to finish.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="paymentContainer three mb-0">
-                <div class="position-relative paymentImg">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1767808774phpVmZWHT.png" class="img-fluid paymentBackground" alt="TEMP-1069-Kabana - 879533  GB decoration">
-                    <img loading="lazy" src="https://assets.touch2success.com/static/e6fd7949ac7e6c7c8651795d21f59be4/img/1697567063phpFGe79f.png" class="paymentImgs" alt="TEMP-1069-Kabana - 879533  GB pick dish">
-                </div>
-                <div class="paymentContent">
-                    <h3 class="mb-0">
-                      Freshly Made
-                    </h3>
-                    <p class="mb-0">
-                      The best bites, ready when you are.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+        <p class="footerBtmTxt">
+            Order Now
+        </p>
+    </section>
+    
+    
     </div>
 
-  </section>
-         
-      </main>
-
- </div>
-
-<style type="text/css">.parallax-mirror{z-index: 1!important;}</style>
 
 <script>
    window.addEventListener("load", function(){
@@ -1314,3 +746,21 @@ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/178
 https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png
 https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpxxoiG2.jpg -->
 
+
+<!-- 
+
+https://assets.foodhub.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786985561phpeTRibz.jpg
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204php0nRZgo.png 
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204phpkVXcB7.png
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpxxoiG2.jpg
+
+https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpWjYrDT.png 
+
+-->
