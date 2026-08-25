@@ -60,7 +60,18 @@
         overflow-x: hidden; 
         scroll-behavior: smooth; 
         background-color: var(--cream);
+        position: relative;
         } 
+        body .page-wrapper::after { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpxxoiG2.jpg');
+            opacity: 0.2;
+        }
         
        .page-wrapper p {
         font-size: 18px;
@@ -119,6 +130,7 @@
         color: var(--white);
     font-size: 72px;
     font-weight: 600;
+    margin-bottom: 25px;
        }
        .page-wrapper h1 span {
         color: var(--yellow);
@@ -164,24 +176,21 @@
     
        .page-wrapper .badge-wrapper {
         position: relative;
-    width: 100%;
-    height: 100%;
-    border: 15px solid var(--brown);
-    margin-right: 5%;
+    width: 500px;
+    height: 500px;
+    border: 15px solid var(--brown); 
     margin-left: auto;
     border-radius: 50%;
-    background: #fceee3;
-    padding: 5px;
+    background: #fceee3; 
     transform: translateY(-100px);
             }
     
             .page-wrapper .badge-svg {
                 width: 100%;
         height: 100%;
-        animation: rotateBadge 20s linear infinite;
-        padding: 5px;
-        background: var(--white);
+        animation: rotateBadge 20s linear infinite;  
         border-radius: 50%;
+        scale: 1.1;
             }
     
             .page-wrapper .inner-circle-static {
@@ -189,8 +198,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 75%;
-        height: 75%;
+        width: 390px;
+        height: 390px;
         padding: 15px; 
         border-radius: 50%;
         display: flex;
@@ -208,10 +217,12 @@
                 to { transform: rotate(360deg); }
             }
             .page-wrapper .svgTxt {
-                font-size: 16px;
-    letter-spacing: 0.8px;
-        font-family: 'Roboto Condensed', sans-serif;
-        fill: var(--brown);
+               font-size: 14px;
+    letter-spacing: 0.6px;
+    font-family: 'Roboto Condensed', sans-serif;
+    fill: var(--red);
+    font-weight: 700;
+    word-spacing: 1px;
             }
             .page-wrapper .aboutSection {
                 padding: 250px 0 50px;
@@ -224,11 +235,14 @@
     width: 650px;
     background-size: contain;
     background-repeat: no-repeat;
-    transform: scale(1.7) translate(-25px, 10px);
+    transform: scale(1.7) translate(0px, 10px);
     transform-origin: left;
     top: 0;
     z-index: -1;
     filter: brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(6835%) hue-rotate(355deg) brightness(94%) contrast(104%);
+            }
+            .page-wrapper .tasteContent {
+                    padding-left: 45px;
             }
             .page-wrapper .aboutRow {
                 position: relative;
@@ -370,17 +384,36 @@
     width: 17%;
     top: 10%;
     }
+    .page-wrapper .seedsImg {
+            position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    transform: scale(2.5);
+    transform-origin: right;
+    z-index: -1;
+    }
+    .page-wrapper .masalaImg {
+            position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 175px;
+    }
         /* RESPONSIVE VIEW */
     
         @media(min-width:1200px){
             .page-wrapper .container{
-                max-width: 1140px;
+                max-width: 1050px;
             }
         }
     
         @media(min-width:1500px){
             .page-wrapper .container{
-                max-width: 1440px;
+                max-width: 1300px;
             }
         }
     
@@ -392,20 +425,34 @@
     .page-wrapper .paymentTxt { font-size: 23px; }
     .page-wrapper .paymentSection::after { width: 95%; }
 
-    .page-wrapper h1 { font-size: 60px; }
-    .page-wrapper h2 { font-size: 40px; }
-    .page-wrapper p { font-size: 17px; }
-    .page-wrapper .headerSection { padding: 90px 0; }
+    .page-wrapper h1 { font-size: 55px; }
+    .page-wrapper h2 { font-size: 32px; }
+    .page-wrapper p { font-size: 14px; }
+    .page-wrapper .inner-circle-static {
+            width: 300px;
+    height: 365px;
+    }
+    .page-wrapper .headerSection { padding: 75px 0; min-height: 75vh; }
     .page-wrapper .orderBtn { font-size: 22px; padding: 18px 28px; }
-    .page-wrapper .badge-wrapper { border-width: 13px; transform: translateY(-90px); }
+    .page-wrapper .badge-wrapper { border-width: 10px; transform: translateY(-90px);     width: 425px;
+    height: 425px; }
     .page-wrapper .aboutSection { padding: 220px 0 50px; }
-    .page-wrapper .aboutRow::after { height: 260px; width: 560px; }
+    .page-wrapper .aboutRow::after {         height: 260px;
+        width: 540px; }
     .page-wrapper .aboutRow { min-height: 340px; }
-    .page-wrapper .vectorImg { width: 70px; left: -40px; top: -40px; }
+    .page-wrapper .vectorImg {        width: 50px;
+        left: -10px;
+        top: -30px;}
     .page-wrapper .paymentContainer h2 { font-size: 27px; }
     .page-wrapper .paymentTxt { font-size: 15px; }
     .page-wrapper .footerBtmTxt { font-size: 150px; }
     .page-wrapper .paymentSection { padding: 90px 0 140px; }
+    .page-wrapper .seedsImg {
+        width: 75px;
+    }
+    .page-wrapper .masalaImg {
+        width: 110px;
+    }
 }
 
 @media (max-width:1199px) {
@@ -534,8 +581,6 @@
     
     </style>
 
-
-
 </head>
 
 
@@ -547,16 +592,15 @@
 
 
 
-
 <div class="page-wrapper">
     
     <section class="headerSection">
       <div class="container">
        <div class="row bgImg">
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-7 col-md-6 col-sm-12">
                 <div class="headerContent">
                     <h1>
-                        Spice Up Your Day with the Best <span>Indian</span> Cuisine!
+                        Spice Up Your Day <br> with the Best <br><span>Indian</span> Cuisine!
                     </h1> 
                     <a class="orderBtn" href="/order-now">Order Now</a>
                 </div>
@@ -566,30 +610,34 @@
             </div>
        </div>
       </div>
-      <!-- <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png" class="img-fluid waveImg" alt=""> -->
+      <!-- <img loading=lazy src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png" class="img-fluid waveImg" alt=""> -->
     </section>
 
     <section class="aboutSection">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787574064phpfPH4JU.png" class="img-fluid seedsImg" alt="">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787574064phpmVWnUP.png" class="img-fluid masalaImg" alt="">
         <div class="container aboutRow">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>
-                        Taste the Magic of <br> India with Every Bite!
-                    </h2>
-                    <p>
-                        At Temp1069 Scoopaholic 886319 23062026, we bring the vibrant flavours of India to , offering an authentic dining experience that blends rich traditions with fresh ingredients. Our chefs craft every dish with aromatic spices and time-honoured techniques, ensuring every meal is a celebration of Indian cuisine. Whether you're dining with family or friends, expect warm hospitality, bold flavours, and an unforgettable culinary journey.
-                    </p>
+                    <div class="tasteContent">
+                        <h2>
+                            Taste the Magic of <br> India with Every Bite!
+                        </h2>
+                        <p>
+                            At Temp1069 Scoopaholic 886319 23062026, we bring the vibrant flavours of India to , offering an authentic dining experience that blends rich traditions with fresh ingredients. Our chefs craft every dish with aromatic spices and time-honoured techniques, ensuring every meal is a celebration of Indian cuisine. Whether you're dining with family or friends, expect warm hospitality, bold flavours, and an unforgettable culinary journey.
+                        </p>
+                    </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class="badge-wrapper">
-                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid vectorImg" alt="">
+                        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid vectorImg" alt="">
                         <svg class="badge-svg" viewBox="0 0 200 200">
                             <defs>
                                 <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
                             </defs>
                             <text fill="red" class="svgTxt">
                                 <textPath href="#circlePath">
-                                    • SATISFY YOUR CRAVINGS • SATISFY YOUR CRAVINGS •
+                                    HANDCRAFTED & BURSTING WITH FLAVOUR! SLOW-COOKED.
                                 </textPath>
                             </text>
                         </svg>
@@ -603,7 +651,7 @@
     </section>
 
     <section class="menuSection">
-        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204phpkVXcB7.png" class="img-fluid rightLeafImg" alt="">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204phpkVXcB7.png" class="img-fluid rightLeafImg" alt="">
         <div class="container">
             <h2>
                 Our <span>Menu</span>
@@ -629,7 +677,7 @@
     </section>
 
     <section class="discoverSection text-center">
-        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204php0nRZgo.png" class="img-fluid leftLeafImg" alt="">
+        <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204php0nRZgo.png" class="img-fluid leftLeafImg" alt="">
         <div class="container">
             <h2>
                 Discover the Magic of <span>Indian Spices</span> <br> One Dish at a Time!
@@ -747,20 +795,4 @@ https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/178
 https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpxxoiG2.jpg -->
 
 
-<!-- 
 
-https://assets.foodhub.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786985561phpeTRibz.jpg
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204php0nRZgo.png 
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786993204phpkVXcB7.png
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470954phpE1jLcS.png
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpxxoiG2.jpg
-
-https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phpWjYrDT.png 
-
--->
