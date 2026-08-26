@@ -161,6 +161,21 @@
     display: flex;
     align-items: center;
     background-position: right;
+    position: relative;
+       }
+       .page-wrapper .headerContent {
+            z-index: 2;
+    position: relative;
+       }
+       .page-wrapper .headerSection::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.3;
        }
        .page-wrapper .orderBtn {
         font-size: 25px;
@@ -264,13 +279,133 @@
             }
             .page-wrapper .galleryImg {
                 background: #fff;
-    padding: 30px;
-    border-radius: 30px;
-            }
-            .page-wrapper .galleryInnerImg {
-                border-radius: inherit;
+                padding: 30px;
+                border-radius: 30px;
             }
 
+            .page-wrapper .galleryImg {
+    position: relative;
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotateX(0) rotateY(0) translateY(0);
+
+    transition:
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.8s ease;
+}
+
+.page-wrapper .galleryImg .galleryInnerImg {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+
+    border-radius: inherit;
+
+    transform: scale(1);
+    transition:
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-wrapper .galleryImg::after {
+    content: "";
+    position: absolute;
+
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+
+    background: url("https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png")
+        center / cover no-repeat;
+
+    -webkit-mask: url("https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png")
+        center / contain no-repeat;
+
+    mask: url("https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png")
+        center / contain no-repeat;
+
+    opacity: 0;
+
+    transform:
+        scale(0.65)
+        rotate(-10deg)
+        translateZ(30px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* STRONG CARD TILT */
+.page-wrapper .galleryImg:hover {
+  transform: perspective(900px) rotateX(5deg) rotateY(3deg) translateY(-2px);
+
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE */
+.page-wrapper .galleryImg:hover .galleryInnerImg {
+    transform:
+        scale(0.72)
+        rotate(-3deg)
+        translateZ(10px);
+}
+
+/* MASK */
+.page-wrapper .galleryImg:hover::after {
+        opacity: 1;
+    transform: scale(1.02) rotate(0deg) translateZ(0px);
+}
+            
+/* .page-wrapper .galleryImg::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+
+    background: url("https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png")
+                center / cover no-repeat;
+
+    -webkit-mask: url("https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png")
+                center / contain no-repeat;
+
+    mask: url("https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787509756phpfjQ6AK.png")
+          center / contain no-repeat;
+
+    opacity: 0;
+    transform: scale(0.85);
+    transform-origin: center;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-wrapper .galleryImg:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-wrapper .galleryImg:hover .galleryInnerImg{
+    scale: 0.5;
+    transition: all 0.2s linear;
+}
+.page-wrapper .galleryImg .galleryInnerImg{ 
+    transition: all 0.2s linear;
+    border-radius: inherit;
+} */
 
    .page-wrapper .paymentSection { 
         padding: 100px 0 160px;
@@ -403,6 +538,42 @@
     margin: auto;
     width: 175px;
     }
+    .page-wrapper .cartImg {
+            position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 35px;
+    opacity: 0;
+    transition: all 0.2s linear;
+    }
+    .page-wrapper .hoverContent {
+            position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    background: #c02511;
+    z-index: 4;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0 15px 15px 0;
+    font-size: 16px;
+    transition: all 0.2s linear;
+    }
+    .page-wrapper .hoverContent::after {
+        content: '';
+        position: absolute;
+    }
+    .page-wrapper .galleryImg:hover .cartImg{
+        right: 50px;
+        opacity: 1;
+    transition: all 0.2s linear;
+    }
+    .page-wrapper .galleryImg:hover .hoverContent{
+       bottom: 30px;
+    opacity: 1;
+    transition: all 0.2s linear;
+    }
         /* RESPONSIVE VIEW */
     
         @media(min-width:1200px){
@@ -522,18 +693,36 @@
 }
 
 @media (max-width:991px) {
-    .page-wrapper h1 { font-size: 36px; }
-    .page-wrapper h2 { font-size: 27px; }
-    .page-wrapper p { font-size: 15px; line-height: 1.5; }
-    .page-wrapper .headerSection { padding: 60px 0; min-height: 70vh; }
+    .page-wrapper h1 { font-size: 35px; }
+    .page-wrapper h2 { font-size: 25px; }
+    .page-wrapper p {         font-size: 13px;
+        line-height: 1.5; }
+    .page-wrapper .headerSection {         padding: 40px 0;
+        min-height: 55vh;}
+            .page-wrapper .tasteContent {
+        padding-left: 0px;
+    }
+    .page-wrapper .seedsImg {
+        width: 60px;
+    }
     .page-wrapper .orderBtn { font-size: 16px; padding: 12px 22px; border-radius: 35px; }
-    .page-wrapper .badge-wrapper { border-width: 8px; transform: translateY(-45px); margin-right: 0; }
-    .page-wrapper .svgTxt { font-size: 14px; letter-spacing: 0.5px; }
-    .page-wrapper .inner-circle-static { padding: 12px; }
+    .page-wrapper .badge-wrapper {         border-width: 3px;
+        transform: translateY(-15px);
+        margin-right: 0;width: 300px;
+        height: 300px; }
+    .page-wrapper .svgTxt {         font-size: 12px;
+        letter-spacing: 1.4px; }
+    .page-wrapper .inner-circle-static {         padding: 15px;
+        width: 250px;
+        height: 250px; }
     .page-wrapper .aboutSection { padding: 120px 0 30px; }
     .page-wrapper .aboutRow { min-height: 250px; }
-    .page-wrapper .aboutRow::after { height: 170px; width: 360px; transform: scale(1.5) translate(-15px, 6px); }
-    .page-wrapper .vectorImg { width: 45px; left: -18px; top: -18px; }
+    .page-wrapper .aboutRow::after {                height: 250px;
+        width: 490px;
+        transform: scale(1.4) translate(-15px, 11px); }
+    .page-wrapper .vectorImg { width: 30px;
+        left: 30px;
+        top: -30px; }
     .page-wrapper .menuSection h2 { margin-bottom: 40px; transform: scale(1.1); }
     .page-wrapper .menuSection { padding: 0 0 60px; }
     .page-wrapper .galleryImg { padding: 14px; border-radius: 18px; }
@@ -552,17 +741,30 @@
 }
 
 @media (max-width:767px) {
-    .page-wrapper h1 { font-size: 28px; }
-    .page-wrapper h2 { font-size: 22px; }
-    .page-wrapper p { font-size: 14px; letter-spacing: 0.3px; }
-    .page-wrapper .headerSection { padding: 45px 0; min-height: 60vh; }
+    .page-wrapper h1 { font-size: 26px; } 
+    .page-wrapper p { font-size: 14px;font-weight: 400; letter-spacing: 0.3px; }
+    .page-wrapper .headerSection {         padding: 40px 0;
+        min-height: 40vh; }
     .page-wrapper .orderBtn { font-size: 14px; padding: 10px 18px; border-radius: 30px; }
-    .page-wrapper .badge-wrapper { border-width: 6px; transform: translateY(-30px); }
-    .page-wrapper .svgTxt { font-size: 13px; letter-spacing: 0.3px; }
-    .page-wrapper .inner-circle-static { padding: 8px; }
-    .page-wrapper .aboutSection { padding: 80px 0 25px; }
+    .page-wrapper .badge-wrapper {         border-width: 6px;
+        transform: translateY(0px);
+        margin: 45px auto 45px; }
+    .page-wrapper .svgTxt {         font-size: 14px;
+        letter-spacing: 0.2px;} 
+    .page-wrapper .aboutSection { padding: 50px 0 25px; }
     .page-wrapper .aboutRow { min-height: 200px; }
-    .page-wrapper .aboutRow::after { height: 130px; width: 270px; transform: scale(1.4) translate(-10px, 5px); }
+    .page-wrapper .aboutRow::after {     display: none; }
+            .page-wrapper .tasteContent { 
+        text-align: center;
+        padding: 40px 20px;
+        background: #6e1203;
+        border-radius: 25px;
+    }
+    .page-wrapper .masalaImg {
+        width: 100px;
+        bottom: 20%;
+        top: unset;
+    }
     .page-wrapper .vectorImg { width: 35px; left: -12px; top: -12px; }
     .page-wrapper .menuSection h2 { margin-bottom: 30px; transform: scale(1.05); }
     .page-wrapper .menuSection { padding: 0 0 45px; }
@@ -583,18 +785,40 @@
 
 @media (max-width:575px) {
     .page-wrapper h1 { font-size: 30px; }
-    .page-wrapper h2 { font-size: 24px; }
-    .page-wrapper p { font-size: 14px; }
-    .page-wrapper .headerSection { padding: 60px 0; min-height: 65vh; text-align: center; }
+    .page-wrapper h2 { font-size: 22px; } 
+       .page-wrapper p {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .page-wrapper .headerSection {        padding: 50px 0;
+        min-height: 50vh;
+        text-align: center;}
+        .page-wrapper .tasteContent {
+                    padding: 30px 10px;
+        background: #6e1203;
+        border-radius: 15px;
+        }
     .page-wrapper .headerSection .col-sm-12 { text-align: center; }
     .page-wrapper .orderBtn { font-size: 15px; padding: 12px 22px; }
-    .page-wrapper .badge-wrapper { width: 280px; height: 280px; margin: 0 auto; border-width: 8px; transform: translateY(-40px); }
+    .page-wrapper .badge-wrapper {              width: 250px;
+        height: 250px;
+        margin: 40px auto 40px;
+        border-width: 5px; }
+            .page-wrapper .seedsImg {
+        width: 40px;
+    } 
     .page-wrapper .svgTxt { font-size: 14px; }
-    .page-wrapper .inner-circle-static { padding: 14px; }
-    .page-wrapper .aboutSection { padding: 60px 0 20px; text-align: center; }
+    .page-wrapper .inner-circle-static { padding: 20px; width: 220px;
+        height: 220px;}
+            .page-wrapper .masalaImg {
+        width: 50px;
+        bottom: 27%;
+        top: unset;
+    }
+    .page-wrapper .aboutSection { padding: 50px 0 20px; text-align: center; }
     .page-wrapper .aboutRow { min-height: auto; }
     .page-wrapper .aboutRow::after { height: 120px; width: 100%; transform: none; background-position: center; opacity: 0.9; }
-    .page-wrapper .vectorImg { width: 32px; left: 0; top: -10px; }
+    .page-wrapper .vectorImg { width: 25px; left: 0; top: -10px; }
     .page-wrapper .menuSection h2 { margin-bottom: 25px; transform: none; }
     .page-wrapper .menuSection { padding: 0 0 40px; }
     .page-wrapper .galleryImg { padding: 12px; border-radius: 16px; margin-bottom: 18px; }
@@ -634,7 +858,7 @@
     <section class="headerSection">
       <div class="container">
        <div class="row bgImg">
-            <div class="col-lg-7 col-md-6 col-sm-12">
+            <div class="col-lg-7 col-md-7 col-sm-12">
                 <div class="headerContent">
                     <h1>
                         Spice Up Your Day <br> with the Best <br><span>Indian</span> Cuisine!
@@ -655,7 +879,7 @@
         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1787574064phpmVWnUP.png" class="img-fluid masalaImg" alt="">
         <div class="container aboutRow">
             <div class="row">
-                <div class="col-lg-7 col-md-6 col-sm-12">
+                <div class="col-lg-7 col-md-7 col-sm-12">
                     <div class="tasteContent">
                         <h2>
                             Taste the Magic of <br> India with Every Bite!
@@ -665,7 +889,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="col-lg-5 col-md-5 col-sm-12">
                     <div class="badge-wrapper">
                         <img loading="lazy" src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid vectorImg" alt="">
                         <svg class="badge-svg" viewBox="0 0 200 200">
@@ -697,16 +921,28 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
+                        <p class="hoverContent">
+                            Onion Bhaji
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                         <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
+                        <p class="hoverContent">
+                            Onion Bhaji
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
+                         <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
+                        <p class="hoverContent">
+                            Onion Bhaji
+                        </p>
                     </div>
                 </div> 
             </div>
