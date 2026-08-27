@@ -356,7 +356,7 @@
 /* IMAGE */
 .page-wrapper .galleryImg:hover .galleryInnerImg {
     transform:
-        scale(0.72)
+        scale(0.62)
         rotate(-3deg)
         translateZ(10px);
 }
@@ -518,6 +518,7 @@
     left: 0;
     width: 17%;
     top: 10%;
+    z-index: -1;
     }
     .page-wrapper .seedsImg {
             position: absolute;
@@ -553,6 +554,7 @@
     background: #c02511;
     z-index: 4;
     padding: 10px 15px;
+    left: 20px;
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
@@ -560,9 +562,16 @@
     font-size: 16px;
     transition: all 0.2s linear;
     }
-    .page-wrapper .hoverContent::after {
+    .page-wrapper .hoverContent::before {
         content: '';
-        position: absolute;
+    position: absolute;
+    z-index: 1;
+    top: -19.5px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    background: #faa68c;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     }
     .page-wrapper .galleryImg:hover .cartImg{
         right: 50px;
@@ -611,11 +620,26 @@
         width: 100%;
     }
     .page-wrapper .menuSection h2 {
-        margin-bottom: 50px;
+        margin-bottom: 35px;
     }
     .page-wrapper .galleryImg {
             padding: 20px;
     border-radius: 20px;
+    }
+    .page-wrapper .cartImg {
+            width: 25px;
+    }
+    .page-wrapper .galleryImg:hover .cartImg {
+        right: 60px;
+    }
+    .page-wrapper .leftLeafImg {
+        width: 15%;
+    }
+    .page-wrapper .hoverContent {
+        left: 18px;
+    }
+    .page-wrapper .galleryImg:hover .hoverContent {
+        bottom: 20px;
     }
     .page-wrapper .headerSection { padding: 75px 0; min-height: 75vh; }
     .page-wrapper .orderBtn { font-size: 22px; padding: 18px 28px; }
@@ -639,6 +663,9 @@
     }
     .page-wrapper .masalaImg {
         width: 110px;
+    }
+    .page-wrapper .rightLeafImg {
+        width: 10%;
     }
 }
 
@@ -676,20 +703,35 @@
     .page-wrapper .vectorImg {         width: 40px;
         left: -10px;
         top: -20px; }
-    .page-wrapper .menuSection h2 { margin-bottom: 55px; transform: scale(1.2); }
+    .page-wrapper .menuSection h2 { margin-bottom: 35px; transform: scale(1.2); }
     .page-wrapper .menuSection { padding: 0 0 80px; }
     .page-wrapper .galleryImg { padding: 20px; border-radius: 24px; }
     .page-wrapper .discoverSection p { max-width: 80%; margin: 30px auto; }
-    .page-wrapper .discoverSection .orderBtn.two { transform: scale(1.3); margin: 30px 0; }
-    .page-wrapper .paymentParentContainer { width: 85%; border-radius: 45px; }
-    .page-wrapper .paymentContainer { max-width: 220px; }
+    .page-wrapper .discoverSection .orderBtn.two {         transform: scale(1.1);
+        margin: 15px 0; }
+    .page-wrapper .paymentParentContainer {         width: 100%;
+        border-radius: 30px; }
+    .page-wrapper .paymentContainer { max-width: 200px; }
     .page-wrapper .paymentContainer h2 { font-size: 24px; }
     .page-wrapper .paymentImgContainer { margin-bottom: 22px; }
     .page-wrapper .paymentImgContainer img { width: 48px; height: 48px; }
     .page-wrapper .footerBtmTxt { font-size: 120px; }
-    .page-wrapper .paymentSection { padding: 80px 0 120px; }
-    .page-wrapper .rightLeafImg { width: 13%; }
-    .page-wrapper .leftLeafImg { width: 16%; }
+    .page-wrapper .paymentSection { padding: 60px 0 120px; }
+    .page-wrapper .rightLeafImg { width: 10%; }
+    .page-wrapper .leftLeafImg { width: 12%; }
+        .page-wrapper .hoverContent {
+        left: 16px;
+        font-size: 14px;
+    } 
+        .page-wrapper .cartImg {
+        width: 20px;
+    }
+        .page-wrapper .paymentTxt {
+        font-size: 13px;
+    }
+    .page-wrapper .paymentContainer.two::before, .page-wrapper .paymentContainer.two::after {
+        width: 2px;
+    }
 }
 
 @media (max-width:991px) {
@@ -703,7 +745,24 @@
         padding-left: 0px;
     }
     .page-wrapper .seedsImg {
-        width: 60px;
+        width: 50px;
+    }
+        .page-wrapper .cartImg {
+        width: 15px;
+    }
+        .page-wrapper .galleryImg:hover .cartImg {
+        right: 50px;
+    }
+    .page-wrapper .hoverContent {
+                font-size: 12px;
+                    padding: 7px 12px;
+                    left: 18px;
+    }
+    .page-wrapper .hoverContent::before {
+            top: -15.1px;
+    left: 1px;
+    width: 15px;
+    height: 15px;
     }
     .page-wrapper .orderBtn { font-size: 16px; padding: 12px 22px; border-radius: 35px; }
     .page-wrapper .badge-wrapper {         border-width: 3px;
@@ -723,21 +782,28 @@
     .page-wrapper .vectorImg { width: 30px;
         left: 30px;
         top: -30px; }
-    .page-wrapper .menuSection h2 { margin-bottom: 40px; transform: scale(1.1); }
+    .page-wrapper .menuSection h2 {         margin-bottom: 25px;
+        transform: scale(1.0); }
     .page-wrapper .menuSection { padding: 0 0 60px; }
     .page-wrapper .galleryImg { padding: 14px; border-radius: 18px; }
     .page-wrapper .discoverSection p { max-width: 90%; margin: 25px auto; }
-    .page-wrapper .discoverSection .orderBtn.two { transform: scale(1.15); margin: 25px 0; }
-    .page-wrapper .paymentParentContainer { width: 92%; border-radius: 35px; padding: 20px 0; }
-    .page-wrapper .paymentContainer { max-width: 190px; margin: 15px auto; }
+    .page-wrapper .discoverSection .orderBtn.two {         transform: scale(1.0);
+        margin: 15px 0; }
+    .page-wrapper .paymentParentContainer {  border-radius: 20px; padding: 20px 0; }
+    .page-wrapper .paymentContainer { max-width: 170px; margin: 15px auto; }
     .page-wrapper .paymentContainer h2 { font-size: 20px; }
-    .page-wrapper .paymentTxt { font-size: 14px; }
+    .page-wrapper .paymentTxt { font-size: 12px; }
     .page-wrapper .paymentImgContainer { margin-bottom: 16px; }
     .page-wrapper .paymentImgContainer img { width: 40px; height: 40px; }
     .page-wrapper .footerBtmTxt { font-size: 85px; bottom: -10px; }
-    .page-wrapper .paymentSection { padding: 60px 0 90px; }
+    .page-wrapper .paymentSection { padding: 50px 0 90px; }
     .page-wrapper .rightLeafImg { width: 14%; }
-    .page-wrapper .leftLeafImg { width: 15%; top: 12%; }
+        .page-wrapper .leftLeafImg {
+        width: 8%;
+        top: unset;
+        z-index: -1;
+        bottom: 0;
+    }
 }
 
 @media (max-width:767px) {
@@ -771,16 +837,20 @@
     .page-wrapper .galleryImg { padding: 10px; border-radius: 14px; }
     .page-wrapper .discoverSection p { max-width: 95%; margin: 20px auto; }
     .page-wrapper .discoverSection .orderBtn.two { transform: scale(1); margin: 20px 0; }
-    .page-wrapper .paymentParentContainer { width: 95%; border-radius: 28px; padding: 15px 0; }
+    .page-wrapper .paymentParentContainer { border-radius: 15px;
+        padding: 15px 0; }
     .page-wrapper .paymentContainer { max-width: 155px; margin: 12px auto; }
-    .page-wrapper .paymentContainer h2 { font-size: 17px; }
+    .page-wrapper .paymentContainer h2 { font-size: 18px; }
     .page-wrapper .paymentTxt { font-size: 12px; line-height: 1.4; }
     .page-wrapper .paymentImgContainer { margin-bottom: 12px; }
     .page-wrapper .paymentImgContainer img { width: 34px; height: 34px; }
     .page-wrapper .footerBtmTxt { font-size: 60px; bottom: -6px; }
-    .page-wrapper .paymentSection { padding: 45px 0 70px; }
+    .page-wrapper .paymentSection {         padding: 25px 0 70px; }
     .page-wrapper .rightLeafImg { width: 15%; }
-    .page-wrapper .leftLeafImg { width: 15%; top: 15%; }
+    .page-wrapper .leftLeafImg { width: 10%;   }
+    .page-wrapper .discoverSection h2 {
+            transform: scale(1.0);
+    }
 }
 
 @media (max-width:575px) {
@@ -799,7 +869,8 @@
         border-radius: 15px;
         }
     .page-wrapper .headerSection .col-sm-12 { text-align: center; }
-    .page-wrapper .orderBtn { font-size: 15px; padding: 12px 22px; }
+    .page-wrapper .orderBtn {         font-size: 14px;
+        padding: 8px 16px; }
     .page-wrapper .badge-wrapper {              width: 250px;
         height: 250px;
         margin: 40px auto 40px;
@@ -820,24 +891,40 @@
     .page-wrapper .aboutRow::after { height: 120px; width: 100%; transform: none; background-position: center; opacity: 0.9; }
     .page-wrapper .vectorImg { width: 25px; left: 0; top: -10px; }
     .page-wrapper .menuSection h2 { margin-bottom: 25px; transform: none; }
-    .page-wrapper .menuSection { padding: 0 0 40px; }
-    .page-wrapper .galleryImg { padding: 12px; border-radius: 16px; margin-bottom: 18px; }
+    .page-wrapper .menuSection { padding: 0 0 25px; }
+    .page-wrapper .galleryImg { padding: 10px;
+        border-radius: 15px;
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 25px; }
+        .page-wrapper .hoverContent {
+                    left: 21px;
+                    bottom: 28px;
+        }
     .page-wrapper .discoverSection p { max-width: 100%; margin: 18px auto; }
-    .page-wrapper .discoverSection .orderBtn.two { transform: none; margin: 18px 0; }
-    .page-wrapper .paymentParentContainer { width: 92%; border-radius: 25px; padding: 20px 0; }
-    .page-wrapper .paymentContainer { max-width: 240px; margin: 18px auto; }
-    .page-wrapper .paymentContainer h2 { font-size: 20px; }
+    .page-wrapper .discoverSection .orderBtn.two { transform: none; margin: 0px 0; }
+    .page-wrapper .paymentParentContainer {         width: 100%;
+        max-width: 350px;
+        border-radius: 25px;
+        padding: 0px 0; }
+    .page-wrapper .paymentContainer {        max-width: 240px;
+        margin: auto;
+        padding: 25px 0;}
+    .page-wrapper .paymentContainer h2 { font-size: 18px; }
     .page-wrapper .paymentTxt { font-size: 13px; }
     .page-wrapper .paymentContainer.two::before,
-    .page-wrapper .paymentContainer.two::after { width: 100%; height: 2px; top: auto; }
-    .page-wrapper .paymentContainer.two::before { top: -10px; left: 0; }
-    .page-wrapper .paymentContainer.two::after { bottom: -10px; right: 0; }
+    .page-wrapper .paymentContainer.two::after { width: 100%; height: 1.5px; top: auto; }
+    .page-wrapper .paymentContainer.two::before { top: 0px; left: 0; }
+    .page-wrapper .paymentContainer.two::after { bottom: 0px; right: 0; }
     .page-wrapper .paymentImgContainer { margin-bottom: 14px; }
     .page-wrapper .paymentImgContainer img { width: 38px; height: 38px; }
-    .page-wrapper .footerBtmTxt { font-size: 42px; bottom: -4px; }
-    .page-wrapper .paymentSection { padding: 40px 0 60px; }
+    .page-wrapper .footerBtmTxt {         font-size: 32px;
+        bottom: -4px;
+        text-align: center;
+        left: 0; }
+    .page-wrapper .paymentSection { padding: 40px 15px 60px; }
     .page-wrapper .rightLeafImg { width: 22%; }
-    .page-wrapper .leftLeafImg { width: 22%; top: 8%; }
+    .page-wrapper .leftLeafImg { width: 15%; bottom: -35px;}
 }
     
     </style>
@@ -917,8 +1004,8 @@
             <h2>
                 Our <span>Menu</span>
             </h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-md-0 mb-sm-4">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
                         <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
@@ -927,7 +1014,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-md-0 mb-sm-4">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
                          <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
@@ -936,7 +1023,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="galleryImg">
                         <img loading="lazy" src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1713291900phpbwa7zI.png" class="img-fluid galleryInnerImg" alt="">
                          <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1786470158phplbW4AK.png" class="img-fluid cartImg" alt="">
